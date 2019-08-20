@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/dynamic.css">
+    <link rel="stylesheet" href="./assets/font_1340231_cnxr2ldyd4c/iconfont.css">
+    <script src="./libs/jquery.min.js"></script>
+    <!-- <script src="./libs/jquery.fullpage.js"></script> -->
+    <title>Document</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <!-- <div id="fullpage"> -->
+    <div class="wrapper">
+        <!-- 最外层部分 -->
+        <div class="banner">
+            <div class="logo">
+                <img src="./assets/images/微信图片_20190808104730.png" alt="">
+            </div>
+            <div class="search">
+                <img class="search_img" src="./assets/images/搜索.png" alt="">
+                <div class="none" onclick="none()">x</div>
+                <div class="ipt">
+                    <input type="text" placeholder="请输入关键词"><span class="iconfont icon-sousuo"></span>
+                </div>
+                <div class="title">
+                    <span></span>热门搜索关键词
+                </div>
+            </div>
+            <div class="nav">
+                <div><a href="./index.html">首页</a></div>
+                <div>关于和鲜</div>
+                <div>和鲜产品</div>
+                <div>加入和鲜</div>
+                <div>公司动态</div>
+                <div>商业合作</div>
+                <div>和鲜商城</div>
+                <div onclick="search()"><span class="iconfont icon-sousuo"></span></div>
+                <div>二</div>
+            </div>
+            <div class="center_title">
+                <p>新闻动态</p>
+                <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
+                <p>加入我们，共同庆祝世界各地的精湛技艺和生活乐趣。</p>
+            </div>
+            <!-- 轮播部分 -->
+            <div class="imgList">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_01.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="new">
+            <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_04.png" alt="">
+            <div class="script">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="bigtitle">
+                    黄德满董事长荣获
+                </div>
+                <div class="bigtitle">
+                    深圳十大商业杰出人物称号
+                </div>
+                <div class="title">
+                    为充分展示深圳商业40年来取得的辉煌成就，树立新时代深圳商业标杆，近日，
+                    由深圳市商务局指导深圳市商业联合会、深圳市老字号协会、深圳市零售商业行业协会
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_07.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_09.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_11.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_15.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_16.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_17.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_21.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box big_list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_22.png" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    一道美食彻底解决顽固性口臭
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_26.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_27.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_29.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_35.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_36.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+            <div class="list_box">
+                <img src="./assets/images/和鲜-公司动态/和鲜-公司动态_37.jpg" alt="">
+                <div class="time">
+                    2019年05月24日 14:03
+                </div>
+                <div class="title">
+                    和鲜集团出席2019年
+                </div>
+                <div class="title">
+                    中国食醋及调味料酒产业创新
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            加载更多
+        </div>
+    </div>
+    <div class="foot">
+        <div class="ite">
+            Copyright 2019 Hexian All Rights Reserved 粤ICP备18009779号-1
+        </div>
+        <ul class="bottom_nav">
+                <!-- 图片右下角序号部分 -->
+                <li><span class="iconfont icon-icoweibo"></span><span class="iconfont icon-weixin"></span></li>
+                <li>加入和鲜</li>
+                <li>/</li>
+                <li>关于和鲜</li>
+                <li>/</li>
+                <li>和鲜商城</li>
+            </ul>   
+    </div>
+    <!-- </div> -->
+    <script type="text/javascript">
+        // $(function(){
+        //     $('#fullpage').fullpage();
+        // });
+        // var h = window.innerHeight
+        //     console.log(h)
+        // $('.imgList').css('height',h+'px')
+
+        // onresize = function(){
+        //     h = window.innerHeight
+        //     $('.imgList').css('height',h+'px')
+        //     console.log(h)
+        // }
+        for(let i = 0; i < $(".center_title").children().length; i++){
+                setTimeout(() => {
+                $(".center_title").children().eq(i).addClass("qie");
+                }, i*4+'00');
+            }
+        function scroll(){
+            var a = $(document).scrollTop()
+            var b = $(".list")[0].offsetTop
+            var c = $(".new")[0].offsetTop
+            if(b<a+400){
+                for(let i = 0; i < $(".list_box").length; i++){
+                    setTimeout(() => {
+                        $(".list_box").eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+            if(c<a+400){
+                for(let i = 0; i < $(".script").length; i++){
+                    setTimeout(() => {
+                        $(".new").eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+        }
+        function search(){
+            $('.search').css('display','block')
+        }
+        function none(){
+            $('.search').css('display','none')
+        }
+        // })
+    </script>
+</body>
+
+</html>

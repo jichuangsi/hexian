@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/index.css">
+    <link rel="stylesheet" href="./assets/font_1340231_cnxr2ldyd4c/iconfont.css">
+    <script src="./libs/jquery.min.js"></script>
+    <!-- <script src="./libs/jquery.fullpage.js"></script> -->
+    <title>Document</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <!-- <div id="fullpage"> -->
+    <div class="wrapper">
+        <!-- 最外层部分 -->
+        <div class="banner">
+            <div class="logo">
+                <img src="./assets/images/微信图片_20190808104730.png" alt="">
+            </div>
+            <div class="search">
+                <img class="search_img" src="./assets/images/搜索.png" alt="">
+                <div class="none" onclick="none()">x</div>
+                <div class="ipt">
+                    <input type="text" placeholder="请输入关键词"><span class="iconfont icon-sousuo"></span>
+                </div>
+                <div class="title">
+                    <span></span>热门搜索关键词
+                </div>
+            </div>
+            <div class="nav">
+                <div>首页</div>
+                <div>关于和鲜</div>
+                <div>和鲜产品</div>
+                <div>加入和鲜</div>
+                <div><a href="./dynamic.html">公司动态</a></div>
+                <div>商业合作</div>
+                <div>和鲜商城</div>
+                <div onclick="search()"><span class="iconfont icon-sousuo"></span></div>
+                <div>二</div>
+            </div>
+            <div class="ite">
+                Copyright 2019 Hexian All Rights Reserved 粤ICP备18009779号-1
+            </div>
+            <!-- 轮播部分 -->
+            <ul class="imgList">
+                <!-- 图片部分 -->
+                <li class="imgOn">
+                        <div class="title">
+                            <p class="qie">Only make healthy</p>
+                            <p class="qie">food without additives</p>
+                            <p class="fsz62_m qie">只做无添加剂健康食品</p>
+                            <p class="btn qie">了解更多</p>
+                        </div>
+                    <a href="#"><img src="./assets/images/和鲜-首页-只做无添加剂健康食品.png"></a>
+                </li>
+                <li>
+                    <div class="title">
+                        <p>Join us.</p>
+                        <p>and hexian</p>
+                        <p class="fsz62">加入我们·加入和鲜</p>
+                        <p class="btn">了解更多</p>
+                    </div>
+                    <a href="#"><img src="./assets/images/和鲜-首页-加入我们·加入和鲜.png"></a>
+                </li>
+                <li>
+                    <div class="title">
+                        <p class="ruizi">深圳十大商业杰出人物</p>
+                        <p class="ruizi">维也纳酒店集团创始人</p>
+                        <p class="ruizi">和鲜食品科技集团董事长黄德满</p>
+                        <p class="fsz16">
+                            Ten Business Outstanding Persons in Shenzhen,Founder of Vienna Hotel Group
+                        </p>
+                        <p class="fsz16">
+                            Chairman Huang Deman of Hexian Food Science and Technology Group
+                        </p>
+                        <p class="btn">了解更多</p>
+                    </div>
+                    <a href="#"><img src="./assets/images/和鲜-3深圳十大商业杰出人物和鲜创始人黄德满董事长.png"></a>
+                </li>
+                <li>
+                    <div class="title">
+                        <p>Hexian News</p>
+                        <p class="fsz62">和鲜新闻资讯</p>
+                        <p class="btn">了解更多</p>
+                    </div>
+                    <a href="#"><img src="./assets/images/和鲜-首页-和鲜新闻资讯.png"></a>
+                </li>
+                <li>
+                    <div class="title">
+                        <p>Let mankind enjoy</p>
+                        <p>Healthy in Gourmet Food</p>
+                        <p class="fsz62_m">让人类在享受美食中健康起来！</p>
+                        <p class="btn">了解更多</p>
+                    </div>
+                    <a href="#"><img src="./assets/images/和鲜-首页-让人类在享受美食中健康起来！.png"></a>
+                </li>
+            </ul>
+            <ul class="indexList">
+                <!-- 图片右下角序号部分 -->
+                <li class="indexOn">01 Product</li>
+                <li>02 Personnel</li>
+                <li>03 Chairman</li>
+                <li>04 News</li>
+                <li>05 Strategy</li>
+            </ul>
+            <ul class="bottom_nav">
+                    <!-- 图片右下角序号部分 -->
+                    <li>和鲜商城</li>
+                    <li>/</li>
+                    <li>关于和鲜</li>
+                    <li>/</li>
+                    <li>加入和鲜</li>
+                    <li><span class="iconfont icon-icoweibo"></span><span class="iconfont icon-weixin"></span></li>
+                </ul>
+        </div>
+    </div>
+    <!-- </div> -->
+    <script type="text/javascript">
+        // $(function(){
+        //     $('#fullpage').fullpage();
+        // });
+        var h = window.innerHeight
+        $('.imgList').css('height',h+'px')
+        $('.imgList>li').css('height',h+'px')
+        // $('.imgList>li').find('img').css('height',h+'px')
+        // console.log($('.imgList>li>img'))
+        console.log(h)
+        var curIndex = 0; //当前index
+        //   alert(imgLen);
+        // 定时器自动变换2.5秒每次
+        var autoChange;
+        go()
+        function go(){
+            autoChange = setInterval(function () {
+            if (curIndex < $(".imgList li").length - 1) {
+                curIndex++;
+            } else {
+                curIndex = 0;
+            }
+            //调用变换处理函数
+            changeTo(curIndex);
+        }, 5500);
+        }
+
+        $(".indexList").find("li").each(function (item) {
+            console.log($(this))
+            $(this).click(function (){
+                console.log(2)
+            })
+            $(this).click(function () {
+                console.log(1)
+                clearInterval(autoChange);
+                changeTo(item);
+                curIndex = item;
+                go()
+            });
+        });
+
+        function changeTo(num) {
+            $(".imgList").find("li").removeClass("imgOn")
+            $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
+            $(".imgList").find("li").find('p').removeClass("qie")
+            setTimeout(function(){
+                $(".imgList").find("li").eq(num).addClass("imgOn");
+            },100)
+            for(let i = 0; i < $(".imgList").find("li").eq(num).find('p').length; i++){
+                setTimeout(() => {
+                $(".imgList").find("li").eq(num).find('p').eq(i).addClass("qie");
+                    console.log(i+1+'00')
+                }, i*4+'00');
+            }
+            // $(".imgList").find("li").removeClass("imgOn").hide().eq(num).fadeIn().addClass("imgOn");
+            // $(".infoList").find("li").removeClass("infoOn").eq(num).addClass("infoOn");
+            // $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
+        }
+        onresize = function(){
+            h = window.innerHeight
+            $('.imgList').css('height',h+'px')
+            $('.imgList>li').css('height',h+'px')
+            console.log(h)
+        }
+        function search(){
+            $('.search').css('display','block')
+        }
+        function none(){
+            $('.search').css('display','none')
+        }
+    </script>
+</body>
+
+</html>

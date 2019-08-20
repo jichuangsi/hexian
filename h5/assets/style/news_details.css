@@ -1,0 +1,355 @@
+body {
+    background-color: #f5f8f9;
+}
+.wrapper {
+    position: relative;
+}
+
+.imgList {
+    width: 100%;
+    z-index: 10;
+    /* overflow: hidden; */
+}
+.imgList img{
+    width: 100%;
+    height: auto;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 40px;
+    z-index: 20;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    background: black;
+}
+
+.infoList {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 30;
+}
+
+.infoList li {
+    display: none;
+}
+
+.infoList .infoOn {
+    display: inline;
+    color: white;
+}
+
+.indexList {
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+    z-index: 30;
+}
+
+.indexList li {
+    float: left;
+    margin-right: 60px;
+    cursor: pointer;
+    color:rgba(255, 255, 255, 0.6);
+}
+.indexList li:last-child{
+    margin-right: 0px;
+}
+
+.indexList .indexOn {
+    color: white;
+}
+.logo {
+    width: 124px;
+    height: 75px;
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    z-index: 30;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.nav {
+    position: absolute;
+    right: 5%;
+    top: 60px;
+    z-index: 30;
+}
+.nav div {
+    float: left;
+    margin-right: 90px;
+    cursor: pointer;
+    color:rgba(255, 255, 255, 1);
+}
+.nav div:last-child {
+    margin-right: 0px;
+}
+.search {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 32;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.search_img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 32;
+}
+.search .ipt{
+    width: 50%;
+    height: 55px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 55px;
+    z-index: 32;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.search .ipt input{
+    flex: 1;
+    height: 55px;
+    border: none;
+    outline: none;
+    text-indent: 30px;
+}
+.search .icon-sousuo {
+    color: #0f9c81 !important;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.search .title {
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    z-index: 32;
+}
+.search .title span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dd7a36;
+    display: inline-block;
+    margin-right: 5px;
+}
+.none {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #6fc4b3;
+    color: #fff;
+    position: absolute;
+    right: 17%;
+    top: 5%;
+    z-index: 32;
+    font-size: 28px;
+    cursor: pointer;
+}
+.center_title {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+}
+.center_title p:first-child {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.center_title p:first-child span{
+    margin-left: 20px;
+}
+.center_title p:last-child {
+    font-size: 36px;
+    color: #fff;
+}
+.center {
+    width: 80%;
+    padding: 0px 10% 5% 10%;
+    margin: 0% auto;
+    margin-top: -5%;
+    margin-bottom: 5%;
+    background-color: #fff;
+    position: relative;
+    z-index: 50;
+    overflow: hidden;
+}
+.center .left {
+    width: 60%;
+    float: left;
+    margin-top: 114px;
+    padding-right: 64px;
+    border-right: 1px solid #e7e7e7;
+    position: relative;
+}
+.center .left img{
+    width: 100%;
+}
+.center .left p{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 46px;
+}
+.center .left .text{
+    margin-top: 84px;
+}
+.center .left .xian{
+    width: 100%;
+    height: 2px;
+    background-color: #e7e7e7;
+    margin-bottom: 40px;
+}
+.center .left ul{
+    margin-top: 40px;
+}
+.center .left li{
+    width: 70%;
+    font-size: 16px;
+    line-height: 36px;
+    cursor: pointer;
+    white-space: nowrap;
+/* 文本不换行 */
+text-overflow:ellipsis;
+/* 超出显示为省略号 */
+overflow: hidden;
+/* 超出部分隐藏 */
+}
+.center .left li:hover{
+    color: #0f9c81;
+}
+.center .left li span{
+    margin-right: 15px;
+}
+.center .left .out {
+    position: absolute;
+    right: 64px;
+    bottom: 10px;
+    width: 154px;
+    height: 57px;
+    line-height: 57px;
+    text-align: center;
+    background-color: #b4b4b4;
+    color: #fff;
+    cursor: pointer;
+}
+.center .right {
+    width: 40%;
+    padding-left: 70px;
+    margin-top: 59px;
+    float: right;
+}
+.center .right img{
+    width: 100%;
+}
+.center .right .title{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.center .right p{
+    font-size: 26px;
+    margin-top: 19px;
+    margin-bottom: 38px;
+}
+.center .right .xian{
+    width: 100%;
+    height: 1px;
+    background-color: #e7e7e7;
+    margin-bottom: 40px;
+}
+.center .right ul{
+    margin-bottom: 60px;
+}
+.center .right li{
+    font-size: 18px;
+    line-height: 36px;
+}
+.center .right li span{
+    margin-right: 15px;
+}
+.center .right li:hover{
+    color: #0f9c81;
+    cursor: pointer;
+}
+.foot {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background-color: #fff;
+}
+.foot .ite{
+    float: left;
+    font-size: 16px;
+    transform: scale(.8);
+    font-family: AVANTGA2;
+    color: #333;
+}
+.bottom_nav  {
+    margin-right: 2%;
+}
+.bottom_nav li {
+    float: right;
+    margin-right: 30px;
+    cursor: pointer;
+    /* transform: scale(.8); */
+    font-size: 16px;
+    color:#333;
+    font-family: AVANTGA2;
+}
+.bottom_nav li:last-child{
+    margin-right: 0px;
+}
+.bottom_nav li span{
+    margin-right: 20px;
+}
+.bottom_nav li span:last-child{
+    margin-right: 0px;
+}
+.qie {
+    transform: translateY(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+@media screen and (max-width : 1366px){
+    .nav div {
+        margin-right: 60px;
+    }
+    .center .right .title{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .center .right p{
+        font-size: 18px;
+        margin-top: 19px;
+        margin-bottom: 38px;
+    }
+    .center .right li{
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .center .left p{
+        font-size: 12px;
+    }
+    .center .left li{
+        font-size: 12px;
+        line-height: 30px;
+    }
+}
