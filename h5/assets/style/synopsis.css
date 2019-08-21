@@ -79,6 +79,155 @@
     width: 100%;
     height: auto;
 }
+#synopsis {
+    position: relative;
+    padding-top: 30%;
+}
+#synopsis .center_title{
+    top: 10%;
+    color: #000;
+}
+#synopsis .center_title p{
+    width: 55%;
+    margin: 46px auto;
+}
+#synopsis .center_title img{
+    width: auto;
+}
+#strategy {
+    position: relative;
+}
+#strategy .center_title{
+    top: 10%;
+    color: #000;
+}
+#strategy .center_title p{
+    top: 10%;
+    margin: 0px auto;
+}
+#strategy .center_title p:first-child{
+    top: 10%;
+    margin: 46px auto;
+}
+#strategy .center_title img{
+    width: auto;
+}
+#strategy .one_title {
+    width: 18%;
+    position: absolute;
+    left: 16%;
+    top: 55%;
+}
+#strategy .two_title {
+    width: 18%;
+    position: absolute;
+    left: 41%;
+    top: 55%;
+}
+#strategy .three_title {
+    width: 18%;
+    position: absolute;
+    left: 66%;
+    top: 55%;
+}
+#strategy .text_title {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+}
+#strategy .text_title p {
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+}
+#strategy .text_title span{
+    font-size: 18px;
+    color: #de7a36;
+}
+#Idea {
+    position: relative;
+}
+#Idea .center_title{
+    top: 10%;
+    color: #000;
+}
+#Idea .center_title p{
+    top: 10%;
+    margin: 46px auto;
+}
+#Idea .center_title img{
+    width: auto;
+}
+#Idea .Idea_title {
+    position: absolute;
+    font-size: 16px;
+    line-height: 28px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+}
+#Idea .Idea_title p{
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+}
+#Idea .Idea_title p:first-child {
+    color: #009d81;
+    font-size: 20px;
+}
+#Idea .one_title {
+    top: 33%;
+    right: 66%;
+    text-align: right;
+}
+#Idea .two_title {
+    top: 44%;
+    right: 69%;
+    text-align: right;
+}
+#Idea .three_title {
+    top: 55%;
+    right: 66%;
+    text-align: right;
+}
+#Idea .four_title {
+    top: 70%;
+    right: 50%;
+    text-align: center;
+    transform: translateX(50%) !important;
+}
+#Idea .five_title {
+    top: 33%;
+    left: 66%;
+    text-align: left;
+}
+#Idea .six_title {
+    top: 44%;
+    left: 69%;
+    text-align: left;
+}
+#Idea .senve_title {
+    top: 55%;
+    left: 66%;
+    text-align: left;
+}
+#Culture {
+    position: relative;
+}
+#Culture .center_title{
+    top: 10%;
+    color: #000;
+}
+#Culture .center_title p{
+    top: 10%;
+    margin: 0px auto;
+}
+#Culture .center_title p:first-child{
+    top: 10%;
+    margin: 46px auto;
+}
+#Culture .center_title img{
+    width: auto;
+}
 .center_nav {
     display: none;
     position: fixed;
@@ -145,6 +294,7 @@
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
     margin-bottom: 36px;
@@ -175,86 +325,6 @@
 }
 .center_title .btn:first-child{
     margin-left: 0px;
-}
-.center .list {
-    width: 80%;
-    margin: 5% auto;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.center .list .list_box{
-    /* width: 440px; */
-    width: 30%;
-    height: 420px;
-    margin-bottom: 5%;
-    position: relative;
-    overflow: hidden;
-}
-.center .list .list_box img{
-    width: 100%;
-    height: auto;
-    margin-bottom: 40px;
-    transform: translateX(100%);
-    opacity: 0;
-    transition: all 1s linear;
-}
-.center .list .list_box .time{
-    font-size: 16px;
-    color: #e7a27b;
-    margin-bottom: 30px;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: all 1s linear;
-}
-.center .list .list_box .title {
-    font-size: 22px;
-    line-height: 28px;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: all 1s linear;
-}
-.center .list .big_list_box {
-    width: 65%;
-    height: 420px;
-}
-.center .list .big_list_box img{
-    height: 99%;
-    transform: translateX(100%);
-    opacity: 0;
-    transition: all 1s linear;
-    margin-bottom: 0px;
-}
-.center .list .big_list_box .time{
-    position: absolute;
-    left: 5%;
-    bottom: 14%;
-    color: #fff;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: all 1s linear;
-}
-.center .list .big_list_box .title{
-    position: absolute;
-    left: 5%;
-    bottom: 8%;
-    color: #fff;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: all 1s linear;
-}
-.more {
-    width: 190px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    background-color: #009e8b;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 60px;
-    margin: 0 auto;
-    cursor: pointer;
 }
 .qie {
     transform: translateY(0px) !important;
@@ -317,6 +387,38 @@
     .search .list {
         font-size: 14px;
         line-height: 26px;
+    }
+    #synopsis .center_title {
+        top: 7%;
+    }
+    #synopsis .center_title p{
+        font-size: 14px;
+        margin: 36px auto;
+    }
+    #synopsis .center_title img{
+        margin: 0px;
+    }
+    #synopsis .center_title p:first-child{
+        font-size: 46px;
+    }
+    #strategy .center_title p{
+        font-size: 14px;
+    }
+    #strategy .center_title p:first-child{
+        font-size: 46px;
+    }
+    #Culture .center_title p{
+        font-size: 14px;
+    }
+    #Culture .center_title p:first-child{
+        font-size: 46px;
+    }
+    #strategy .text_title p {
+        font-size: 12px;
+        line-height: 32px;
+    }
+    #strategy .text_title span{
+        font-size: 14px;
     }
 }
 @media screen and (max-width : 1600px){

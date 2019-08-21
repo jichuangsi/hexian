@@ -20,6 +20,29 @@
                 <div class="search">
                         <img class="search_img" src="./assets/images/搜索.png" alt="">
                         <div class="none" onclick="none()">x</div>
+                        <div class="search_box">
+                            <div class="ipt">
+                                <input type="text" placeholder="请输入关键词"><span onclick="serachclick()" class="iconfont icon-sousuo"></span>
+                            </div>
+                            <div class="title">
+                                <span></span>热门搜索关键词
+                            </div>
+                            <div class="ipt_text">
+                                <ul>
+                                    <li>助力铜仁市产业</li>
+                                    <li>铜仁市政府</li>
+                                    <li>中国食醋</li>
+                                    <li>创新发展论坛</li>
+                                    <li>和鲜情怀</li>
+                                    <li>添加剂</li>
+                                    <li>病菌</li>
+                                    <li>伪劣</li>
+                                    <li>十种食物添加剂</li>
+                                    <li>番茄汁</li>
+                                    <li>防腐剂</li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="search_list">
                             <div class="list">
                                 <div class="one">关于和鲜</div>
@@ -83,7 +106,10 @@
         //     $('#fullpage').fullpage();
         // });
         function search(){
-            // window.location.href = './dynamic.html?search=1'
+            $('.search').css('display','block')
+            $('.search_box').css('display','block')
+            $('.search_list').css('display','none')
+            parent.window.iframefixed()
         }
         function none(){
             $('.search').css('display','none')
@@ -91,7 +117,18 @@
         }
         function list(){
             $('.search').css('display','block')
+            $('.search_box').css('display','none')
+            $('.search_list').css('display','flex')
             parent.window.iframefixed()
+        }
+        $('.ipt_text > ul >li').click(function(){
+            console.log($(this).text())
+            $('.ipt > input').val($(this).text())
+        })
+        function serachclick(){
+            if($('.ipt > input').val()!=''){
+                top.location.href = './search_Result.html?search='+$('.ipt > input').val()
+            }
         }
     </script>
 </body>
