@@ -15,23 +15,62 @@
     </style>
 </head>
 
-<body onscroll="scroll()">
+<body onscroll="scroll()"> <div class="search">
+        <img class="search_img" src="./assets/images/搜索.png" alt="">
+        <div class="none" onclick="none()">x</div>
+        <!-- <div class="search_box">
+            <div class="ipt">
+                <input type="text" placeholder="请输入关键词"><span class="iconfont icon-sousuo"></span>
+            </div>
+            <div class="title">
+                <span></span>热门搜索关键词
+            </div>
+        </div> -->
+        <div class="search_list">
+            <div class="list">
+                <div class="one">关于和鲜</div>
+                <div class="two">企业简介</div>
+                <div class="three">
+                    <div>企业简介</div>
+                    <div>发展战略</div>
+                    <div>核心理念</div>
+                    <div>企业文化</div>
+                </div>
+                <div class="two">经营理念</div>
+                <div class="two">和鲜大事记</div>
+            </div>
+            <div class="list">
+                <div class="one">和鲜产品</div>
+                <div class="two">调味品</div>
+                <div class="two">半冷链成品</div>
+                <div class="two">烽蜜</div>
+                <div class="two">蜜蒜</div>
+                <div class="two">饮料</div>
+            </div>
+            <div class="list">
+                <div class="one">加入和鲜</div>
+                <div class="two">校园招聘</div>
+                <div class="two">校外招聘</div>
+            </div>
+            <div class="list">
+                <div class="one"><a href="./dynamic.html">公司动态</a></div>
+            </div>
+            <div class="list">
+                <div class="one">商业合作</div>
+                <div class="two">招商介绍</div>
+                <div class="two">加盟优势</div>
+                <div class="two">成长培训</div>
+                <div class="two">加盟细则</div>
+                <div class="two">营销支持</div>
+            </div>
+        </div>
+    </div>
     <!-- <div id="fullpage"> -->
     <div class="wrapper">
         <!-- 最外层部分 -->
         <div class="banner">
             <div class="logo">
                 <img src="./assets/images/微信图片_20190808104730.png" alt="">
-            </div>
-            <div class="search">
-                <img class="search_img" src="./assets/images/搜索.png" alt="">
-                <div class="none" onclick="none()">x</div>
-                <div class="ipt">
-                    <input type="text" placeholder="请输入关键词"><span class="iconfont icon-sousuo"></span>
-                </div>
-                <div class="title">
-                    <span></span>热门搜索关键词
-                </div>
             </div>
             <div class="nav">
                 <div><a href="./index.html">首页</a></div>
@@ -42,7 +81,7 @@
                 <div>商业合作</div>
                 <div>和鲜商城</div>
                 <div onclick="search()"><span class="iconfont icon-sousuo"></span></div>
-                <div>二</div>
+                <div onclick="list()">二</div>
             </div>
             <div class="center_title">
                     <p>2019/07/06  <span></span> 5289</p>
@@ -141,10 +180,13 @@
         //     }
         // }
         function search(){
-            $('.search').css('display','block')
+            window.location.href = './dynamic.html?search=1'
         }
         function none(){
             $('.search').css('display','none')
+        }
+        function list(){
+            $('.search').css('display','block')
         }
         // })
     </script>
