@@ -1,0 +1,664 @@
+/* body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+} */
+.wrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+#head {
+    width: 100%;
+    height: 300px;
+    position: fixed;
+    z-index: 66;
+}
+#foot {
+    width: 100%;
+    height: 100px;
+}
+.imgList {
+    width: 100%;
+    z-index: 10;
+    /* overflow: hidden; */
+}
+.imgList img{
+    width: 100%;
+    height: auto;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 40px;
+    z-index: 20;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    background: black;
+}
+
+.infoList {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 30;
+}
+
+.infoList li {
+    display: none;
+}
+
+.infoList .infoOn {
+    display: inline;
+    color: white;
+}
+
+.indexList {
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+    z-index: 30;
+}
+
+.indexList li {
+    float: left;
+    margin-right: 60px;
+    cursor: pointer;
+    color:rgba(255, 255, 255, 0.6);
+}
+.indexList li:last-child{
+    margin-right: 0px;
+}
+
+.indexList .indexOn {
+    color: white;
+}
+.center {
+    width: 100%;
+    /* height: 500px; */
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 99;
+    transition: top 0.06s linear;
+}
+.center img {
+    width: 100%;
+    height: auto;
+}
+.all_center_title {
+    position: relative;
+    margin-top: -5px;
+}
+.all_center_title:first-child{
+    margin-top: 0px;
+}
+.all_center_title .center_title{
+    top: 10%;
+    color: #000;
+}
+.all_center_title .center_title p{
+    top: 10%;
+    margin: 0px auto;
+    width: 60%; 
+}
+.all_center_title .center_title .fsz24{
+    font-size: 34px;
+    margin-bottom: 46px;
+}
+.all_center_title .center_title .btn{
+    width: 206px;
+    margin-left: 30px;
+    margin-top: 10%;
+}
+.all_center_title .center_title .btn:first-child{
+    margin-left: 0px;
+}
+.all_center_title .center_title p:first-child{
+    top: 10%;
+    margin: 46px auto;
+}
+.all_center_title .center_title img{
+    width: auto;
+}
+#two .center_title{
+    color: #fff;
+}
+#three .center_title{
+    color: #fff;
+}
+#four {
+    width: 80%;
+    background-color: #ffffff;
+    padding-top: 26%;
+    padding-bottom: 6%;
+    margin: 0 auto;
+}
+#four .center_title p:last-child{
+    font-size: 24px;
+    color: #009d81;
+}
+#four .four_box {
+    width: 100%;
+    display: flex;
+}
+#four .left {
+    width: 50%;
+}
+#four .right {
+    width: 50%;
+    padding-left: 5%;
+    display: flex;
+}
+#four .right ul {
+    width: 100%;
+}
+#four .right ul li{
+    display: flex;
+    align-items: center;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+}
+#four .right ul li div{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    /* margin: 0 auto; */
+    background-color: #de7a36;
+    margin-top: 10px;
+    color: #fff;
+    margin-left: 20px;
+}
+#four .right ul li:first-child{
+    margin-top: 0px;
+}
+#four .right ul .number div{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #fff;
+    color: #de7a36;
+    border: 3px solid #de7a36;
+    font-weight: 600;
+    margin-left: 0px;
+    display: block;
+}
+#four .right ul li p {
+    flex: 1;
+    margin-left: 10%;
+    margin-left: 20px;
+    line-height: 32px;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+}
+#four .right ul .lv div{
+    color: #009d81;
+    border-color: #009d81;
+}
+#four .right ul .lv p{
+    color: #009d81;
+}
+#five {
+    width: 100%;
+    padding-top: 22%;
+    background-color: #f3f3f3;
+    padding-bottom: 10%;
+}
+#five .center_title p:first-child{
+    font-size: 34px;
+    color: #009d81;
+}
+#five .center_title p span{
+    font-size: 24px;
+    color: #de7a36;
+}
+#five .img {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#five .img img {
+    width: 30%;
+    height: auto;
+}
+#five .text_title {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+}
+#five .text_title p {
+    color: #fff;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+}
+#five .text_title p:nth-child(1){
+    font-size: 34px;
+    line-height: 44px;
+    margin-bottom: 10px;
+}
+#five .one_title {
+    width: 18%;
+    position: absolute;
+    left: 11%;
+    bottom: 17%;
+}
+#five .two_title {
+    width: 18%;
+    position: absolute;
+    left: 39%;
+    bottom: 17%;
+}
+#five .three_title {
+    width: 18%;
+    position: absolute;
+    left: 67%;
+    bottom: 17%;
+}
+#three .one_title {
+    width: 18%;
+    position: absolute;
+    left: 16%;
+    bottom: 15%;
+}
+#three .two_title {
+    width: 18%;
+    position: absolute;
+    left: 41%;
+    bottom: 20%;
+}
+#three .three_title {
+    width: 18%;
+    position: absolute;
+    left: 66%;
+    bottom: 25%;
+}
+#three .text_title {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+}
+#three .text_title p {
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+}
+#three .text_title p:nth-child(1){
+    color: #009d81;
+    font-size: 34px;
+    line-height: 44px;
+    margin-bottom: 30px;
+}
+#three .number{
+    color: #fff;
+    background-color: #de7a36;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-family: 'AVANTGA2' !important;
+    font-weight: 600;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#three .number_one{
+    top: 35%;
+    left: 25%;
+    transform: translateX(-50%);
+}
+#three .number_three{
+    top: 26%;
+    left: 75%;
+    transform: translateX(-50%);
+}
+#six .center_title{
+    color: #fff;
+}
+#six .center_title p:first-child{
+    width: 100%;
+}
+#six .one_title {
+    width: 18%;
+    position: absolute;
+    left: 3%;
+    bottom: 30%;
+}
+#six .two_title {
+    width: 18%;
+    position: absolute;
+    left: 29%;
+    bottom: 30%;
+}
+#six .three_title {
+    width: 18%;
+    position: absolute;
+    left: 54%;
+    bottom: 30%;
+}
+#six .four_title {
+    width: 18%;
+    position: absolute;
+    left: 79%;
+    bottom: 30%;
+}
+#six .text_title {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+}
+#six .text_title p {
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+#six .text_title p:nth-child(1){
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #de7a36;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+#six .text_title .btn {
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #de7a36;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.center_nav {
+    display: none;
+    position: fixed;
+    left: 3%;
+    top: 100px;
+    z-index: 666;
+}
+.center_nav a{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #009d81;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.center_nav a:hover{
+    background-color: #de7a36;
+}
+.center_nav a:hover span{
+    display: block;
+}
+.center_nav .check{
+    background-color: #de7a36;
+}
+.center_nav .check span{
+    display: block;
+}
+.center_nav a span{
+    display: none;
+    white-space: nowrap;
+    background-color: #de7a36;
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 28px;
+    position: absolute;
+    left: 300%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.center_nav a em{
+    width: 20px;
+    height: 20px;
+    position: absolute;    
+    left: -12px;
+    top: 50%;
+    background-color: #de7a36;
+    transform: rotate(45deg) translateY(-70%);
+}
+.center_title {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translateX(-50%);
+    z-index: 31;
+    text-align: center;
+    color: #fff;
+    transition: all 0.6s linear;
+}
+.center_title p {
+    font-size: 17px;
+    line-height: 30px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+}
+.center_title img {
+    margin-bottom: 36px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+}
+.center_title p:first-child {
+    font-size: 56px;
+    margin-bottom: 46px;
+}
+.center_title .btn{
+    margin-top: 90px;
+    margin-left: 30px;
+    width: 206px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #d6d6d6;
+    color: #333;
+    border-radius: 60px;
+    display: inline-block;
+    cursor: pointer;
+}
+.center_title .check{
+    background-color: #de7a36;
+    color: #fff;
+}
+.center_title .btn:first-child{
+    margin-left: 0px;
+}
+.big_box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.big_box .text_box {
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 60px;
+}
+.big_box .text_box .box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: scroll;
+    padding: 60px;
+}
+.big_box .text_box .box::-webkit-scrollbar{/*滚动条整体样式*/
+    width: 5px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+.big_box .text_box .box::-webkit-scrollbar-thumb{/*滚动条里面小方块*/
+    border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 5px #de7a36;
+    background: #de7a36;
+}
+.big_box .text_box .box::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px #e5e5e5;
+    border-radius: 10px;
+    background: #EDEDED;
+}
+.big_box .text_box .none {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    font-size: 56px;
+    color: #e9e9e9;
+    cursor: pointer;
+}
+.big_box .text_box .box p {
+    font-size: 18px;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    margin-bottom:20px;
+    line-height: 24px;
+}
+.big_box .text_box .box .h1 {
+    font-size: 34px;
+    color: #009d81;
+    margin-bottom:30px;
+}
+.big_box .text_box .box .h2 {
+    font-size: 20px;
+    color: #de7a36;
+    margin-bottom:30px;
+}
+.big_box .text_box .box .h2 span{
+    font-size: 20px;
+    color: #de7a36;
+    padding: 3px 10px;
+    border-radius: 50%;
+    border: 1px solid #de7a36;
+    margin-right: 10px;
+}
+.big_box .text_box .box .h3 {
+    font-size: 20px;
+}
+.big_box .text_box .box .hui {
+    color: #999;
+    margin-bottom:30px;
+}
+.qie {
+    transform: translateY(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+.qie .time{
+    transform: translateY(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+.qie .bigtitle{
+    transform: translateY(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+.qie .title{
+    transform: translateY(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+.qie img{
+    transform: translateX(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+@media screen and (max-width : 1366px){
+    .nav div {
+        margin-right: 60px;
+    }
+    .center .new .script .time {
+        font-size: 12px;
+    }
+    .center .new .script .bigtitle {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .center .new .script .title {
+        margin-top: 24px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .center .list .list_box .time{
+        font-size: 12px;
+    }
+    .center .list .list_box .title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .none {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .search .list .one {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .search .list {
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .all_center_title .center_title p{
+        font-size: 14px;
+    }
+    .all_center_title .center_title p:first-child{
+        font-size: 46px;
+    }
+    .all_center_title .center_title .btn {
+        width: 180px;
+        height: 50px;
+        line-height: 50px;
+    }
+    #three .text_title p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    #three .text_title p:nth-child(1){
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+@media screen and (max-width : 1600px){
+    .search .list .one {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .search .list {
+        font-size: 14px;
+        line-height: 26px;
+    }
+}

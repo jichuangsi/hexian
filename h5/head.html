@@ -45,16 +45,16 @@
                         </div>
                         <div class="search_list">
                             <div class="list">
-                                <div class="one">关于和鲜</div>
-                                <div class="two">企业简介</div>
+                                <div class="one" onclick="top.location.href='./synopsis.html'">关于和鲜</div>
+                                <div class="two" onclick="top.location.href='./synopsis.html?num=1'">企业简介</div>
                                 <div class="three">
-                                    <div>企业简介</div>
-                                    <div>发展战略</div>
-                                    <div>核心理念</div>
-                                    <div>企业文化</div>
+                                    <div onclick="top.location.href='./synopsis.html?num=1'">企业简介</div>
+                                    <div onclick="top.location.href='./synopsis.html?num=2'">发展战略</div>
+                                    <div onclick="top.location.href='./synopsis.html?num=3'">核心理念</div>
+                                    <div onclick="top.location.href='./synopsis.html?num=4'">企业文化</div>
                                 </div>
-                                <div class="two">经营理念</div>
-                                <div class="two">和鲜大事记</div>
+                                <div class="two" onclick="top.location.href='./Idea.html'">经营理念</div>
+                                <div class="two" onclick="top.location.href='./big_Notes.html'">和鲜大事记</div>
                             </div>
                             <div class="list">
                                 <div class="one">和鲜产品</div>
@@ -73,12 +73,12 @@
                                 <div class="one" onclick="top.location.href='./dynamic.html'">公司动态</div>
                             </div>
                             <div class="list">
-                                <div class="one">商业合作</div>
-                                <div class="two">招商介绍</div>
-                                <div class="two">加盟优势</div>
-                                <div class="two">成长培训</div>
-                                <div class="two">加盟细则</div>
-                                <div class="two">营销支持</div>
+                                <div class="one" onclick="top.location.href='./business.html'">商业合作</div>
+                                <div class="two" onclick="top.location.href='./business.html?num=1'">招商介绍</div>
+                                <div class="two" onclick="top.location.href='./business.html?num=2'">加盟优势</div>
+                                <div class="two" onclick="top.location.href='./business.html?num=3'">成长培训</div>
+                                <div class="two" onclick="top.location.href='./business.html?num=4'">加盟细则</div>
+                                <div class="two" onclick="top.location.href='./business.html?num=5'">营销支持</div>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             <div>和鲜产品</div>
                             <div>加入和鲜</div>
                             <div onclick="top.location.href='./dynamic.html'">公司动态</div>
-                            <div>商业合作</div>
+                            <div onclick="top.location.href='./business.html'">商业合作</div>
                             <div>和鲜商城</div>
                             <div onclick="search()"><span class="iconfont icon-sousuo"></span></div>
                             <div onclick="list()">二</div>
@@ -106,17 +106,30 @@
         //     $('#fullpage').fullpage();
         // });
         function search(){
-            $('.search').css('display','block')
+            // $('.search').css('display','block')
+            $('.search').css('opacity','1')
+            $('.search').css('transform','scale(1)')
+            $('.search').css('top','0px')
+            $('.search').css('left','0px')
             $('.search_box').css('display','block')
             $('.search_list').css('display','none')
+            $('.ipt > input').val('')
             parent.window.iframefixed()
         }
         function none(){
-            $('.search').css('display','none')
+            // $('.search').css('display','none')
+            $('.search').css('opacity','0')
+            $('.search').css('transform','scale(0.1)')
+            $('.search').css('top','-50%')
+            $('.search').css('left','50%')
             parent.window.iframeabsolute()
         }
         function list(){
-            $('.search').css('display','block')
+            // $('.search').css('display','block')
+            $('.search').css('opacity','1')
+            $('.search').css('transform','scale(1)')
+            $('.search').css('top','0px')
+            $('.search').css('left','0px')
             $('.search_box').css('display','none')
             $('.search_list').css('display','flex')
             parent.window.iframefixed()

@@ -33,8 +33,8 @@
                 <p>“只做无添加剂健康食品”是我们一直坚守的信念，</p>
                 <p>不断创新探索，给予消费者新时代下充满质感和智慧的美食体验。</p>
                 <p class="btn check">企业简介</p>
-                <p class="btn">经营理念</p>
-                <p class="btn">和鲜大事记</p>
+                <p class="btn" onclick="location.href='./Idea.html'">经营理念</p>
+                <p class="btn" onclick="location.href='./big_Notes.html'">和鲜大事记</p>
             </div>
             <!-- 轮播部分 -->
             <div class="imgList">
@@ -57,8 +57,7 @@
             <div class="center_title">
                 <p>我们的核心发展战略</p>
                 <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
-                <p>实施人才战略是和鲜的核心发展战略，我们始终把人才战略放在团队建设的第一梯队，</p>
-                <p>坚信人才是和鲜发展的核心竞争力和业务驱动力，任人唯贤，打造事成人爽的道场，助力每个人实现自我价值。</p>
+                <p>实施人才战略是和鲜的核心发展战略，我们始终把人才战略放在团队建设的第一梯队，<br>坚信人才是和鲜发展的核心竞争力和业务驱动力，任人唯贤，打造事成人爽的道场，助力每个人实现自我价值。</p>
             </div>
             <div class="one_title text_title">
                 <p>公司治理结构，由和鲜产业投资支持平台<br>（和鲜科技集团）+各产业公司。<br>由维也纳酒店集团创始人黄德满领投。</p>
@@ -110,16 +109,21 @@
             <div class="center_title">
                 <p>我们的企业核心文化</p>
                 <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
-                <p>坚持以客户为中心，以创造客户价值为中心；</p>
-                <p>坚持奋斗与贡献，以奋斗者为本，给有贡献的奋斗者丰厚回报；</p>
-                <p>坚持改进与创新，反省不足，追求卓越！</p>
-                <p>坚持人才战略，任人唯贤，主营造人。分享成果，成就人才，事成人爽！</p>
+                <p>坚持以客户为中心，以创造客户价值为中心；<br>坚持奋斗与贡献，以奋斗者为本，给有贡献的奋斗者丰厚回报；<br>坚持改进与创新，反省不足，追求卓越！<br>坚持人才战略，任人唯贤，主营造人。分享成果，成就人才，事成人爽！</p>
             </div>
         </div>
     </div>
     <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     <!-- </div> -->
     <script type="text/javascript">
+    var url = window.location.href.split('?')[1]?window.location.href.split('?')[1]:''
+    var num;
+    if(url!=''){
+        num = url?url.split('=')[1]:''
+    }
+        if(num == 1){
+            $('.center_nav').children().eq(0).click()
+        }
         // $(function(){
         //     $('#fullpage').fullpage();
         // });
@@ -138,12 +142,13 @@
                 }, i*4+'00');
             }
         function scroll(){
-            var a = $(document).scrollTop()+100
+            var a = $(document).scrollTop()
             var b = $(".center")[0].offsetTop
             var c = $("#synopsis")[0].offsetTop
             var d = $("#strategy")[0].offsetTop
             var e = $("#Idea")[0].offsetTop
             var f = $("#Culture")[0].offsetTop
+            $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
             if(b < a){
                 $('.center_nav').css('display','block')
             }else{
@@ -181,7 +186,7 @@
                     setTimeout(() => {
                     $(".Idea_title").eq(i).addClass("qie");
                     }, i*4+'00');
-                }Idea_title
+                }
             }
             if(f<a){
                 $(".center_nav > a").eq(3).addClass('check').siblings().removeClass('check')
@@ -195,11 +200,13 @@
         function iframefixed(){
             $('#head').css('position','fixed')
             $('#head').css('height','100%')
+            $('.center').css('zIndex','6')
             $('.btn').css('zIndex','70')
         }
         function iframeabsolute(){
             $('#head').css('position','absolute')
             $('#head').css('height','300px')
+            $('.center').css('zIndex','99')
             $('.btn').css('zIndex','30')
         }
         // })

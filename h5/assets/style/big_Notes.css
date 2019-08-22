@@ -76,172 +76,175 @@
 .center {
     width: 100%;
     /* height: 500px; */
-    background-color: #fff;
+    position: relative;
+    /* padding-top: 30%; */
+    padding-bottom: 8%;
+    background: -webkit-linear-gradient(#fff, #f3f3f3); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#fff, #f3f3f3); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#fff, #f3f3f3); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#fff, #f3f3f3);
     position: absolute;
     top: 100%;
     left: 0px;
     z-index: 99;
     transition: top 0.06s linear;
 }
-.center img {
+.center .center_title {
+    color: #000;
+    top: 180px;
+}
+.center .center_box {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 26%;
+}
+.center .first {
     width: 100%;
+    /* height: 600px; */
+    padding-top: 5px;
+    overflow: hidden;
+    background: url('../images/关于和鲜--和鲜大事迹/和鲜-关于和鲜-和鲜大事件_03.png') no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    position: relative;
+}
+.center .first img {
+    width: 40%;
     height: auto;
-}
-#synopsis {
-    position: relative;
-    padding-top: 30%;
-}
-#synopsis .center_title{
-    top: 10%;
-    color: #000;
-}
-#synopsis .center_title p{
-    width: 55%;
-    margin: 46px auto;
-}
-#synopsis .center_title img{
-    width: auto;
-}
-#strategy {
-    position: relative;
-}
-#strategy .center_title{
-    top: 10%;
-    color: #000;
-}
-#strategy .center_title p{
-    top: 10%;
-    margin: 0px auto;
-}
-#strategy .center_title p:first-child{
-    top: 10%;
-    margin: 46px auto;
-}
-#strategy .center_title img{
-    width: auto;
-}
-#strategy .one_title {
-    width: 18%;
-    position: absolute;
-    left: 16%;
-    top: 55%;
-}
-#strategy .two_title {
-    width: 18%;
-    position: absolute;
-    left: 41%;
-    top: 55%;
-}
-#strategy .three_title {
-    width: 18%;
-    position: absolute;
-    left: 66%;
-    top: 55%;
-}
-#strategy .text_title {
-    transform: translateY(50px);
+    display: inline-block;
+    transform: translateX(50px);
     opacity: 0;
     transition: all 1s linear;
 }
-#strategy .text_title p {
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
-    font-size: 16px;
-    line-height: 32px;
-    text-align: center;
+.center .first .text {
+    width: 50%;
+    display: inline-block;
+    padding-left: 7%;
+    padding-top: 5%;
 }
-#strategy .text_title span{
+.center .first .text p{
+    color: #fff;
     font-size: 18px;
-    color: #de7a36;
-}
-#Idea {
-    position: relative;
-}
-#Idea .center_title{
-    top: 10%;
-    color: #000;
-}
-#Idea .center_title p{
-    top: 10%;
-    margin: 46px auto;
-}
-#Idea .center_title img{
-    width: auto;
-}
-#Idea .Idea_title {
-    position: absolute;
-    font-size: 16px;
     line-height: 28px;
+    margin-bottom: 30px;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
-#Idea .Idea_title p{
+.center .first .text em{
+    position: absolute;
+    right: 2%;
+    top: 4%;
+    color: #fff;
+    letter-spacing: 1px;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    transform: rotate(40deg) translate(10%,-40%);
 }
-#Idea .Idea_title p:first-child {
-    color: #009d81;
-    font-size: 20px;
+.center .first .text p:first-child{
+    font-size: 46px;
+    line-height: 56px;
 }
-#Idea .one_title {
-    top: 33%;
-    right: 66%;
-    text-align: right;
-}
-#Idea .two_title {
-    top: 44%;
-    right: 69%;
-    text-align: right;
-}
-#Idea .three_title {
-    top: 55%;
-    right: 66%;
-    text-align: right;
-}
-#Idea .four_title {
-    top: 70%;
-    right: 50%;
-    text-align: center;
-    transform: translateX(50%) !important;
-}
-#Idea .five_title {
-    top: 33%;
-    left: 66%;
-    text-align: left;
-}
-#Idea .six_title {
-    top: 44%;
-    left: 69%;
-    text-align: left;
-}
-#Idea .senve_title {
-    top: 55%;
-    left: 66%;
-    text-align: left;
-}
-#Culture {
+.center .Second {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10%;
     position: relative;
 }
-#Culture .center_title{
-    top: 10%;
-    color: #000;
+.center .Second .hua{
+    margin: 0 auto;
+    text-align: center;
 }
-#Culture .center_title p{
-    top: 10%;
-    margin: 0px auto;
+.center .Second .xian {
+    width: 1px;
+    height: 90%;
+    background-color: #de7a36;
+    position: absolute;
+    left: 50.5%;
+    /* top: 5%; */
 }
-#Culture .center_title p:first-child{
-    top: 10%;
-    margin: 46px auto;
+.center .Second .more {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #de7a36;
+    color: #fff;
+    text-align: center;
+    line-height: 140px;
+    font-size: 24px;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-45%);
+    cursor: pointer;
 }
-#Culture .center_title img{
-    width: auto;
+.center .Second .second_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+    /* margin-top: -10%; */
+}
+.center .Second .second_box .yuan {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-10%);  
+}
+.center .Second .second_box .yuan div {
+    width: 15px;
+    height: 15px;
+    background-color: #de7a36;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.center .Second .second_box img {
+    height: 0px;
+    transition: all 1s linear;
+}
+.center .Second .second_box .time {
+    font-size: 48px;
+    color: #de7a36;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    margin-bottom: 30px;
+}
+.center .Second .second_box .title {
+    font-size: 30px;
+    color: #009d81;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    margin-bottom: 30px;
+}
+.center .Second .second_box .text {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    height: 0px;
+    overflow: hidden;
+    transition: all 1s linear;
+}
+.center .Second .second_box .left_box{
+    width: 40%;
+}
+.center .Second .second_box .right_box{
+    width: 40%;
 }
 .center_nav {
     display: none;
     position: fixed;
     left: 3%;
     top: 100px;
-    z-index: 666;
+    z-index: 66;
 }
 .center_nav a{
     display: block;
@@ -355,7 +358,7 @@
     /* margin-top: 0px; */
     opacity: 1 !important;
 }
-.qie img{
+.first .qie {
     transform: translateX(0px) !important;
     /* margin-top: 0px; */
     opacity: 1 !important;
@@ -397,37 +400,17 @@
         font-size: 14px;
         line-height: 26px;
     }
-    #synopsis .center_title {
-        top: 7%;
-    }
-    #synopsis .center_title p{
-        font-size: 14px;
-        margin: 36px auto;
-    }
-    #synopsis .center_title img{
-        margin: 0px;
-    }
-    #synopsis .center_title p:first-child{
-        font-size: 46px;
-    }
-    #strategy .center_title p{
-        font-size: 14px;
-    }
-    #strategy .center_title p:first-child{
-        font-size: 46px;
-    }
-    #Culture .center_title p{
-        font-size: 14px;
-    }
-    #Culture .center_title p:first-child{
-        font-size: 46px;
-    }
-    #strategy .text_title p {
+    .center .first .text p{
         font-size: 12px;
-        line-height: 32px;
+        line-height: 28px;
+        margin-bottom: 20px !important;
     }
-    #strategy .text_title span{
-        font-size: 14px;
+    .center .first .text p:first-child{
+        font-size: 26px;
+        line-height: 46px;
+    }
+    .center .Second .second_box .yuan {
+        transform: translateX(-20%);  
     }
 }
 @media screen and (max-width : 1600px){
@@ -438,5 +421,14 @@
     .search .list {
         font-size: 14px;
         line-height: 26px;
+    }
+    .center .first .text p{
+        font-size: 14px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    .center .first .text p:first-child{
+        font-size: 36px;
+        line-height: 46px;
     }
 }

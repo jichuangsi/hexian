@@ -1,6 +1,9 @@
 
 .wrapper {
-    position: relative;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
 }
 
 #head {
@@ -79,6 +82,11 @@
     background: -o-linear-gradient(#fff, #f3f3f3); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(#fff, #f3f3f3); /* Firefox 3.6 - 15 */
     background: linear-gradient(#fff, #f3f3f3);
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 99;
+    transition: top 0.06s linear;
 }
 .center .new {
     width: 80%;
@@ -104,6 +112,9 @@
     bottom: 0px;
     background-color: #fff;
     padding: 2% 0px 0px 6%;
+}
+.center .new .script div {
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center .new .script .time {
     font-size: 16px;
@@ -142,11 +153,13 @@
     z-index: 31;
     text-align: center;
     color: #fff;
+    transition: all 0.6s linear;
 }
 .center_title p {
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
     transform: translateY(50px);
@@ -185,6 +198,9 @@
     transform: translateX(100%);
     opacity: 0;
     transition: all 1s linear;
+}
+.center .list .list_box div{
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center .list .list_box .time{
     font-size: 16px;
@@ -242,6 +258,7 @@
     border-radius: 60px;
     margin: 0 auto;
     cursor: pointer;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .qie {
     transform: translateY(0px) !important;
