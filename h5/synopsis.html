@@ -60,12 +60,18 @@
                 <p>实施人才战略是和鲜的核心发展战略，我们始终把人才战略放在团队建设的第一梯队，<br>坚信人才是和鲜发展的核心竞争力和业务驱动力，任人唯贤，打造事成人爽的道场，助力每个人实现自我价值。</p>
             </div>
             <div class="one_title text_title">
+                <img src="./assets/images/和鲜--公司简介/xx.png" alt="">
+                <p class="number">1</p>
                 <p>公司治理结构，由和鲜产业投资支持平台<br>（和鲜科技集团）+各产业公司。<br>由维也纳酒店集团创始人黄德满领投。</p>
             </div>
             <div class="two_title text_title">
+                <img src="./assets/images/和鲜--公司简介/xx.png" alt="">
+                <p class="number">2</p>
                 <p>每一个产品产业公司，借助平台的资源优势，独立经营与核算。成立与注册产品产业公司营业执照，由和鲜总部全额投资，和鲜总部占股<span>51％</span>，人才合伙人持股<span>49％</span>的法定股权（由和鲜代出资），同时，能另外获得和鲜集团的<span>1000万至3000万</span>的股权分配。</p>
             </div>
             <div class="three_title text_title">
+                <img src="./assets/images/和鲜--公司简介/xx.png" alt="">
+                <p class="number">3</p>
                 <p>和鲜集团总部高层管理人才，将获得<span>10亿</span>总股本中的<span>4亿9千万</span>股权的分配，根据不同的岗位将会获得<span>1000万至5000万</span>股权，还可在产业公司的经营执照中，基于贡献，持有一定比例的法定股权。</p>
             </div>
         </div>
@@ -112,8 +118,8 @@
                 <p>坚持以客户为中心，以创造客户价值为中心；<br>坚持奋斗与贡献，以奋斗者为本，给有贡献的奋斗者丰厚回报；<br>坚持改进与创新，反省不足，追求卓越！<br>坚持人才战略，任人唯贤，主营造人。分享成果，成就人才，事成人爽！</p>
             </div>
         </div>
+        <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     </div>
-    <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     <!-- </div> -->
     <script type="text/javascript">
     var url = window.location.href.split('?')[1]?window.location.href.split('?')[1]:''
@@ -122,7 +128,13 @@
         num = url?url.split('=')[1]:''
     }
         if(num == 1){
-            $('.center_nav').children().eq(0).click()
+            $('.center_nav').find('a').eq(0)[0].click()
+        }else if(num == 2){
+            $('.center_nav').find('a').eq(1)[0].click()
+        }else if(num == 3){
+            $('.center_nav').find('a').eq(2)[0].click()
+        }else if(num == 4){
+            $('.center_nav').find('a').eq(3)[0].click()
         }
         // $(function(){
         //     $('#fullpage').fullpage();

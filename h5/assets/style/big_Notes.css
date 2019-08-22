@@ -78,7 +78,6 @@
     /* height: 500px; */
     position: relative;
     /* padding-top: 30%; */
-    padding-bottom: 8%;
     background: -webkit-linear-gradient(#fff, #f3f3f3); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(#fff, #f3f3f3); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(#fff, #f3f3f3); /* Firefox 3.6 - 15 */
@@ -150,6 +149,7 @@
     margin: 0 auto;
     margin-top: 10%;
     position: relative;
+    margin-bottom: 10%;
 }
 .center .Second .hua{
     margin: 0 auto;

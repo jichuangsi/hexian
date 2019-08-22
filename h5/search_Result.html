@@ -195,8 +195,8 @@
         <div class="more">
             加载更多
         </div>
+        <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     </div>
-    <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     <!-- </div> -->
     <script type="text/javascript">
         // $(function(){
@@ -219,6 +219,7 @@
         function scroll(){
             var a = $(document).scrollTop()
             var b = $(".list")[0].offsetTop
+            $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
             if(b<a+400){
                 for(let i = 0; i < $(".list_box").length; i++){
                     setTimeout(() => {
@@ -229,9 +230,11 @@
         }
         function iframefixed(){
             $('#head').css('position','fixed')
+            $('.center').css('zIndex','6')
         }
         function iframeabsolute(){
             $('#head').css('position','absolute')
+            $('.center').css('zIndex','99')
         }
         // })
     </script>
