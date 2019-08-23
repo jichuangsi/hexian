@@ -166,7 +166,7 @@
         }
         $('.list_box').click(function(){
             console.log($(this).find('.box').css('height'))
-            if($(this).find('.box').css('height') == '-1px'){
+            if(Number($(this).find('.box').css('height').split('px')[0]) < 10){
                 $(this).find('.box').css('height','auto')
                 $(this).find('.six>em').css('transform','rotate(225deg)')
             }else{
