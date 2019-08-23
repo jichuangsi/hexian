@@ -41,20 +41,10 @@
     transform: translate(-75%,-50%);
 }
 .imgList li .img_2 {
+    width: 100%;
+    height: auto;
     left: 0%;
     top: 0%;
-}
-.imgList li .img_3 {
-    left: 0%;
-    bottom: 0%;
-}
-.imgList li .img_4 {
-    right: 0%;
-    top: 0%;
-}
-.imgList li .img_5 {
-    right: 0%;
-    bottom: 0%;
 }
 .imgList li a{
     width: 100%;
