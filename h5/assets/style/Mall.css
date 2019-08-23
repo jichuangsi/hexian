@@ -1,0 +1,248 @@
+
+.wrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+#head {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    z-index: 66;
+}
+#foot {
+    width: 100%;
+    height: 100px;
+}
+.imgList {
+    width: 100%;
+    z-index: 10;
+    /* overflow: hidden; */
+}
+.imgList img{
+    width: 100%;
+    height: auto;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 40px;
+    z-index: 20;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    background: black;
+}
+
+.infoList {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 30;
+}
+
+.infoList li {
+    display: none;
+}
+
+.infoList .infoOn {
+    display: inline;
+    color: white;
+}
+
+.indexList {
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+    z-index: 30;
+}
+
+.indexList li {
+    float: left;
+    margin-right: 60px;
+    cursor: pointer;
+    color:rgba(255, 255, 255, 0.6);
+}
+.indexList li:last-child{
+    margin-right: 0px;
+}
+
+.indexList .indexOn {
+    color: white;
+}
+.center {
+    width: 100%;
+    /* height: 500px; */
+    /* background-color: #fff; */
+    background: #f2f9fb;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 99;
+    transition: top 0.06s linear;
+}
+.center .box {
+    width: 80%;
+    margin: 10% auto;
+    display: flex;
+    justify-content: space-between;
+}
+.center .box .all_title{
+    width: 30%;
+    height: 409px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.center .box .all_title img{
+    width: 30%;
+    margin-top: 20%;
+}
+.center .box .three_title img{
+    width: 60%;
+}
+.center .box .all_title:hover{
+    box-shadow: 4px 4px 20px  rgba(0, 0, 0, 0.3);
+}
+.center .box .all_title .fsz34{
+    color: #009d81;
+    font-size: 34px;
+    margin-bottom: 20px;
+    margin-top: 5%;
+}
+.center .box .all_title p{
+    width: 100%;
+    margin-bottom: 20%;
+}
+.center_title {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translateX(-50%);
+    z-index: 31;
+    text-align: center;
+    color: #fff;
+    transition: all 0.6s linear;
+}
+.center_title p {
+    font-size: 17px;
+    line-height: 30px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+}
+.center_title img {
+    margin-bottom: 36px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s linear;
+}
+.center_title p:first-child {
+    font-size: 56px;
+    margin-bottom: 5%;
+}
+.center_title p:last-child {
+    font-size: 17px;
+    margin-top: 4%;
+}
+.center_title .btn{
+    margin-top: 90px;
+    margin-left: 30px;
+    width: 206px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #d6d6d6;
+    color: #333;
+    border-radius: 60px;
+    display: inline-block;
+    cursor: pointer;
+}
+.center_title .check{
+    background-color: #de7a36;
+    color: #fff;
+}
+.center_title .btn:first-child{
+    margin-left: 0px;
+}
+.qie {
+    transform: translateY(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+.qie .time{
+    transform: translateY(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+.qie .bigtitle{
+    transform: translateY(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+.qie .title{
+    transform: translateY(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+.qie img{
+    transform: translateX(0px) !important;
+    /* margin-top: 0px; */
+    opacity: 1 !important;
+}
+@media screen and (max-width : 1366px){
+    .nav div {
+        margin-right: 60px;
+    }
+    .center .new .script .time {
+        font-size: 12px;
+    }
+    .center .new .script .bigtitle {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .center .new .script .title {
+        margin-top: 24px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .center .list .list_box .time{
+        font-size: 12px;
+    }
+    .center .list .list_box .title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .none {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .search .list .one {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .search .list {
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
+@media screen and (max-width : 1600px){
+    .search .list .one {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .search .list {
+        font-size: 14px;
+        line-height: 26px;
+    }
+}

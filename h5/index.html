@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <iframe name="head" src="./head.html" frameborder="0"></iframe>
+    <iframe id="head" src="./head.html" frameborder="0"></iframe>
     <!-- <div id="fullpage"> -->
     <div class="wrapper">
         <!-- 最外层部分 -->
@@ -28,25 +28,30 @@
             <ul class="imgList">
                 <!-- 图片部分 -->
                 <li class="imgOn">
-                        <div class="title">
+                        <div class="title" onclick="location.href='./commodity.html'">
                             <p class="qie">Only make healthy</p>
                             <p class="qie">food without additives</p>
                             <p class="fsz62_m qie">只做无添加剂健康食品</p>
                             <p class="btn qie">了解更多</p>
                         </div>
-                    <a href="#"><img src="./assets/images/和鲜-首页-只做无添加剂健康食品.png"></a>
+                    <a href="./commodity.html"><img src="./assets/images/和鲜-首页-只做无添加剂健康食品.png"></a>
                 </li>
                 <li>
-                    <div class="title">
-                        <p>Join us.</p>
-                        <p>and hexian</p>
-                        <p class="fsz62">加入我们·加入和鲜</p>
+                    <div class="title" onclick="location.href='./Campus.html'">
+                        <p class="ruizi">和鲜投资,您来创业</p>
+                        <p class="ruizi">诚聘合伙人 百万年新+<span>49%</span>法定股权</p>
+                        <p class="fsz16">
+                            Hexian Investment,You Come to Start a Business
+                        </p>
+                        <p class="fsz16">
+                            Appointment of Partners Million Years New + 49% Statutory Equity
+                        </p>
                         <p class="btn">了解更多</p>
                     </div>
-                    <a href="#"><img src="./assets/images/和鲜-首页-加入我们·加入和鲜.png"></a>
+                    <a href="./Campus.html"><img src="./assets/images/和鲜-首页-加入我们·加入和鲜.png"></a>
                 </li>
                 <li>
-                    <div class="title">
+                    <div class="title" onclick="location.href='./dynamic.html'">
                         <p class="ruizi">深圳十大商业杰出人物</p>
                         <p class="ruizi">维也纳酒店集团创始人</p>
                         <p class="ruizi">和鲜食品科技集团董事长黄德满</p>
@@ -58,24 +63,24 @@
                         </p>
                         <p class="btn">了解更多</p>
                     </div>
-                    <a href="#"><img src="./assets/images/和鲜-3深圳十大商业杰出人物和鲜创始人黄德满董事长.png"></a>
+                    <a href="./dynamic.html"><img src="./assets/images/和鲜-3深圳十大商业杰出人物和鲜创始人黄德满董事长.png"></a>
                 </li>
                 <li>
-                    <div class="title">
+                    <div class="title" onclick="location.href='./dynamic.html'">
                         <p>Hexian News</p>
                         <p class="fsz62">和鲜新闻资讯</p>
                         <p class="btn">了解更多</p>
                     </div>
-                    <a href="#"><img src="./assets/images/和鲜-首页-和鲜新闻资讯.png"></a>
+                    <a href="./dynamic.html"><img src="./assets/images/和鲜-首页-和鲜新闻资讯.png"></a>
                 </li>
                 <li>
-                    <div class="title">
+                    <div class="title" onclick="location.href='./synopsis.html'">
                         <p>Let mankind enjoy</p>
                         <p>Healthy in Gourmet Food</p>
                         <p class="fsz62_m">让人类在享受美食中健康起来！</p>
                         <p class="btn">了解更多</p>
                     </div>
-                    <a href="#"><img src="./assets/images/和鲜-首页-让人类在享受美食中健康起来！.png"></a>
+                    <a href="./synopsis.html"><img src="./assets/images/和鲜-首页-让人类在享受美食中健康起来！.png"></a>
                 </li>
             </ul>
             <ul class="indexList">
@@ -161,6 +166,14 @@
             $('.imgList').css('height',h+'px')
             $('.imgList>li').css('height',h+'px')
             console.log(h)
+        }
+        function iframefixed(){
+            $('#head').css('position','fixed')
+            $('#head').css('height','100%')
+        }
+        function iframeabsolute(){
+            $('#head').css('position','absolute')
+            $('#head').css('height','150px')
         }
         
     </script>

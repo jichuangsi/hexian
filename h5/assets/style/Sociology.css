@@ -237,6 +237,63 @@
     margin-top: 40px;
     color: #009d81;
 }
+.center .list .ym {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.center .list .ym .left_span{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: #f3f3f3;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    cursor: pointer;
+}
+.center .list .ym .left_span em {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999999;
+    transform: rotate(45deg) translate(10%,-20%);
+    border-color: transparent transparent #999 #999;
+}
+.center .list .ym .right_span{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: #f3f3f3;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.center .list .ym .right_span em {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999999;
+    transform: rotate(225deg) translate(20%,-20%);
+    border-color: transparent transparent #999 #999;
+}
+.center .list .ym .number_span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #f3f3f3;
+    cursor: pointer;
+}
+.center .list .ym span {
+    margin-left: 20px;
+}
+.center .list .ym .check {
+    background-color: #009d81;
+    color: #fff;
+}
 .center_title {
     position: absolute;
     left: 50%;
