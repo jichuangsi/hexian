@@ -299,11 +299,17 @@
     background-color: #de7a36;
     transform: rotate(45deg) translateY(-70%);
 }
+
+.fsz56 {
+    font-size: 56px !important;
+    margin-bottom: 46px !important;
+    margin-top: -3% !important;
+}
 .center_title {
     width: 100%;
     position: absolute;
     left: 50%;
-    top: 42%;
+    top: 30%;
     transform: translateX(-50%);
     z-index: 31;
     text-align: center;
@@ -329,7 +335,7 @@
     margin-bottom: 46px;
 }
 .center_title .btn{
-    margin-top: 90px;
+    margin-top: 5%;
     margin-left: 30px;
     width: 206px;
     height: 60px;

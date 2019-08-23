@@ -443,12 +443,18 @@
     width: 100%;
     position: absolute;
     left: 50%;
-    top: 42%;
+    top: 30%;
     transform: translateX(-50%);
     z-index: 31;
     text-align: center;
     color: #fff;
     transition: all 0.6s linear;
+}
+
+.fsz56 {
+    font-size: 56px !important;
+    margin-bottom: 46px !important;
+    margin-top: -3% !important;
 }
 .center_title p {
     font-size: 17px;

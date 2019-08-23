@@ -1,0 +1,427 @@
+#head {
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    z-index: 33;
+}
+#head .nav div {
+    color: #000 !important;
+}
+
+.wrapper {
+    position: relative;
+}
+.imgList {
+    width: 100%;
+    z-index: 10;
+    background: -webkit-linear-gradient(#f9f4ee, #fff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#f9f4ee, #fff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#f9f4ee, #fff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#f9f4ee, #fff);
+}
+
+.imgList li {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: opacity 0.8s linear;
+    overflow: hidden;
+}
+.imgList li img{
+    width: 20%;
+    /* width: 100%; */
+    height: auto;
+    position: absolute;
+}
+.imgList li .img_1 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-75%,-50%);
+}
+.imgList li .img_2 {
+    left: 0%;
+    top: 0%;
+}
+.imgList li .img_3 {
+    left: 0%;
+    bottom: 0%;
+}
+.imgList li .img_4 {
+    right: 0%;
+    top: 0%;
+}
+.imgList li .img_5 {
+    right: 0%;
+    bottom: 0%;
+}
+.imgList li a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.imgList .imgOn {
+    opacity: 1;
+    z-index: 10;
+}
+.bg {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 40px;
+    z-index: 20;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    background: black;
+}
+
+.infoList {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 30;
+}
+
+.infoList li {
+    display: none;
+}
+
+.infoList .infoOn {
+    display: inline;
+    color: white;
+}
+
+.indexList {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    z-index: 30;
+}
+
+.indexList li {
+    cursor: pointer;
+    color: #de7a36;
+    border: 2px solid #de7a36;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 60px;
+    text-align: center;
+    margin-top: 30px;
+    /* font-weight: 600; */
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+}
+.indexList li:first-child{
+    margin-top: 0px;
+}
+
+.indexList .indexOn {
+    color: white;
+    background-color: #009e8b;
+    border-color: #009e8b;
+}
+.bottom_nav {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    z-index: 30;
+}
+.bottom_nav li {
+    float: left;
+    margin-right: 30px;
+    cursor: pointer;
+    /* transform: scale(.8); */
+    font-size: 16px;
+    color:#000;
+    font-family: AVANTGA2;
+}
+.bottom_nav li:last-child{
+    margin-right: 0px;
+}
+.bottom_nav li span{
+    margin-right: 20px;
+}
+.bottom_nav li span:last-child{
+    margin-right: 0px;
+}
+/* .logo {
+    width: 124px;
+    height: 75px;
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    z-index: 30;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.nav {
+    position: absolute;
+    right: 5%;
+    top: 60px;
+    z-index: 30;
+}
+.nav div {
+    float: left;
+    margin-right: 90px;
+    cursor: pointer;
+    color:rgba(255, 255, 255, 1);
+}
+.nav div:last-child {
+    margin-right: 0px;
+} */
+.ite {
+    position: absolute;
+    left: 11px;
+    bottom: 5%;
+    font-size: 16px;
+    transform: scale(.8);
+    color:#000;
+    z-index: 30;
+    font-family: AVANTGA2;
+}
+.fsz34 {
+    color: #009e8b;
+    font-size: 44px;
+}
+.te {
+    color: #de7a36;
+    /* float: left; */
+}
+.te_box {
+    /* height: 100%; */
+    /* float: left; */
+    display: flex;
+    margin-top: 30px;
+}
+.te_box .right_box {
+    margin-left: 20px;
+}
+.title {
+    position: absolute;
+    left: 60%;
+    top: 46%;
+    transform: translateY(-50%);
+    z-index: 30;
+    font-size: 18px;
+    line-height: 24px;
+    color:#000;
+    cursor: pointer;
+    display: none;
+}
+.title_check{
+    display: block;
+}
+.title p {
+    opacity: 0;
+    letter-spacing: 4px;
+    transition: all 1s linear;
+    transform: translateY(50px);
+    font-family: 'Reeji Cloud YuanZhun GBK';
+}
+.title p span {
+    color: #de7a36;
+}
+.title .btn_box {
+    display: flex;
+    /* justify-content: space-around; */
+}
+.title .btn {
+    margin-top: 70px;
+    /* display: inline-block; */
+    font-size: 16px;
+    /* padding: 20px 52px; */
+    border-radius: 60px;
+    line-height: normal;
+    background-color: #de7a36;
+    color: #fff;
+    display: flex;
+    width: 140px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.title .btn_box .first {
+    margin-left: 0px;
+}
+.title .btn img{
+    /* flex:1; */
+    width: auto;
+    position: relative;
+    margin-right: 10px;
+}
+.title .btn span {
+    color: #fff;
+}
+.title .btn:last-child {
+    background-color: #009e8b;
+    color: #fff;
+}
+.title .qie {
+    transform: translateY(0px);
+    /* margin-top: 0px; */
+    opacity: 1;
+}
+.tab {
+    width: 30%;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    justify-content: space-between;
+}
+.all_title img {
+    width: 100% !important;
+    position: relative !important;
+}
+.all_title {
+    width: 20%;
+}
+.all_title p{
+    text-align: center;
+    margin-top: 10px;
+}
+.all_check p{
+    color: #de7a36;
+}
+/* .search {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 32;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.search_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 32;
+}
+.search .ipt{
+    width: 50%;
+    height: 55px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 55px;
+    z-index: 32;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.search .ipt input{
+    flex: 1;
+    height: 55px;
+    border: none;
+    outline: none;
+    text-indent: 30px;
+}
+.search .icon-sousuo {
+    color: #0f9c81 !important;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.search .title {
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    z-index: 32;
+}
+.search .title span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dd7a36;
+    display: inline-block;
+    margin-right: 5px;
+}
+.search .search_list {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    z-index: 32;
+    display: flex;
+    justify-content: center;
+}
+.search .list {
+    display: inline-block;
+    color: #fff;
+    vertical-align: top;
+    margin-left: 100px;
+    font-size: 18px;
+    line-height: 32px;
+}
+.search .list:first-child {
+    margin-left: 0px;
+}
+.search .list div {
+    cursor: pointer;
+}
+.search .list .one{
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.search .list .three{
+    border-left: 1px solid #dd7a36;
+    text-indent: 30px;
+}
+.none {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #6fc4b3;
+    color: #fff;
+    position: absolute;
+    right: 17%;
+    top: 5%;
+    z-index: 32;
+    font-size: 28px;
+    cursor: pointer;
+} */
+@media screen and (max-width:1366px){
+    .nav div {
+        margin-right: 60px;
+    }
+    .none {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .search .list .one {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .search .list {
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
+@media screen and (max-width : 1600px){
+    .search .list .one {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .search .list {
+        font-size: 14px;
+        line-height: 26px;
+    }
+}

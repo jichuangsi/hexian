@@ -147,7 +147,7 @@
 .center_title {
     position: absolute;
     left: 50%;
-    top: 42%;
+    top: 30%;
     transform: translateX(-50%);
     z-index: 31;
     text-align: center;
@@ -164,6 +164,11 @@
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
+}
+.fsz56 {
+    font-size: 56px;
+    margin-bottom: 5%;
+    margin-top: -4%;
 }
 .center_title p:first-child {
     font-size: 56px;
