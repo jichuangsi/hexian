@@ -17,6 +17,21 @@ setHTML();
 // resize 事件 表示调整大小触发事件
 onresize = function () {
 setHTML();
+console.log(25555)
+var url = window.location.href
+if(url.indexOf('index') != -1){
+        let w = window.innerWidth
+        let h = window.innerHeight
+    if(w>=1200){
+        $('.imgList').css('height',h+'px')
+        $('.imgList>li').css('height',h+'px')
+        // $('.imgList>li').find('img').css('height',h+'px')
+    }else{
+        $('.imgList').css('height','635px')
+        $('.imgList>li').css('height','635px')
+        // $('.imgList>li').find('img').css('height','635px')
+    }
+}
 }
 
 function setHTML() {
@@ -28,7 +43,7 @@ const pageWidth = 1920;
 let screenWidth = document.querySelector("html").offsetWidth;
 // 要设置的fontsize
 let fontsize = screenWidth * baseVal / pageWidth;
-console.log(fontsize)
+
 // 设置到html标签的中
 document.querySelector("html").style.fontSize = fontsize + "px";
 

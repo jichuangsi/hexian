@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/style/reset.css">
     <link rel="stylesheet" href="./assets/style/search_Result.css">
-    <link rel="stylesheet" href="./assets/font_1340231_cnxr2ldyd4c/iconfont.css">
+    <link rel="stylesheet" href="./assets/font_1340231_4btwh394d0v/iconfont.css">
     <script src="./libs/jquery.min.js"></script>
+    <script src="./assets/js/reset.js"></script>
     <!-- <script src="./libs/jquery.fullpage.js"></script> -->
     <title>Document</title>
     <style type="text/css">
@@ -218,8 +219,12 @@
                 }, i*4+'00');
             }
         function scroll(){
+            var l = $(document).scrollLeft()
             var a = $(document).scrollTop()
             var b = $(".list")[0].offsetTop
+            $('.wrapper').css('left',-l+'px')
+            var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+            childWindow.scroll_top(l);
             $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
             if(b<a+400){
                 for(let i = 0; i < $(".list_box").length; i++){
@@ -231,11 +236,15 @@
         }
         function iframefixed(){
             $('#head').css('position','fixed')
+            $('#head').css('height','100%')
             $('.center').css('zIndex','6')
         }
         function iframeabsolute(){
-            $('#head').css('position','absolute')
-            $('.center').css('zIndex','99')
+            setTimeout(function(){
+                $('#head').css('position','absolute')
+                $('#head').css('height','2rem')
+                $('.center').css('zIndex','99')
+            },500)
         }
         // })
     </script>

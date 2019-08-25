@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/style/reset.css">
     <link rel="stylesheet" href="./assets/style/business.css">
-    <link rel="stylesheet" href="./assets/font_1340231_cnxr2ldyd4c/iconfont.css">
+    <link rel="stylesheet" href="./assets/font_1340231_4btwh394d0v/iconfont.css">
     <script src="./libs/jquery.min.js"></script>
+    <script src="./assets/js/reset.js"></script>
     <!-- <script src="./libs/jquery.fullpage.js"></script> -->
     <title>Document</title>
     <style type="text/css">
@@ -48,6 +49,34 @@
                 <p>招商专区</p>
                 <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
                 <p>以珠三角为核心突破口，重点聚焦华南销售区域，<br>全国范围内布局华北、华中、华东、东北、西北、西南六大销售区域。</p>
+            </div>
+            <div class="one_title one_all_title">
+                <span>东北</span><span class="quan"><em></em></span>
+                <p><em></em>黑龙江、吉林、辽宁、内蒙古</p>
+            </div>
+            <div class="two_title one_all_title">
+                <span>华北</span><br><span class="quan"><em></em></span>
+                <p><em></em>北京、天津、河北、山西</p>
+            </div>
+            <div class="three_title one_all_title">
+                <span>西北</span><br><span class="quan"><em></em></span>
+                <p><em></em>陕西、甘肃、新疆、青海、宁夏</p>
+            </div>
+            <div class="four_title one_all_title">
+                <span>西南</span><br><span class="quan"><em></em></span>
+                <p><em></em>四川、重庆、贵州、云南、西藏</p>
+            </div>
+            <div class="five_title one_all_title">
+                <span>华中</span><br><span class="quan"><em></em></span>
+                <p><em></em>湖北、湖南、河南、江西</p>
+            </div>
+            <div class="six_title one_all_title">
+                <span>华东</span><span class="quan"><em></em></span>
+                <p><em></em>上海、江苏、浙江、山东、安徽</p>
+            </div>
+            <div class="senve_title one_all_title">
+                <span>华南</span><br><span class="quan"><em></em></span>
+                <p><em></em>广东、福建、广西、海南</p>
             </div>
         </div>
         <div id="two" class="all_center_title">
@@ -159,21 +188,24 @@
                 <div class="two_title text_title">
                     <p>2</p>
                     <p>权威营销 信任背书</p>
+                    <p class="btn" onclick="$('.big_box').css('display','block')">查看更多</p>
                 </div>
                 <div class="three_title text_title">
                     <p>3</p>
                     <p>线上组合媒体推广</p>
+                    <p class="btn" onclick="$('.big_box').css('display','block')">查看更多</p>
                 </div>
                 <div class="four_title text_title">
                     <p>4</p>
                     <p>线下推广支持</p>
+                    <p class="btn" onclick="$('.big_box').css('display','block')">查看更多</p>
                 </div>
         </div>
         <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     </div>
     <div class="big_box">
         <div class="text_box">
-            <div class="none" onclick="$('.big_box').css('display','none')">x</div>
+            <div class="none iconfont icon-quxiao" onclick="$('.big_box').css('display','none')"></div>
             <div class="box">
                     <p class="h1">
                             户外广告支持
@@ -342,6 +374,7 @@
             }
             var d = 0
         function scroll(){
+            var l = $(document).scrollLeft()
             var a = $(document).scrollTop()
             var b = $(".center")[0].offsetTop
             var c = $("#one")[0].offsetHeight + b
@@ -351,6 +384,9 @@
             var g = $("#five")[0].offsetHeight + f
             var h = $("#five")[0].offsetHeight + g
             // $(".center").css('top',s-a)
+            $('.wrapper').css('left',-l+'px')
+            var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+            childWindow.scroll_top(l);
             console.log(f)
             $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
             if(b<a+100){
@@ -432,10 +468,12 @@
             $('.btn').css('zIndex','70')
         }
         function iframeabsolute(){
-            $('#head').css('position','absolute')
-            $('.center').css('zIndex','99')
-            $('#head').css('height','300px')
-            $('.btn').css('zIndex','30')
+            setTimeout(function(){
+                $('#head').css('position','absolute')
+                $('.center').css('zIndex','99')
+                $('#head').css('height','2rem')
+                $('.btn').css('zIndex','30')
+            },500)
         }
         $('#two').find('.btn').click(function(){
             console.log(this)
@@ -460,6 +498,16 @@
                 $(this).parent().find('.bian').text('与国内外多家知名食品专业大学达成战略合作，并聘请多位国内外知名食品专业专家担任集团外部专家委员会成员，参与公司一系列产品的专业研发及技术升级指导。集团技术团队由数十位曾任职于全球品牌排名前十的食品科技产业资深高管为骨干组成，充分利用内外部专家资源，对各项目进行充分研究、讨论、验证基础上，提出切实有效的运作指导。')
             }
         })
+        $('.right').find('.number').each(function (item) {
+            $(this).click(function () {
+                $('.right').find('.number').eq(item).addClass('lv').siblings().removeClass('lv')
+            });
+        });
+        $('.one_all_title').each(function (item) {
+            $(this).click(function () {
+                $('.one_all_title').eq(item).addClass('check').siblings().removeClass('check')
+            });
+        });
         // })
     </script>
 </body>

@@ -8,13 +8,16 @@
 
 #head {
     width: 100%;
-    height: 300px;
+    height: 2rem;
     position: absolute;
     z-index: 66;
 }
 #foot {
     width: 100%;
-    height: 100px;
+    height: 1rem;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
 }
 .imgList {
     width: 100%;
@@ -26,21 +29,11 @@
     height: auto;
 }
 
-.bg {
-    position: absolute;
-    bottom: 0;
-    width: 400px;
-    height: 40px;
-    z-index: 20;
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    background: black;
-}
 
 .infoList {
     position: absolute;
-    left: 10px;
-    bottom: 10px;
+    left: 0.1rem;
+    bottom: 0.1rem;
     z-index: 30;
 }
 
@@ -62,7 +55,7 @@
 
 .indexList li {
     float: left;
-    margin-right: 60px;
+    margin-right: 0.6rem;
     cursor: pointer;
     color:rgba(255, 255, 255, 0.6);
 }
@@ -88,18 +81,23 @@
     transition: top 0.06s linear;
 }
 .center .img {
+    width: 14rem;
     position: relative;
+    margin: 0 auto;
 }
-.center img {
+.center .img img {
     display: block;
-    width: 80%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
-    margin-top: 26%;
+    margin-top: 0.6rem;
 }
 .center .center_title {
-    top: 10%;
+    width: 100%;
+    margin-top: 1.3rem;
     color: #000;
+    position: relative;
+    /* margin-bottom: 0.6rem; */
 }
 .center .center_title img {
     width: auto;
@@ -107,49 +105,56 @@
 }
 .center .center_title p:last-child {
     color: #009d81;
-    font-size: 20px;
+    font-size: 0.2rem;
 }
 .center .text {
     position: absolute;
-    left: 13%;
-    top: 36%;
+    left: 1.2rem;
+    top: 1.8rem;
     color: #fff;
 }
 .center .text p{
-    line-height: 24px;
+    font-size: 0.2rem;
+    line-height: 0.28rem;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center .text .bottom {
-    margin-bottom: 30px;
+    margin-bottom: 0.45rem;
 }
 .center .sel{
-    width: 80%;
-    height: 60px;
-    margin: 40px auto;
+    width: 14rem;
+    height: 0.6rem;
+    margin: 0.4rem auto;
     display: flex;
     background-color: orange;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
 }
 .center .sel select {
     flex: 1;
-    text-indent: 20px;
+    text-indent: 0.2rem;
     outline: none;
+    border: none;
+    border-right: 1px solid #f6f6f6;
 }
 .center .sel input {
     flex: 1;
-    text-indent: 20px;
+    text-indent: 0.2rem;
     outline: none;
+    border: none;
 }
 .center .sel .btn {
-    width: 180px;
+    font-size: 0.1rem;
+    width: 1.8rem;
     text-align: center;
-    line-height: 60px;
+    line-height: 0.6rem;
     cursor: pointer;
     background-color: #009d81;
     color: #fff;
 }
 .center .zw {
-    width: 80%;
-    margin: 40px auto;
+    font-size: 0.1rem;
+    width: 14rem;
+    margin: 0.4rem auto;
     display: flex;
     align-items: center;
 }
@@ -157,7 +162,7 @@
     width: 50%;
 }
 .center .zw p:first-child{
-    font-size: 34px;
+    font-size: 0.34rem;
 }
 .center .zw p:last-child{
     text-align: right
@@ -166,9 +171,9 @@
     color: #de7a36;
 }
 .center .list {
-    width: 80%;
+    width: 14rem;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 0.38rem 0.4rem;
     background-color: #fff;
     margin-bottom: 10%;
 }
@@ -176,9 +181,9 @@
     width: 100%;
     /* height: 60px; */
     /* line-height: 60px; */
-    padding: 20px 0px;
+    padding: 0.2rem 0px;
     /* border-bottom: 1px solid #f3f3f3; */
-    font-size: 18px;
+    font-size: 0.18rem;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -190,7 +195,7 @@
 .center .list .list_box div {
     width: 18%;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 0.2rem;
 }
 .center .list .list_box .one {
     width: 10%;
@@ -201,8 +206,8 @@
     align-items: center;
 }
 .center .list .list_box em {
-    width: 15px;
-    height: 15px;
+    width: 0.15rem;
+    height: 0.15rem;
     display: inline-block;
     border: 1px solid #333;
     border-color: transparent #333 #333   transparent;
@@ -223,29 +228,30 @@
     width: 45%;
 }
 .center .list .list_box .box p {
-    line-height: 24px;
-    margin-bottom: 10px;
+    line-height: 0.24rem;
+    margin-bottom: 0.1rem;
 }
 .center .list .list_box .box .h1{
-    font-size: 34px;
-    margin-bottom: 30px;
-    margin-top: 40px;
+    font-size: 0.34rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0.4rem;
     color: #de7a36;
 }
 .center .list .list_box .box .emil{
-    margin-bottom: 30px;
-    margin-top: 40px;
+    margin-bottom: 3rem;
+    margin-top: 0.4rem;
     color: #009d81;
 }
 .center .list .ym {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 0.2rem;
 }
 .center .list .ym .left_span{
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: #f3f3f3;
     align-items: center;
     justify-content: center;
@@ -254,16 +260,16 @@
 }
 .center .list .ym .left_span em {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 0.2rem;
+    height: 0.2rem;
     border: 1px solid #999999;
     transform: rotate(45deg) translate(10%,-20%);
     border-color: transparent transparent #999 #999;
 }
 .center .list .ym .right_span{
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: #f3f3f3;
     align-items: center;
     justify-content: center;
@@ -271,30 +277,32 @@
 }
 .center .list .ym .right_span em {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 0.2rem;
+    height: 0.2rem;
     border: 1px solid #999999;
     transform: rotate(225deg) translate(20%,-20%);
     border-color: transparent transparent #999 #999;
 }
 .center .list .ym .number_span {
+    font-size: 0.1rem;
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 0.5rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
     text-align: center;
     background-color: #fff;
     border: 1px solid #f3f3f3;
     cursor: pointer;
 }
 .center .list .ym span {
-    margin-left: 20px;
+    margin-left: 0.2rem;
 }
 .center .list .ym .check {
     background-color: #009d81;
     color: #fff;
 }
 .center_title {
+    width: 100%;
     position: absolute;
     left: 50%;
     top: 30%;
@@ -305,42 +313,44 @@
     transition: all 0.6s linear;
 }
 .fsz56 {
-    font-size: 56px !important;
-    margin-bottom: 46px !important;
-    margin-top: -5% !important;
+    font-size: 0.56rem !important;
+    margin-bottom: 0.46rem !important;
+    margin-top: -2% !important;
 }
 .center_title p {
-    font-size: 17px;
-    line-height: 30px;
+    font-size: 0.17rem;
+    line-height: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
-    margin-bottom: 36px;
+    margin-bottom: 0.36rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
+.center_title img:first-child {
+    width: 6.12rem;
+}
 .center_title p:first-child {
-    font-size: 56px;
-    margin-bottom: 5%;
+    font-size: 0.56rem;
+    margin-bottom: 0.46rem;
 }
 .center_title p:last-child {
-    font-size: 17px;
-    margin-top: 4%;
+    font-size: 0.17rem;
 }
 .center_title .btn{
-    margin-top: 5%;
-    margin-left: 30px;
-    width: 206px;
-    height: 60px;
-    line-height: 60px;
+    margin-top: 0.9rem;
+    margin-left: 0.3rem;
+    width: 2.06rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
     text-align: center;
     background-color: #d6d6d6;
     color: #333;
-    border-radius: 60px;
+    border-radius: 0.6rem;
     display: inline-block;
     cursor: pointer;
 }
@@ -376,51 +386,119 @@
     /* margin-top: 0px; */
     opacity: 1 !important;
 }
-@media screen and (max-width : 1366px){
-    .nav div {
-        margin-right: 60px;
+
+@media screen and (max-width : 1200px){
+    .imgList {
+        width: 1200px;
     }
-    .center .new .script .time {
+    .center {
+        width: 1200px;
+    }
+    #head {
+        width: 1200px;
+        height: 100px;
+    }
+    #foot {
+        width: 1200px;
+        height: 66px;
+        /* height: 100px;   */
+    }
+    .fsz56 {
+        font-size: 36px!important;
+        margin-bottom: 26px!important;
+        margin-top: -2% !important;
+    }
+    .center_title p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .center_title .btn{
+        margin-top: 60px;
+        margin-left: 30px;
+        width: 136px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 40px;
+    }
+    .center_title p:first-child{
+        font-size: 36px;
+        margin-bottom: 26px;
+    }
+    .center_title img:first-child{
+        width: 400px;
+    }
+    .center_title img {
+        margin-bottom: 16px;
+    }
+    .center_title p:last-child {
         font-size: 12px;
     }
-    .center .new .script .bigtitle {
-        font-size: 30px;
-        line-height: 38px;
+    .center .img {
+        width: 860px;
     }
-    .center .new .script .title {
+    .center .text {
+        top: 115px;
+        left: 60px;
+    }
+    .center .sel {
+        width: 860px;
+        height: 40px;
+    }
+    .center .sel .btn {
+        font-size: 12px;
+        line-height: 40px;
+        width: 120px;
+    }
+    .center .zw{
+        width: 860px;
+    }
+    .center .list{
+        width: 860px;
+    }
+    .center .list .list_box em {
+        width: 10px;
+        height: 10px;
+    }
+    .center .list .list_box {
+        padding: 16px;
+        padding-bottom: 0px;
+    }
+    .center .list .list_box div{
+        padding-bottom: 16px;
+    }
+    .center .list .list_box .box .h1 {
+        font-size: 22px;
+        margin-bottom: 24px;
+        margin-top: 20px;
+    }
+    .center .list .list_box .box p{
+        line-height: 18px;
+        margin-bottom: 8px;
+    }
+    .center .list .list_box .box .emil {
+        margin-bottom: 20px;
         margin-top: 24px;
-        font-size: 14px;
-        line-height: 24px;
     }
-    .center .list .list_box .time{
+    .center .list .ym .left_span{
+        width: 36px;
+        height: 36px;
+    }
+    .center .list .ym .left_span em {
+        width: 14px;
+        height: 14px;
+    }
+    .center .list .ym .right_span{
+        width: 36px;
+        height: 36px;
+    }
+    .center .list .ym .right_span em {
+        width: 14px;
+        height: 14px;
+    }
+    .center .list .ym .number_span{
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
         font-size: 12px;
-    }
-    .center .list .list_box .title {
-        font-size: 18px;
-        line-height: 24px;
-    }
-    .none {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 20px;
-    }
-    .search .list .one {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    .search .list {
-        font-size: 14px;
-        line-height: 26px;
-    }
-}
-@media screen and (max-width : 1600px){
-    .search .list .one {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    .search .list {
-        font-size: 14px;
-        line-height: 26px;
     }
 }

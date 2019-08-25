@@ -14,7 +14,10 @@
 }
 #foot {
     width: 100%;
-    height: 100px;
+    height: 1rem;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
 }
 .imgList {
     width: 100%;
@@ -24,17 +27,6 @@
 .imgList img{
     width: 100%;
     height: auto;
-}
-
-.bg {
-    position: absolute;
-    bottom: 0;
-    width: 400px;
-    height: 40px;
-    z-index: 20;
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    background: black;
 }
 
 .infoList {
@@ -62,7 +54,7 @@
 
 .indexList li {
     float: left;
-    margin-right: 60px;
+    margin-right: 0.6rem;
     cursor: pointer;
     color:rgba(255, 255, 255, 0.6);
 }
@@ -86,10 +78,11 @@
     left: 0px;
     z-index: 99;
     transition: top 0.06s linear;
+    overflow: hidden;
 }
 .center .new {
-    width: 80%;
-    margin: 5% auto;
+    width: 14rem;
+    margin: 0.7rem auto;
     position: relative;
     overflow: hidden;
 }
@@ -104,37 +97,37 @@
     transition: all 1s linear;
     }
 .center .new .script {
-    width: 60%;
-    height: 36%;
+    width: 8.5rem;
+    height: 2.687rem;
     position: absolute;
     right: 0px;
     bottom: 0px;
     background-color: #fff;
-    padding: 2% 0px 0px 6%;
+    padding: 0.4rem .36rem 0px 1rem;
 }
 .center .new .script div {
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center .new .script .time {
-    font-size: 16px;
+    font-size: 0.16rem;
     color: #e7a27b;
-    margin-bottom: 20px;
+    margin-bottom: 0.2rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
 .center .new .script .bigtitle {
-    font-size: 34px;
-    line-height: 46px;
+    font-size: 0.34rem;
+    line-height: 0.46rem;
     color: #009d81;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
 .center .new .script .title {
-    margin-top: 30px;
-    font-size: 18px;
-    line-height: 28px;
+    margin-top: 0.3rem;
+    font-size: 0.18rem;
+    line-height: 0.28rem;
     overflow:hidden; 
     text-overflow:ellipsis;
     display:-webkit-box; 
@@ -154,33 +147,49 @@
     color: #fff;
     transition: all 0.6s linear;
 }
+.center_title {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    z-index: 31;
+    text-align: center;
+    color: #fff;
+    transition: all 0.6s linear;
+}
+.fsz56 {
+    font-size: 0.56rem !important;
+    margin-bottom: 0.46rem !important;
+    margin-top: -2% !important;
+}
 .center_title p {
+    font-size: 0.17rem;
+    line-height: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
+    margin-bottom: 0.36rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
-.fsz56 {
-    font-size: 56px;
-    margin-bottom: 5%;
-    margin-top: -4%;
+.center_title img:first-child {
+    width: 7.18rem;
 }
 .center_title p:first-child {
-    font-size: 56px;
-    margin-bottom: 5%;
+    font-size: 0.56rem;
+    margin-bottom: 0.46rem;
 }
 .center_title p:last-child {
-    font-size: 17px;
-    margin-top: 4%;
+    font-size: 0.17rem;
 }
 .center .list {
-    width: 80%;
-    margin: 5% auto;
+    width: 14rem;
+    margin: 0.7rem auto;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -188,17 +197,17 @@
     margin-bottom: 0px;
 }
 .center .list .list_box{
-    /* width: 440px; */
-    width: 30%;
-    height: 385px;
-    margin-bottom: 5%;
+    width: 4.4rem;
+    /* width: 30%; */
+    height: 3.85rem;
+    margin-bottom: 0.6rem;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .center .list .list_box img{
     width: 100%;
     height: auto;
-    margin-bottom: 40px;
+    margin-bottom: 0.4rem;
     transform: translateX(100%);
     opacity: 0;
     transition: all 1s linear;
@@ -207,23 +216,23 @@
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center .list .list_box .time{
-    font-size: 16px;
+    font-size: 0.16rem;
     color: #e7a27b;
-    margin-bottom: 30px;
+    margin-bottom: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
 .center .list .list_box .title {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 0.22rem;
+    line-height: 0.28rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
 .center .list .big_list_box {
-    width: 65%;
-    height: 385px;
+    width: 9.2rem;
+    height: 3.85rem;
 }
 .center .list .big_list_box img{
     width: 100%;
@@ -235,8 +244,8 @@
 }
 .center .list .big_list_box .time{
     position: absolute;
-    left: 5%;
-    bottom: 14%;
+    left: 0.6rem;
+    top: 2.9rem;
     color: #fff;
     transform: translateY(50px);
     opacity: 0;
@@ -244,22 +253,22 @@
 }
 .center .list .big_list_box .title{
     position: absolute;
-    left: 5%;
-    bottom: 8%;
+    left: 0.6rem;
+    bottom: 0.28rem;
     color: #fff;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
 .more {
-    width: 190px;
-    height: 60px;
-    line-height: 60px;
+    width: 1.9rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
     text-align: center;
     background-color: #009e8b;
     color: #fff;
-    font-size: 18px;
-    border-radius: 60px;
+    font-size: 0.18rem;
+    border-radius: 0.6rem;
     margin: 0 auto;
     cursor: pointer;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
@@ -290,51 +299,109 @@
     /* margin-top: 0px; */
     opacity: 1 !important;
 }
-@media screen and (max-width : 1366px){
-    .nav div {
-        margin-right: 60px;
+@media screen and (max-width : 1200px){
+    .imgList {
+        width: 1200px;
     }
-    .center .new .script .time {
+    .wrapper {
+        width: 1200px;
+    }
+    .center {
+        width: 1200px;
+    }
+    #head {
+        width: 1200px;
+        height: 100px;
+    }
+    #foot {
+        width: 1200px;
+        height: 66px;
+        /* height: 100px;   */
+    }
+    .fsz56 {
+        font-size: 36px!important;
+        margin-bottom: 26px!important;
+        margin-top: -2% !important;
+    }
+    .center_title p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .center_title .btn{
+        margin-top: 60px;
+        margin-left: 30px;
+        width: 136px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 40px;
+    }
+    .center_title p:first-child{
+        font-size: 36px;
+        margin-bottom: 26px;
+    }
+    .center_title img:first-child{
+        width: 440px;
+    }
+    .center_title img {
+        margin-bottom: 16px;
+    }
+    .center_title p:last-child {
         font-size: 12px;
     }
-    .center .new .script .bigtitle {
-        font-size: 30px;
-        line-height: 38px;
+    .center .new {
+        width: 860px;
+        margin: 0px auto;
+        margin-bottom: 43px;
+        margin-top: 43px;
+    }
+    .center .new .script {
+        width: 520px;
+        height: 166px;
+        padding: 24px 22px 0px 64px;
+    }
+    .center .new .script .time {
+        font-size: 14px;
+    }
+    .center .new .script .bigtitle{
+        font-size: 24px;
+        line-height: 32px;
     }
     .center .new .script .title {
-        margin-top: 24px;
+        margin-top: 16px;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 18px;
+    }
+    .center .list {
+        width: 860px;
+    }
+    .center .list .list_box {
+        width: 272px;
+        height: 238px;
+        margin-bottom: 60px;
     }
     .center .list .list_box .time{
         font-size: 12px;
+        margin-bottom: 16px;
     }
-    .center .list .list_box .title {
-        font-size: 18px;
-        line-height: 24px;
+    .center .list .list_box .title{
+        font-size: 16px;
+        line-height: 22px;
     }
-    .none {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 20px;
+    .center .list .big_list_box {
+        width: 566px;
+        height: 238px;
     }
-    .search .list .one {
-        font-size: 18px;
-        margin-bottom: 10px;
+    .center .list .big_list_box .time {
+        top: 180px;
     }
-    .search .list {
+    .center .list .big_list_box .title {
+        bottom: 16px;
+    }
+    .more{
+        width: 116px;
+        height: 36px;
+        line-height: 36px;
         font-size: 14px;
-        line-height: 26px;
-    }
-}
-@media screen and (max-width : 1600px){
-    .search .list .one {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    .search .list {
-        font-size: 14px;
-        line-height: 26px;
+        border-radius: 36px;
     }
 }

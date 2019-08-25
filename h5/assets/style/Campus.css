@@ -8,13 +8,16 @@
 
 #head {
     width: 100%;
-    height: 300px;
+    height: 2rem;
     position: absolute;
     z-index: 66;
 }
 #foot {
     width: 100%;
-    height: 100px;
+    height: 1rem;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
 }
 .imgList {
     width: 100%;
@@ -26,21 +29,11 @@
     height: auto;
 }
 
-.bg {
-    position: absolute;
-    bottom: 0;
-    width: 400px;
-    height: 40px;
-    z-index: 20;
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    background: black;
-}
 
 .infoList {
     position: absolute;
-    left: 10px;
-    bottom: 10px;
+    left: 0.1rem;
+    bottom: 0.1rem;
     z-index: 30;
 }
 
@@ -62,7 +55,7 @@
 
 .indexList li {
     float: left;
-    margin-right: 60px;
+    margin-right: 0.6rem;
     cursor: pointer;
     color:rgba(255, 255, 255, 0.6);
 }
@@ -92,7 +85,8 @@
     height: auto;
 }
 .center .center_title {
-    top: 10%;
+    top: 1.28rem;
+    width: 100%;
 }
 .center .center_title img {
     width: auto;
@@ -111,26 +105,30 @@
     margin-bottom: 8%;
 }
 .center .list .list_box{
-    width: 40%;
+    width: 48%;
     background-color: #fff;
-    padding: 20px 20px;
-    margin-bottom: 60px;
+    padding: 0.56rem;
+    padding-right: 0.88rem;
+    margin-bottom: 0.6rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
+    font-size: 0.1rem;
 }
 .center .list .list_box p {
-    line-height: 24px;
+    line-height: 0.28rem;
 }
 .center .list .list_box p:first-child{
-    font-size: 34px;
+    font-size: 0.46rem;
+    line-height: 0.54rem;
     color: #009d81;
-    margin-bottom: 30px;
+    margin-bottom: 0.3rem;
 }
 .center .list .list_box p:nth-child(2){
-    margin-bottom: 30px;
+    margin-bottom: 0.4rem;
 }
 .center .list .list_box p:nth-child(3){
+    margin-bottom: 0.17rem;
     display: flex;
 }
 .center .list .list_box p:nth-child(4){
@@ -140,9 +138,11 @@
     color: #999;
 }
 .center .list .list_box p span:last-child{
-    width: 70%;
+    /* width: 70%; */
+    flex: 1;
 }
 .center_title {
+    width: 100%;
     position: absolute;
     left: 50%;
     top: 30%;
@@ -153,42 +153,44 @@
     transition: all 0.6s linear;
 }
 .fsz56 {
-    font-size: 56px !important;
-    margin-bottom: 46px !important;
-    margin-top: -5% !important;
+    font-size: 0.56rem !important;
+    margin-bottom: 0.46rem !important;
+    margin-top: -2% !important;
 }
 .center_title p {
-    font-size: 17px;
-    line-height: 30px;
+    font-size: 0.17rem;
+    line-height: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
-    margin-bottom: 36px;
+    margin-bottom: 0.36rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
+.center_title img:first-child {
+    width: 6.12rem;
+}
 .center_title p:first-child {
-    font-size: 56px;
-    margin-bottom: 5%;
+    font-size: 0.56rem;
+    margin-bottom: 0.46rem;
 }
 .center_title p:last-child {
-    font-size: 17px;
-    margin-top: 4%;
+    font-size: 0.17rem;
 }
 .center_title .btn{
-    margin-top: 5%;
-    margin-left: 30px;
-    width: 206px;
-    height: 60px;
-    line-height: 60px;
+    margin-top: 0.9rem;
+    margin-left: 0.3rem;
+    width: 2.06rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
     text-align: center;
     background-color: #d6d6d6;
     color: #333;
-    border-radius: 60px;
+    border-radius: 0.6rem;
     display: inline-block;
     cursor: pointer;
 }
@@ -224,51 +226,65 @@
     /* margin-top: 0px; */
     opacity: 1 !important;
 }
-@media screen and (max-width : 1366px){
-    .nav div {
-        margin-right: 60px;
+
+@media screen and (max-width : 1200px){
+    .imgList {
+        width: 1200px;
     }
-    .center .new .script .time {
+    .center {
+        width: 1200px;
+    }
+    #head {
+        width: 1200px;
+        height: 100px;
+    }
+    #foot {
+        width: 1200px;
+        height: 66px;
+        /* height: 100px;   */
+    }
+    .fsz56 {
+        font-size: 36px!important;
+        margin-bottom: 26px!important;
+        margin-top: -2% !important;
+    }
+    .center_title p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .center_title .btn{
+        margin-top: 60px;
+        margin-left: 30px;
+        width: 136px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 40px;
+    }
+    .center_title p:first-child{
+        font-size: 36px;
+        margin-bottom: 26px;
+    }
+    .center_title img:first-child{
+        width: 400px;
+    }
+    .center_title img {
+        margin-bottom: 16px;
+    }
+    .center_title p:last-child {
         font-size: 12px;
     }
-    .center .new .script .bigtitle {
+    .center .list .list_box p:first-child {
         font-size: 30px;
-        line-height: 38px;
+        margin-bottom: 16px;
     }
-    .center .new .script .title {
-        margin-top: 24px;
-        font-size: 14px;
-        line-height: 24px;
-    }
-    .center .list .list_box .time{
+    .center .list .list_box {
         font-size: 12px;
     }
-    .center .list .list_box .title {
-        font-size: 18px;
-        line-height: 24px;
+    .center .list .list_box p{
+        line-height: 18px;
+        margin-bottom: 16px;
     }
-    .none {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 20px;
-    }
-    .search .list .one {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    .search .list {
-        font-size: 14px;
-        line-height: 26px;
-    }
-}
-@media screen and (max-width : 1600px){
-    .search .list .one {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    .search .list {
-        font-size: 14px;
-        line-height: 26px;
+    .center .list .list_box p:nth-child(3){
+        margin-bottom: 8px;
     }
 }

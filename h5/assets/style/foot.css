@@ -1,26 +1,30 @@
 
 .foot {
     width: 100%;
-    height: 100px;
-    line-height: 100px;
+    height: 1rem;
+    /* line-height: 1rem; */
+    display: flex;
+    align-items: center;
     background-color: #fff;
 }
 .foot .ite{
-    float: left;
-    font-size: 16px;
-    transform: scale(.8);
+    width: 50%;
+    font-size: 0.14rem;
+    transform: scale(.8) translateX(-5%);
+    /* margin-left: 0.6rem; */
     font-family: AVANTGA2;
     color: #333;
 }
 .bottom_nav  {
-    margin-right: 2%;
+    width: 50%;
+    margin-right: 0.6rem;
 }
 .bottom_nav li {
     float: right;
-    margin-right: 30px;
+    margin-right: 0.3rem;
     cursor: pointer;
     /* transform: scale(.8); */
-    font-size: 16px;
+    font-size: 0.16rem;
     color:#333;
     font-family: AVANTGA2;
 }
@@ -28,7 +32,7 @@
     margin-right: 0px;
 }
 .bottom_nav li span{
-    margin-right: 20px;
+    margin-right: 0.2rem;
 }
 .bottom_nav li span:last-child{
     margin-right: 0px;

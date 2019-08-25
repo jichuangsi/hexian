@@ -7,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/style/reset.css">
     <link rel="stylesheet" href="./assets/style/index.css">
-    <link rel="stylesheet" href="./assets/font_1340231_cnxr2ldyd4c/iconfont.css">
+    <link rel="stylesheet" href="./assets/font_1340231_4btwh394d0v/iconfont.css">
     <script src="./libs/jquery.min.js"></script>
+    <script src="./assets/js/reset.js"></script>
     <!-- <script src="./libs/jquery.fullpage.js"></script> -->
     <title>Document</title>
     <style type="text/css">
     </style>
 </head>
 
-<body>
+<body onscroll="scroll()">
     <iframe id="head" src="./head.html" frameborder="0"></iframe>
     <!-- <div id="fullpage"> -->
     <div class="wrapper">
@@ -104,13 +105,19 @@
     </div>
     <!-- </div> -->
     <script type="text/javascript">
-        // $(function(){
         //     $('#fullpage').fullpage();
         // });
-        var h = window.innerHeight
-        $('.imgList').css('height',h+'px')
-        $('.imgList>li').css('height',h+'px')
-        // $('.imgList>li').find('img').css('height',h+'px')
+            var w = window.innerWidth
+            var h = window.innerHeight
+        if(w>=1200){
+            $('.imgList').css('height',h+'px')
+            $('.imgList>li').css('height',h+'px')
+            // $('.imgList>li').find('img').css('height',h+'px')
+        }else{
+            $('.imgList').css('height','635px')
+            $('.imgList>li').css('height','635px')
+            // $('.imgList>li').find('img').css('height','635px')
+        }
         // console.log($('.imgList>li>img'))
         console.log(h)
         var curIndex = 0; //当前index
@@ -161,20 +168,31 @@
             // $(".infoList").find("li").removeClass("infoOn").eq(num).addClass("infoOn");
             // $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
         }
-        onresize = function(){
-            h = window.innerHeight
-            $('.imgList').css('height',h+'px')
-            $('.imgList>li').css('height',h+'px')
-            console.log(h)
-        }
+        // onresize = function(){
+        //     h = window.innerHeight
+        //     $('.imgList').css('height',h+'px')
+        //     $('.imgList>li').css('height',h+'px')
+        //     console.log(7777)
+        //     console.log(h)
+        // }iframefixed
         function iframefixed(){
             $('#head').css('position','fixed')
             $('#head').css('height','100%')
         }
         function iframeabsolute(){
-            $('#head').css('position','absolute')
-            $('#head').css('height','150px')
+            setTimeout(function(){
+                $('#head').css('position','absolute')
+                $('#head').css('height','150px')
+            },500)
         }
+        
+    $(function(){
+        function scroll(){
+            var l = $(document).scrollLeft()
+            var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+            childWindow.scroll_top(l);
+        }
+    })
         
     </script>
 </body>

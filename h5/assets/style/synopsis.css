@@ -8,13 +8,16 @@
 
 #head {
     width: 100%;
-    height: 300px;
+    height: 2rem;
     position: absolute;
     z-index: 66;
 }
 #foot {
     width: 100%;
-    height: 100px;
+    height: 1rem;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
 }
 .imgList {
     width: 100%;
@@ -82,184 +85,193 @@
     left: 0px;
     z-index: 99;
     transition: top 0.06s linear;
+    overflow: hidden;
+}
+.center .center_title {
+    color: #000;
 }
 .center img {
     width: 100%;
     height: auto;
 }
-#synopsis {
+#one {
     position: relative;
     padding-top: 30%;
 }
-#synopsis .center_title{
+#one .center_title{
     top: 10%;
     color: #000;
 }
-#synopsis .center_title p{
+#one .center_title p{
     width: 55%;
-    margin: 46px auto;
+    margin: 0.46rem auto;
 }
-#synopsis .center_title img{
+#one .center_title img{
     width: auto;
 }
-#strategy {
+#two {
     position: relative;
 }
-#strategy .center_title{
+#two .center_title{
     top: 10%;
     color: #000;
 }
-#strategy .center_title p{
+#two .center_title p{
     top: 10%;
     margin: 0px auto;
 }
-#strategy .center_title p:first-child{
+#two .center_title p:first-child{
     top: 10%;
-    margin: 46px auto;
+    margin: 0.46rem auto;
 }
-#strategy .center_title img{
+#two .center_title img{
     width: auto;
 }
-#strategy .one_title {
+#two .one_title {
     width: 18%;
     position: absolute;
     left: 16%;
     top: 45%;
 }
-#strategy .two_title {
+#two .two_title {
     width: 18%;
     position: absolute;
     left: 41%;
     top: 45%;
 }
-#strategy .three_title {
+#two .three_title {
     width: 18%;
     position: absolute;
     left: 66%;
     top: 45%;
 }
-#strategy .text_title {
+#two .text_title {
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
-#strategy .text_title img {
+#two .text_title img {
     width: 60%;
     display: block;
     margin: 0 auto;
 }
-#strategy .text_title p {
+#two .text_title p {
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 0.16rem;
+    line-height: 0.32rem;
     text-align: center;
 }
-#strategy .text_title .number {
-    font-size: 54px;
+#two .text_title p:first-child{
+    width: 110%;
+    transform: translateX(-5%);
+}
+#two .text_title .number {
+    font-size: 0.54rem;
     color: #009d81;
     margin-top: -5%;
     font-weight: 600;
-    margin-bottom: 66px;
+    margin-bottom: 0.66rem;
     font-style: italic;
 }
-#strategy .text_title span{
-    font-size: 18px;
+#two .text_title span{
+    font-size: 0.18rem;
     color: #de7a36;
 }
-#Idea {
+#three {
     position: relative;
 }
-#Idea .center_title{
-    top: 10%;
+#three .center_title{
+    top: 5%;
     color: #000;
 }
-#Idea .center_title p{
+#three .center_title p{
     top: 10%;
-    margin: 46px auto;
+    margin: 0.46rem auto;
 }
-#Idea .center_title img{
+#three .center_title img{
     width: auto;
 }
-#Idea .Idea_title {
+#three .three_title_box {
     position: absolute;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 0.16rem;
+    line-height: 0.28rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
-#Idea .Idea_title p{
+#three .three_title_box p{
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
-#Idea .Idea_title p:first-child {
+#three .three_title_box p:first-child {
     color: #009d81;
-    font-size: 20px;
+    font-size: 0.2rem;
 }
-#Idea .one_title {
+#three .one_title {
     top: 33%;
     right: 66%;
     text-align: right;
 }
-#Idea .two_title {
+#three .two_title {
     top: 44%;
     right: 69%;
     text-align: right;
 }
-#Idea .three_title {
+#three .three_title {
+    width: 100%;
     top: 55%;
     right: 66%;
     text-align: right;
 }
-#Idea .four_title {
+#three .four_title {
     top: 70%;
     right: 50%;
     text-align: center;
     transform: translateX(50%) !important;
 }
-#Idea .five_title {
+#three .five_title {
     top: 33%;
     left: 66%;
     text-align: left;
 }
-#Idea .six_title {
+#three .six_title {
     top: 44%;
     left: 69%;
     text-align: left;
 }
-#Idea .senve_title {
+#three .senve_title {
     top: 55%;
     left: 66%;
     text-align: left;
 }
-#Culture {
+#four {
     position: relative;
 }
-#Culture .center_title{
+#four .center_title{
     top: 10%;
     color: #000;
 }
-#Culture .center_title p{
+#four .center_title p{
     top: 10%;
     margin: 0px auto;
 }
-#Culture .center_title p:first-child{
+#four .center_title p:first-child{
     top: 10%;
-    margin: 46px auto;
+    margin: 0.46rem auto;
 }
-#Culture .center_title img{
+#four .center_title img{
     width: auto;
 }
 .center_nav {
     display: none;
     position: fixed;
     left: 3%;
-    top: 100px;
+    top: 1rem;
     z-index: 666;
 }
 .center_nav a{
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 0.15rem;
+    height: 0.15rem;
     border-radius: 50%;
     background-color: #009d81;
     margin-bottom: 30px;
@@ -283,28 +295,28 @@
     white-space: nowrap;
     background-color: #de7a36;
     color: #fff;
-    padding: 10px 28px;
-    border-radius: 28px;
+    font-size: 0.1rem;
+    padding: 0.1rem 0.28rem;
+    border-radius: 0.28rem;
     position: absolute;
     left: 300%;
     top: 50%;
     transform: translateY(-50%);
 }
 .center_nav a em{
-    width: 20px;
-    height: 20px;
+    width: 0.2rem;
+    height: 0.2rem;
     position: absolute;    
-    left: -12px;
+    left: -0.12rem;
     top: 50%;
     background-color: #de7a36;
     transform: rotate(45deg) translateY(-70%);
 }
 
-.fsz56 {
-    font-size: 56px !important;
-    margin-bottom: 46px !important;
-    margin-top: -3% !important;
-}
+.all_center_title {
+    position: relative;
+    margin-top: -5px;
+}   
 .center_title {
     width: 100%;
     position: absolute;
@@ -316,34 +328,46 @@
     color: #fff;
     transition: all 0.6s linear;
 }
+.fsz56 {
+    font-size: 0.56rem !important;
+    margin-bottom: 0.46rem !important;
+    margin-top: -2% !important;
+}
 .center_title p {
-    font-size: 17px;
-    line-height: 30px;
+    font-size: 0.17rem;
+    line-height: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
-    margin-bottom: 36px;
+    width: auto;
+    margin-bottom: 0.36rem;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
 }
+.center_title img:first-child {
+    width: 6.12rem;
+}
 .center_title p:first-child {
-    font-size: 56px;
-    margin-bottom: 46px;
+    font-size: 0.56rem;
+    margin-bottom: 0.46rem;
+}
+.center_title p:last-child {
+    font-size: 0.17rem;
 }
 .center_title .btn{
-    margin-top: 5%;
-    margin-left: 30px;
-    width: 206px;
-    height: 60px;
-    line-height: 60px;
+    margin-top: 0.9rem;
+    margin-left: 0.3rem;
+    width: 2.06rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
     text-align: center;
     background-color: #d6d6d6;
     color: #333;
-    border-radius: 60px;
+    border-radius: 0.6rem;
     display: inline-block;
     cursor: pointer;
 }
@@ -379,83 +403,68 @@
     /* margin-top: 0px; */
     opacity: 1 !important;
 }
-@media screen and (max-width : 1366px){
-    .nav div {
-        margin-right: 60px;
+@media screen and (max-width : 1200px){
+    .wrapper {
+        width: 1200px;
     }
-    .center .new .script .time {
+    .imgList {
+        width: 1200px;
+    }
+    .center {
+        width: 1200px;
+    }
+    #head {
+        width: 1200px;
+        height: 100px;
+    }
+    #foot {
+        width: 1200px;
+        height: 66px;
+        /* height: 100px;   */
+    }
+    .fsz56 {
+        font-size: 36px!important;
+        margin-bottom: 26px!important;
+        margin-top: -2% !important;
+    }
+    .center_title p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .center_title .btn{
+        margin-top: 60px;
+        margin-left: 30px;
+        width: 136px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 40px;
+    }
+    .center_title p:first-child{
+        font-size: 36px;
+        margin-bottom: 26px;
+    }
+    .center_title img:first-child{
+        width: 400px;
+    }
+    .center_title img {
+        margin-bottom: 16px;
+    }
+    .center_title p:last-child {
         font-size: 12px;
     }
-    .center .new .script .bigtitle {
-        font-size: 30px;
-        line-height: 38px;
-    }
-    .center .new .script .title {
-        margin-top: 24px;
-        font-size: 14px;
+    #two .text_title p {
+        font-size: 12px;
         line-height: 24px;
     }
-    .center .list .list_box .time{
-        font-size: 12px;
+    #two .text_title p:first-child{
+        width: 110%;
+        transform: translateX(-5%);
     }
-    .center .list .list_box .title {
-        font-size: 18px;
-        line-height: 24px;
+    #three .three_title_box {
+        font-size: 13px;
+        line-height: 24px
     }
-    .none {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 20px;
-    }
-    .search .list .one {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    .search .list {
-        font-size: 14px;
-        line-height: 26px;
-    }
-    #synopsis .center_title {
-        top: 7%;
-    }
-    #synopsis .center_title p{
-        font-size: 14px;
-        margin: 36px auto;
-    }
-    #synopsis .center_title img{
-        margin: 0px;
-    }
-    #synopsis .center_title p:first-child{
-        font-size: 46px;
-    }
-    #strategy .center_title p{
-        font-size: 14px;
-    }
-    #strategy .center_title p:first-child{
-        font-size: 46px;
-    }
-    #Culture .center_title p{
-        font-size: 14px;
-    }
-    #Culture .center_title p:first-child{
-        font-size: 46px;
-    }
-    #strategy .text_title p {
-        font-size: 12px;
-        line-height: 32px;
-    }
-    #strategy .text_title span{
-        font-size: 14px;
-    }
-}
-@media screen and (max-width : 1600px){
-    .search .list .one {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    .search .list {
-        font-size: 14px;
-        line-height: 26px;
+    #three .three_title_box p:first-child {
+        font-size: 16px;
     }
 }
