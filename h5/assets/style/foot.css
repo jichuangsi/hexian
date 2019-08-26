@@ -40,3 +40,6 @@
 .bottom_nav li span:last-child{
     margin-right: 0px;
 }
+.bottom_nav li .iconfont {
+    font-size: 0.2rem !important;
+}
