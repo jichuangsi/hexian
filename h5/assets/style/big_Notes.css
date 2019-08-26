@@ -82,7 +82,7 @@
     transition: top 0.06s linear;
 }
 .center .center_title {
-    color: #000;
+    color: #333;
     top: 1.8rem;
 }
 .center .center_box {
@@ -109,10 +109,10 @@
     transition: all 1s linear;
 }
 .center .first .text {
-    width: 54%;
+    width: 52%;
     display: inline-block;
-    padding-left: 7%;
-    padding-top: 5%;
+    padding-left: 1.4rem;
+    padding-top: 0.97rem;
 }
 .center .first .text p{
     color: #fff;
@@ -126,7 +126,7 @@
 }
 .center .first .text em{
     position: absolute;
-    font-size: 0.18rem;
+    font-size: 0.24rem;
     right: 2%;
     top: 4%;
     color: #fff;
@@ -137,6 +137,12 @@
 .center .first .text p:first-child{
     font-size: 0.46rem;
     line-height: 0.56rem;
+}
+.center .first .text p:nth-child(2){
+    margin-bottom: 0.48rem;
+}
+.center .first .text p:nth-child(3){
+    margin-bottom: 0.24rem;
 }
 .center .Second {
     width: 100%;
@@ -167,7 +173,7 @@
     color: #fff;
     text-align: center;
     line-height: 1.4rem;
-    font-size: 0.24rem;
+    font-size: 0.18rem;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
     position: absolute;
     bottom: -1rem;
@@ -206,26 +212,36 @@
     top: 50%;
     transform: translate(-50%,-50%);
 }
-.center .Second .second_box img {
+.center .Second .second_box .img {
+    width: 4.62rem;
+    height: 0rem;
+    /* height: 4.62rem; */
+    background-color: #009d81;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.center .Second .second_box .img img {
     /* height: 4.82rem; */
     width: 100%;
-    height: 0px;
-    transition: all 1s linear;
+    height: auto;
+    /* height: 0px; */
+    transform: translate(0.38rem,0.18rem);
 }
 .center .Second .second_box .time {
-    font-size: 0.48rem;
+    font-size: 0.70rem;
     color: #de7a36;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
     margin-bottom: 0.3rem;
 }
 .center .Second .second_box .title {
-    font-size: 0.3rem;
+    font-size: 0.32rem;
+    line-height: 0.38rem;
     color: #009d81;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
     margin-bottom: 0.3rem;
 }
 .center .Second .second_box .text {
-    font-size: 0.18rem;
+    font-size: 0.16rem;
     line-height: 0.24rem;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
     height: 0px;
@@ -300,39 +316,41 @@
     transition: all 0.6s linear;
 }
 .fsz56 {
-    font-size: 0.56rem !important;
+    font-size: 0.70rem !important;
     margin-bottom: 0.46rem !important;  
-    margin-top: -2% !important;
+    margin-top: -2.5% !important;
 }
 .center_title p {
-    font-size: 0.17rem;
+    font-size: 0.18rem;
     line-height: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
-    margin-bottom: 0.36rem;
+    margin-bottom: 0.46rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
 }
 .center_title img:first-child {
     width: 7.2rem;
 }
 .center_title p:first-child {
-    font-size: 0.56rem;
+    font-size: 0.70rem;
+    line-height: 0.74rem;
     margin-bottom: 0.46rem;
 }
 .center_title p:last-child {
-    font-size: 0.17rem;
+    font-size: 0.18rem;
 }
 .center_title .btn{
     margin-top: 0.9rem;
     margin-left: 0.3rem;
     width: 2.06rem;
     height: 0.6rem;
+    font-size: 0.2rem;
     line-height: 0.6rem;
     text-align: center;
     background-color: #d6d6d6;

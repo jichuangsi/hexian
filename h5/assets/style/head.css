@@ -18,16 +18,25 @@
 .nav {
     /* width: 100%; */
     position: absolute;
-    right: 5%;
-    top: 0.6rem;
+    right: 0.6rem;
+    top: 0.7rem;
     z-index: 30;
 }
 .nav div {
     float: left;
-    margin-right: 0.9rem;
-    font-size: 0.1rem;
+    margin-right: 0.95rem;
+    font-size: 0.2rem;
     cursor: pointer;
     color:rgba(255, 255, 255, 1);
+}
+.nav div .iconfont {
+    font-size: 0.2rem !important;
+}
+.nav div:nth-child(7) {
+    margin-right: 0.63rem;
+}
+.nav div:nth-child(8) {
+    margin-right: 0.63rem;
 }
 .nav div:last-child {
     margin-right: 0px;
@@ -87,6 +96,7 @@
     border: none;
     outline: none;
     text-indent: 0.3rem;
+    font-size: 0.16rem;
 }
 .search .icon-sousuo {
     color: #0f9c81 !important;
@@ -94,7 +104,7 @@
     cursor: pointer;
 }
 .search .title {
-    font-size: 0.16rem;
+    font-size: 0.14rem;
     color: #fff;
     position: absolute;
     left: 50%;
@@ -158,18 +168,22 @@
     cursor: pointer;
 }
 .search .list .one{
-    font-size: 0.28rem;
+    font-size: 0.24rem;
     margin-bottom: 0.3rem;
 }
+.search .list .two {
+    font-size: 0.16rem;
+}
 .search .list .three{
+    font-size: 0.14rem;
     border-left: 1px solid #dd7a36;
-    text-indent: 0.3rem;
+    text-indent: 0.24rem;
 }
 .none {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.48rem;
+    height: 0.48rem;
     text-align: center;
-    line-height: 0.5rem;
+    line-height: 0.48rem;
     border-radius: 50%;
     background-color: #6fc4b3;
     color: #fff;
@@ -177,6 +191,6 @@
     right: 17%;
     top: 5%;
     z-index: 32;
-    font-size: 0.20rem !important;
+    font-size: 0.16rem !important;
     cursor: pointer;
 }

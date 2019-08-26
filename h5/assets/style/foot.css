@@ -9,10 +9,11 @@
 }
 .foot .ite{
     width: 50%;
-    font-size: 0.14rem;
-    transform: scale(.8) translateX(-5%);
+    font-size: 0.16rem;
+    margin-left: 0.6rem;
+    /* transform: scale(.8) translateX(-5%); */
     /* margin-left: 0.6rem; */
-    font-family: AVANTGA2;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
     color: #333;
 }
 .bottom_nav  {
@@ -26,7 +27,7 @@
     /* transform: scale(.8); */
     font-size: 0.16rem;
     color:#333;
-    font-family: AVANTGA2;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .bottom_nav li:first-child{
     margin-right: 0px;

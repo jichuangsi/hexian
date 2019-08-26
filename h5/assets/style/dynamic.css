@@ -85,6 +85,7 @@
     margin: 0.7rem auto;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .center .new img{
     display: inline-block;
@@ -117,17 +118,18 @@
     transition: all 1s linear;
 }
 .center .new .script .bigtitle {
-    font-size: 0.34rem;
+    font-size: 0.36rem;
     line-height: 0.46rem;
     color: #009d81;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
 }
 .center .new .script .title {
     margin-top: 0.3rem;
     font-size: 0.18rem;
     line-height: 0.28rem;
+    color: #333;
     overflow:hidden; 
     text-overflow:ellipsis;
     display:-webkit-box; 
@@ -136,6 +138,9 @@
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
+}
+.center .new:hover img{
+    transform: scale(1.1) translateX(0px) !important;
 }
 .center_title {
     position: absolute;
@@ -159,23 +164,23 @@
     transition: all 0.6s linear;
 }
 .fsz56 {
-    font-size: 0.56rem !important;
+    font-size: 0.70rem !important;
     margin-bottom: 0.46rem !important;
-    margin-top: -2% !important;
+    margin-top: -2.5% !important;
 }
 .center_title p {
-    font-size: 0.17rem;
+    font-size: 0.18rem;
     line-height: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
     margin-bottom: 0.36rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear;
 }
 .center_title img:first-child {
     width: 7.18rem;
@@ -202,12 +207,18 @@
     height: 3.85rem;
     margin-bottom: 0.6rem;
     position: relative;
+    cursor: pointer;
     /* overflow: hidden; */
+}
+.center .list .list_box .img{
+    width: 100%;
+    height: 2.47rem;
+    margin-bottom: 0.4rem;
+    overflow: hidden;
 }
 .center .list .list_box img{
     width: 100%;
     height: auto;
-    margin-bottom: 0.4rem;
     transform: translateX(100%);
     opacity: 0;
     transition: all 1s linear;
@@ -221,18 +232,32 @@
     margin-bottom: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
 }
 .center .list .list_box .title {
-    font-size: 0.22rem;
+    font-size: 0.26rem;
     line-height: 0.28rem;
+    color: #333;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
+}
+.center .list .list_box:hover .title {
+    color: #009d81;
+}
+.center .list .list_box:hover img {
+    transform: scale(1.1) translateX(0px) !important;
+}
+.center .list .big_list_box:hover .title {
+    color: #fff;
+}
+.center .list .big_list_box:hover img {
+    transform: scale(1.1) translateX(0px) !important;
 }
 .center .list .big_list_box {
     width: 9.2rem;
     height: 3.85rem;
+    overflow: hidden;
 }
 .center .list .big_list_box img{
     width: 100%;

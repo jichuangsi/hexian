@@ -17,9 +17,8 @@ setHTML();
 // resize 事件 表示调整大小触发事件
 onresize = function () {
 setHTML();
-console.log(25555)
 var url = window.location.href
-if(url.indexOf('index') != -1){
+if(url.indexOf('index') != -1 || url.indexOf('product')){
         let w = window.innerWidth
         let h = window.innerHeight
     if(w>=1200){

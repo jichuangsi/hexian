@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/style/reset.css">
     <link rel="stylesheet" href="./assets/style/index.css">
-    <link rel="stylesheet" href="./assets/font_1340231_4btwh394d0v/iconfont.css">
+    <link rel="stylesheet" href="./assets/font_1340231_3b1rumcv30t/iconfont.css">
     <script src="./libs/jquery.min.js"></script>
     <script src="./assets/js/reset.js"></script>
+    <!-- <script src="./assets/js/antimoderate.js"></script> -->
     <!-- <script src="./libs/jquery.fullpage.js"></script> -->
     <title>Document</title>
     <style type="text/css">
@@ -35,11 +36,11 @@
                             <p class="fsz62_m qie">只做无添加剂健康食品</p>
                             <p class="btn qie">了解更多</p>
                         </div>
-                    <a href="./product.html"><img src="./assets/images/和鲜-首页-只做无添加剂健康食品.png"></a>
+                    <a href="./product.html"><img class="ssas" src="./assets/images/和鲜-首页-只做无添加剂健康食品.png"></a>
                 </li>
                 <li>
                     <div class="title" onclick="location.href='./Campus.html'">
-                        <p class="ruizi">和鲜投资,您来创业</p>
+                        <p class="fsz70">和鲜投资,您来创业</p>
                         <p class="ruizi">诚聘合伙人 百万年新+<span>49%</span>法定股权</p>
                         <p class="fsz16">
                             Hexian Investment,You Come to Start a Business
@@ -69,7 +70,7 @@
                 <li>
                     <div class="title" onclick="location.href='./dynamic.html'">
                         <p>Hexian News</p>
-                        <p class="fsz62">和鲜新闻资讯</p>
+                        <p class="fsz70">和鲜新闻资讯</p>
                         <p class="btn">了解更多</p>
                     </div>
                     <a href="./dynamic.html"><img src="./assets/images/和鲜-首页-和鲜新闻资讯.png"></a>
@@ -78,7 +79,7 @@
                     <div class="title" onclick="location.href='./synopsis.html'">
                         <p>Let mankind enjoy</p>
                         <p>Healthy in Gourmet Food</p>
-                        <p class="fsz62_m">让人类在享受美食中健康起来！</p>
+                        <p class="fsz54">让人类在享受美食中健康起来！</p>
                         <p class="btn">了解更多</p>
                     </div>
                     <a href="./synopsis.html"><img src="./assets/images/和鲜-首页-让人类在享受美食中健康起来！.png"></a>
@@ -124,7 +125,7 @@
         //   alert(imgLen);
         // 定时器自动变换2.5秒每次
         var autoChange;
-        go()
+        // go()
         function go(){
             autoChange = setInterval(function () {
             if (curIndex < $(".imgList li").length - 1) {
@@ -134,7 +135,7 @@
             }
             //调用变换处理函数
             changeTo(curIndex);
-        }, 5500);
+        }, 10500);
         }
 
         $(".indexList").find("li").each(function (item) {
@@ -175,6 +176,8 @@
         //     console.log(7777)
         //     console.log(h)
         // }iframefixed
+        // var img = $('.ssas')[0]
+        // AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"))
         function iframefixed(){
             $('#head').css('position','fixed')
             $('#head').css('height','100%')

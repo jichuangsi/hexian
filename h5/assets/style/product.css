@@ -5,7 +5,7 @@
     z-index: 33;
 }
 #head .nav div {
-    color: #000 !important;
+    color: #333 !important;
 }
 
 .wrapper {
@@ -14,10 +14,8 @@
 .imgList {
     width: 100%;
     z-index: 10;
-    background: -webkit-linear-gradient(#f9f4ee, #fff); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(#f9f4ee, #fff); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(#f9f4ee, #fff); /* Firefox 3.6 - 15 */
-    background: linear-gradient(#f9f4ee, #fff);
+    background: url('../images/和鲜产品/和鲜-公司动态.png') no-repeat;
+    background-size: 100% 100%;
 }
 
 .imgList li {
@@ -36,7 +34,7 @@
     position: absolute;
 }
 .imgList li .img_1 {
-    width: 4.25rem;
+    width: 3.8rem;
     left: 6rem;
     top: 2.28rem;
 }
@@ -85,10 +83,10 @@
     color: #de7a36;
     border: 2px solid #de7a36;
     width: 1.8rem;
-    font-size: 0.1rem;
-    height: 0.6rem;
-    line-height: 0.6rem;
-    border-radius: 0.6rem;
+    font-size: 0.18rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    border-radius: 0.5rem;
     text-align: center;
     margin-top: 0.2rem;
     /* font-weight: 600; */
@@ -105,7 +103,7 @@
 }
 .bottom_nav {
     position: absolute;
-    right: 5%;
+    right: 0.6rem;
     bottom: 5%;
     z-index: 30;
 }
@@ -115,8 +113,8 @@
     cursor: pointer;
     /* transform: scale(.8); */
     font-size: 0.16rem;
-    color:#000;
-    font-family: AVANTGA2;
+    color:#333;
+    font-family: 'Reeji Cloud YuanZhun GBK';
 }
 .bottom_nav li:last-child{
     margin-right: 0px;
@@ -129,13 +127,12 @@
 }
 .ite {
     position: absolute;
-    left: 11px;
+    left: 0.6rem;
     bottom: 5%;
     font-size: 0.16rem;
-    transform: scale(.8);
-    color:#000;
+    color:#333;
     z-index: 30;
-    font-family: AVANTGA2;
+    font-family: 'Reeji Cloud YuanZhun GBK';
 }
 .fsz34 {
     color: #009e8b;
@@ -161,7 +158,7 @@
     z-index: 30;
     font-size: 0.18rem;
     line-height: 0.24rem;
-    color:#000;
+    color:#333;
     cursor: pointer;
     display: none;
 }
@@ -171,7 +168,7 @@
 .title p {
     opacity: 0;
     letter-spacing: 4px;
-    transition: all 1s linear;
+    transition: transform 1s linear, opacity 1s linear;
     transform: translateY(50px);
     font-family: 'Reeji Cloud YuanZhun GBK';
 }
@@ -185,15 +182,14 @@
 .title .btn {
     margin-top: 1.31rem;
     /* display: inline-block; */
-    font-size: 0.16rem;
+    font-size: 0.18rem;
     /* padding: 20px 52px; */
-    border-radius: 0.6rem;
-    line-height: normal;
+    border-radius: 0.5rem;
     background-color: #de7a36;
     color: #fff;
     display: flex;
-    width: 1.4rem;
-    height: 0.6rem;
+    width: 1.8rem;
+    height: 0.5rem;
     justify-content: center;
     align-items: center;
     margin-left: 0.2rem;
@@ -201,14 +197,25 @@
 .title .btn_box .first {
     margin-left: 0px;
 }
-.title .btn img{
+.title .btn .iconfont {
     /* flex:1; */
-    width: auto;
-    position: relative;
-    margin-right: 0.1rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
+    font-size: 0.24rem !important;
+}
+.title .btn .icon-tianmao {
+    font-size: 0.30rem !important;
 }
 .title .btn span {
+    margin-left: 0.1rem;
     color: #fff;
+    font-size: 0.18rem;
+    line-height: 0.2rem;
+    margin-top: 0.1rem;
+    font-family: 'Reeji Cloud YuanZhun GBK';
+}
+.title .btn .jd {
+    margin-top: 0.08rem;
 }
 .title .btn:last-child {
     background-color: #009e8b;

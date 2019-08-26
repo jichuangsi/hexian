@@ -69,16 +69,17 @@
 .center {
     width: 100%;
     /* height: 500px; */
-    /* background-color: #fff; */
-    background: -webkit-linear-gradient(#fff, #f3f3f3); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(#fff, #f3f3f3); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(#fff, #f3f3f3); /* Firefox 3.6 - 15 */
-    background: linear-gradient(#fff, #f3f3f3);
+    background-color: #f4f8f9;
     position: absolute;
     top: 100%;
     left: 0px;
     z-index: 99;
     transition: top 0.06s linear;
+}
+.center_top {
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 1.25rem;
 }
 .center .img {
     width: 14rem;
@@ -94,8 +95,8 @@
 }
 .center .center_title {
     width: 100%;
-    margin-top: 1.3rem;
-    color: #000;
+    padding-top: 1.3rem;
+    color: #333;
     position: relative;
     /* margin-bottom: 0.6rem; */
 }
@@ -105,7 +106,8 @@
 }
 .center .center_title p:last-child {
     color: #009d81;
-    font-size: 0.2rem;
+    font-size: 0.24rem;
+    margin-top: 0.38rem;
 }
 .center .text {
     position: absolute;
@@ -123,30 +125,88 @@
 }
 .center .sel{
     width: 14rem;
-    height: 0.6rem;
+    height: 0.8rem;
     margin: 0.4rem auto;
     display: flex;
-    background-color: orange;
+    background-color: #fff;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 0rem;
+    transform: translateY(-50%);
 }
-.center .sel select {
+.center .sel .sel_box{
     flex: 1;
-    text-indent: 0.2rem;
-    outline: none;
-    border: none;
     border-right: 1px solid #f6f6f6;
+    position: relative;
+}
+.center .sel .sel_box div {
+    width: 100%;
+    height: 100%;
+    font-size: 0.18rem;
+    text-indent: 0.32rem;
+    color: #333;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    cursor: pointer;
+}
+.center .sel .sel_box div span{
+    width: 100%;
+    height: 100%;
+    line-height: 0.8rem;
+    display: inline-block;
+    font-size: 0.18rem;
+    text-indent: 0.32rem;
+    color: #333;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+}
+.center .sel .sel_box em {
+    width: 0.15rem;
+    height: 0.15rem;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    border-color: transparent #d9d9d9 #d9d9d9   transparent;
+    position: absolute;
+    right: 0.32rem;
+    top: 50%;
+    transform: rotate(45deg) translateY(-100%);
+}
+.center .sel .sel_box div ul {
+    width: 100%;
+    position: absolute;
+    top: 0.8rem;
+    background-color: #fff;
+    border: 1px solid #f6f6f6;
+    border-top: none;
+    display: none;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+}
+.center .sel .sel_box div ul li{
+    line-height: 0.8rem;
+    text-indent: none;
+    border-bottom: 1px solid #f6f6f6;
+}
+.center .sel .sel_box div ul li:hover {
+    color: #fff;
+    background-color: #0094ff;
 }
 .center .sel input {
     flex: 1;
-    text-indent: 0.2rem;
+    font-size: 0.18rem;
+    text-indent: 0.32rem;
+    color: #333;
     outline: none;
     border: none;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center .sel .btn {
-    font-size: 0.1rem;
+    font-size: 0.2rem;
     width: 1.8rem;
     text-align: center;
-    line-height: 0.6rem;
+    line-height: 0.8rem;
     cursor: pointer;
     background-color: #009d81;
     color: #fff;
@@ -162,7 +222,8 @@
     width: 50%;
 }
 .center .zw p:first-child{
-    font-size: 0.34rem;
+    font-size: 0.32rem;
+    color: #333;
 }
 .center .zw p:last-child{
     text-align: right
@@ -190,6 +251,7 @@
     flex-wrap: wrap;
 }
 .center .list .first {
+    font-size: 0.2rem;
     border-bottom: 1px solid #f3f3f3;
 }
 .center .list .list_box div {
@@ -209,9 +271,10 @@
     width: 0.15rem;
     height: 0.15rem;
     display: inline-block;
-    border: 1px solid #333;
-    border-color: transparent #333 #333   transparent;
+    border: 1px solid #d9d9d9;
+    border-color: transparent #d9d9d9 #d9d9d9 transparent;
     transform: rotate(45deg);
+    margin-right: 0.37rem;
 }
 .center .list .list_box .box {
     width: 100%;
@@ -224,22 +287,32 @@
     overflow: hidden;
     transition: all 1s linear;
 }
+.center .list .list_box .box .left{
+    width: 62%;
+}
+.center .list .list_box .box .right{
+    width: 48%;
+}
 .center .list .list_box .box div{
-    width: 45%;
+    /* width: auto; */
 }
 .center .list .list_box .box p {
     line-height: 0.24rem;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.16rem;
+    white-space: nowrap;
+    font-size: 0.16rem;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center .list .list_box .box .h1{
-    font-size: 0.34rem;
+    font-size: 0.26rem;
     margin-bottom: 0.3rem;
     margin-top: 0.4rem;
     color: #de7a36;
 }
 .center .list .list_box .box .emil{
-    margin-bottom: 3rem;
+    margin-bottom: 0.3rem;
     margin-top: 0.4rem;
+    font-size: 0.18rem;
     color: #009d81;
 }
 .center .list .ym {
@@ -313,39 +386,41 @@
     transition: all 0.6s linear;
 }
 .fsz56 {
-    font-size: 0.56rem !important;
+    font-size: 0.70rem !important;
     margin-bottom: 0.46rem !important;
-    margin-top: -2% !important;
+    margin-top: -2.5% !important;
 }
 .center_title p {
-    font-size: 0.17rem;
+    font-size: 0.18rem;
     line-height: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
-    margin-bottom: 0.36rem;
+    margin-bottom: 0.46rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
 }
 .center_title img:first-child {
     width: 6.12rem;
 }
 .center_title p:first-child {
-    font-size: 0.56rem;
+    font-size: 0.70rem;
+    line-height: 0.74rem;
     margin-bottom: 0.46rem;
 }
 .center_title p:last-child {
-    font-size: 0.17rem;
+    font-size: 0.18rem;
 }
 .center_title .btn{
     margin-top: 0.9rem;
     margin-left: 0.3rem;
     width: 2.06rem;
     height: 0.6rem;
+    font-size: 0.2rem;
     line-height: 0.6rem;
     text-align: center;
     background-color: #d6d6d6;

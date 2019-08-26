@@ -71,6 +71,7 @@
     width: 100%;
     /* height: 500px; */
     /* background-color: #fff; */
+    padding-bottom: 5%;
     background: #f2f9fb;
     position: absolute;
     top: 100%;
@@ -109,14 +110,21 @@
 }
 .center .box .all_title .fsz34{
     color: #009d81;
-    font-size: 0.34rem;
-    margin-top: 0.8rem;
+    font-size: 0.32rem;
+    margin-top: 0.7rem;
     margin-bottom: 0.2rem;
+}
+.center .box .two_title .fsz34{
+    margin-top: 0.9rem;
+}
+.center .box .three_title .fsz34{
+    margin-top: 1rem;
 }
 .center .box .all_title p{
     width: 100%;
+    color: #333;
     /* margin-bottom: 20%; */
-    font-size: 0.1rem
+    font-size: 0.18rem
 }
 .center_title {
     position: absolute;
@@ -139,26 +147,27 @@
     transition: all 0.6s linear;
 }
 .fsz56 {
-    font-size: 0.56rem !important;
+    font-size: 0.70rem !important;
     margin-bottom: 0.46rem !important;
-    margin-top: -5% !important;
+    margin-top: -2.5% !important;
 }
 .center_title p {
-    font-size: 0.17rem;
+    font-size: 0.18rem;
     line-height: 0.3rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
-    margin-bottom: 0.36rem;
+    margin-bottom: 0.46rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
 }
 .center_title img:first-child {
     width: 6.12rem;
+    margin-bottom: 0px;
 }
 .center_title p:first-child {
     font-size: 0.56rem;

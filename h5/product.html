@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/style/reset.css">
     <link rel="stylesheet" href="./assets/style/product.css">
-    <link rel="stylesheet" href="./assets/font_1340231_4btwh394d0v/iconfont.css">
+    <link rel="stylesheet" href="./assets/font_1340231_3b1rumcv30t/iconfont.css">
     <script src="./libs/jquery.min.js"></script>
     <script src="./assets/js/reset.js"></script>
     <!-- <script src="./libs/jquery.fullpage.js"></script> -->
@@ -49,10 +49,10 @@
                             </div>
                             <div class="btn_box">
                                  <p class="btn first qie" onclick="location.href='https://hexianshipin.tmall.com/shop/view_shop.htm?spm=a220m.1000862.1000730.2.41614658rIy0Zp&user_number_id=4028244311&rn=1e4c7ad05801054ad9ddb4ab35c01a62'">
-                                    <img src="./assets/images/和鲜产品/tianmao.png" alt=""><span>天猫</span>
+                                    <span class="iconfont icon-tianmao"></span><span>天猫</span>
                                 </p>
                                 <p class="btn qie" onclick="location.href='https://mall.jd.com/index-770478.html'">
-                                    <img src="./assets/images/和鲜产品/jingdong.png" alt=""><span>京东</span>
+                                    <span class="iconfont icon-jingdong"></span><span class="jd">京东</span>
                                 </p>
                             </div>
                         </div>
@@ -69,10 +69,10 @@
                             </div>
                             <div class="btn_box">
                                  <p class="btn first qie" onclick="location.href='https://hexianshipin.tmall.com/shop/view_shop.htm?spm=a220m.1000862.1000730.2.41614658rIy0Zp&user_number_id=4028244311&rn=1e4c7ad05801054ad9ddb4ab35c01a62'">
-                                    <img src="./assets/images/和鲜产品/tianmao.png" alt=""><span>天猫</span>
+                                    <span class="iconfont icon-tianmao"></span><span>天猫</span>
                                 </p>
                                 <p class="btn qie" onclick="location.href='https://mall.jd.com/index-770478.html'">
-                                    <img src="./assets/images/和鲜产品/jingdong.png" alt=""><span>京东</span>
+                                    <span class="iconfont icon-jingdong"></span><span class="jd">京东</span>
                                 </p>
                             </div>
                         </div>
@@ -88,10 +88,10 @@
                             </div>
                             <div class="btn_box">
                                  <p class="btn first qie" onclick="location.href='https://hexianshipin.tmall.com/shop/view_shop.htm?spm=a220m.1000862.1000730.2.41614658rIy0Zp&user_number_id=4028244311&rn=1e4c7ad05801054ad9ddb4ab35c01a62'">
-                                    <img src="./assets/images/和鲜产品/tianmao.png" alt=""><span>天猫</span>
+                                    <span class="iconfont icon-tianmao"></span><span>天猫</span>
                                 </p>
                                 <p class="btn qie" onclick="location.href='https://mall.jd.com/index-770478.html'">
-                                    <img src="./assets/images/和鲜产品/jingdong.png" alt=""><span>京东</span>
+                                    <span class="iconfont icon-jingdong"></span><span class="jd">京东</span>
                                 </p>
                             </div>
                         </div>
@@ -113,11 +113,11 @@
             </ul>
             <ul class="indexList">
                 <!-- 图片右下角序号部分 -->
-                <li>调味品</li>
-                <li>半冷链成品</li>
-                <li>蜂蜜</li>
-                <li>密蒜</li>
-                <li class="indexOn">饮料</li>
+                <li class="indexOn" data-id="0" onclick="listclick(this)">调味品</li>
+                <li data-id="1" onclick="listclick(this)">半冷链成品</li>
+                <li data-id="2" onclick="listclick(this)">蜂蜜</li>
+                <li data-id="3" onclick="listclick(this)">密蒜</li>
+                <li data-id="4" onclick="listclick(this)">饮料</li>
             </ul>
             <ul class="bottom_nav">
                     <!-- 图片右下角序号部分 -->
@@ -140,7 +140,6 @@
                 num = url?url.split('=')[1]:''
             }
                 if(num == 1){
-                    console.log($('.indexList').find('li').eq(0)[0])
                     $('.indexList').find('li').eq(0).click()
                 }else if(num == 2){
                     $('.indexList>li').eq(1)[0].click()
@@ -176,8 +175,9 @@
         }
         // $('.imgList>li').find('img').css('height',h+'px')
         // console.log($('.imgList>li>img'))
-        console.log(h)
         var curIndex = 0; //当前index
+        var listfirst;
+        var listtwo;
         //   alert(imgLen);
         // 定时器自动变换2.5秒每次
         var autoChange;
@@ -194,16 +194,21 @@
         // }, 5500);
         }
 
-        $(".indexList").find("li").each(function (item) {
-            $(this).click(function () {
+        // $(".indexList").click(function () {
+        //     console
+        //     let num = $(this).attr('data-id')
+        //         clearInterval(autoChange);
+        //         changeTo(num);
+        //         curIndex = num;
+        // });
+        function listclick(val){
+            let num = $(val).attr('data-id')
                 clearInterval(autoChange);
-                changeTo(item);
-                curIndex = item;
-            });
-        });
+                changeTo(num);
+                curIndex = num;
+        }
         
         $(".tab>.all_title").each(function (item) {
-            console.log(item)
             $(this).click(function () {
                 $(this).addClass('all_check').siblings().removeClass('all_check')
                 $('.title').eq(item).addClass('title_check').siblings().removeClass('title_check')
@@ -211,8 +216,10 @@
         });
 
         function changeTo(num) {
+            listfirst = '';
+            listtwo = '';
             $(".imgList").find("li").removeClass("imgOn")
-            $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
+            // $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
             $(".imgList").find("li").find('p').removeClass("qie")
             setTimeout(function(){
                 $(".imgList").find("li").eq(num).addClass("imgOn");
@@ -220,9 +227,27 @@
             for(let i = 0; i < $(".imgList").find("li").eq(num).find('p').length; i++){
                 setTimeout(() => {
                 $(".imgList").find("li").eq(num).find('p').eq(i).addClass("qie");
-                    console.log(i+1+'00')
                 }, i*4+'00');
             }
+            console.log($(".indexList").find("li").length)
+            console.log(num)
+            for(let i = 0; i < $(".indexList").find("li").length; i++){
+                if(num == $(".indexList").find("li").eq(i).attr('data-id')){
+                    listfirst = $(".indexList").find("li").eq(i)[0]
+                }else{
+                    listtwo +=  '<li data-id="'+$(".indexList").find("li").eq(i).attr('data-id')+'" onclick="listclick(this)">'+$(".indexList").find("li").eq(i).text()+'</li>'
+                }
+            }
+            console.log(listfirst)
+            console.log(listtwo)
+            // $('.listlast').append(listtwo)
+            // console.log($('.listlast')[0])
+            // console.log($('.listlast').children()[0])
+            $(".indexList").children().remove()
+            $(".indexList").append(listfirst)
+            $(".indexList").append(listtwo)
+            $(".indexList").find('li').eq(0).addClass('indexOn')
+            // console.log($(".indexList"))
             // $(".imgList").find("li").removeClass("imgOn").hide().eq(num).fadeIn().addClass("imgOn");
             // $(".infoList").find("li").removeClass("infoOn").eq(num).addClass("infoOn");
             // $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
