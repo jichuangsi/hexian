@@ -89,8 +89,9 @@
     cursor: pointer;
     /* transform: scale(.8); */
     font-size: 0.16rem;
+    line-height: 0.24rem;
     color:rgba(255, 255, 255, 0.6);
-    font-family: AVANTGA2;
+    font-family: 'Reeji Cloud YuanZhun GBK';
 }
 .bottom_nav li:last-child{
     margin-right: 0px;
@@ -136,6 +137,7 @@
     left: 0.6rem;
     bottom: 5%;
     font-size: 0.16rem;
+    line-height: 0.24rem;
     color:rgba(255, 255, 255, 0.8);
     z-index: 30;
     font-family: 'Reeji Cloud YuanZhun GBK';
@@ -144,7 +146,7 @@
     position: absolute;
     left: 0.6rem;
     top: 50%;
-    transform: translateY(-25%);
+    transform: translateY(-50%);
     z-index: 30;
     font-size: 0.6rem;
     line-height: 0.68rem;
@@ -185,7 +187,7 @@
 .title .btn {
     margin-top: 0.7rem;
     display: inline-block;
-    font-size: 0.16px;
+    font-size: 0.16rem;
     padding: 0.23rem 0.62rem;
     border-radius: 0.6rem;
     line-height: normal;

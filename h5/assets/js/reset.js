@@ -1,4 +1,4 @@
-window.onload = function () {
+// window.onload = function () {
 setHTML();
 
         // var u = navigator.userAgent;
@@ -47,4 +47,4 @@ let fontsize = screenWidth * baseVal / pageWidth;
 document.querySelector("html").style.fontSize = fontsize + "px";
 
 }
-}
+// }

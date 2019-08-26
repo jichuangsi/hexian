@@ -113,11 +113,15 @@
     cursor: pointer;
     /* transform: scale(.8); */
     font-size: 0.16rem;
+    line-height: 0.24rem;
     color:#333;
     font-family: 'Reeji Cloud YuanZhun GBK';
 }
 .bottom_nav li:last-child{
     margin-right: 0px;
+}
+.bottom_nav li .iconfont{
+    font-size: 0.2rem !important;
 }
 .bottom_nav li span{
     margin-right: 20px;
@@ -130,6 +134,7 @@
     left: 0.6rem;
     bottom: 5%;
     font-size: 0.16rem;
+    line-height: 0.24rem;
     color:#333;
     z-index: 30;
     font-family: 'Reeji Cloud YuanZhun GBK';

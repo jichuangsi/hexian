@@ -157,7 +157,7 @@
             }
         function scroll(){
             var l = $(document).scrollLeft()
-            var a = $(document).scrollTop()
+            var a = $(document).scrollTop()+100
             var b = $(".center")[0].offsetTop
             var c = $("#one")[0].offsetTop
             var d = $("#two")[0].offsetTop
@@ -166,7 +166,7 @@
             $('.wrapper').css('left',-l+'px')
             var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
             childWindow.scroll_top(l);
-            $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
+            $('.banner>.center_title').css('transform','translate(-50%,'+(-(a-100)/2)+'px)')
             if(b < a){
                 $('.center_nav').css('display','block')
             }else{

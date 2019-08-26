@@ -10,6 +10,7 @@
 .foot .ite{
     width: 50%;
     font-size: 0.16rem;
+    line-height: 0.24rem;
     margin-left: 0.6rem;
     /* transform: scale(.8) translateX(-5%); */
     /* margin-left: 0.6rem; */
@@ -23,6 +24,7 @@
 .bottom_nav li {
     float: right;
     margin-right: 0.3rem;
+    line-height: 0.24rem;
     cursor: pointer;
     /* transform: scale(.8); */
     font-size: 0.16rem;

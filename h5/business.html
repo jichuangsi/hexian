@@ -375,7 +375,7 @@
             var d = 0
         function scroll(){
             var l = $(document).scrollLeft()
-            var a = $(document).scrollTop()
+            var a = $(document).scrollTop()+100
             var b = $(".center")[0].offsetTop
             var c = $("#one")[0].offsetHeight + b
             var d = $("#two")[0].offsetHeight + c
@@ -387,9 +387,8 @@
             $('.wrapper').css('left',-l+'px')
             var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
             childWindow.scroll_top(l);
-            console.log(f)
-            $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
-            if(b<a+100){
+            $('.banner>.center_title').css('transform','translate(-50%,'+(-(a-100)/2)+'px)')
+            if(b<a){
                 $(".center_nav > a").eq(0).addClass('check').siblings().removeClass('check')
                 $('.center_nav').css('display','block')
                 for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
@@ -431,7 +430,7 @@
                 for(let i = 0; i < $("#four").find('ul').children().length; i++){
                     setTimeout(() => {
                     $("#four").find('ul').children().eq(i).addClass("qie");
-                    }, i*4+'00');
+                    }, i*1+'00');
                 }
             }
             if(f<a&&a<g){
