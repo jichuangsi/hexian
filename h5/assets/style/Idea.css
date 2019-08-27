@@ -81,6 +81,7 @@
 .center img {
     width: 100%;
     height: auto;
+    display: block;
 }
 .all_center_title {
     position: relative;
@@ -144,7 +145,7 @@
     white-space: nowrap;
     background-color: #de7a36;
     color: #fff;
-    font-size: 0.1rem;
+    font-size: 0.18rem;
     padding: 0.1rem 0.28rem;
     border-radius: 28px;
     position: absolute;
@@ -186,6 +187,7 @@
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
+    margin: 0 auto;
     margin-bottom: 0.46rem;
     transform: translateY(50px);
     opacity: 0;
