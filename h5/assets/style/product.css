@@ -12,16 +12,13 @@
     position: relative;
 }
 .imgList {
-    position: fixed;
-    top: 0px;
-    left: 0px;
     width: 100%;
     z-index: 10;
-    /* background: url('../images/和鲜产品/和鲜-公司动态.png') no-repeat; */
+    background: url('../images/和鲜产品/和鲜-公司动态.png') no-repeat;
     background-size: 100% 100%;
 }
 
-.imgList .libox {
+.imgList li {
     width: 100%;
     opacity: 0;
     position: absolute;
@@ -30,31 +27,24 @@
     transition: opacity 0.8s linear;
     overflow: hidden;
 }
-.imgList .libox img{
+.imgList li img{
     /* width: 20%; */
     /* width: 100%; */
     height: auto;
-    position: fixed;
+    position: absolute;
 }
-.imgList .libox .img_1 {
+.imgList li .img_1 {
     width: 3.8rem;
     left: 6rem;
     top: 2.28rem;
 }
-.imgList .libox .img_2 {
+.imgList li .img_2 {
     width: 100%;
     height: auto;
     left: 0%;
     top: 0%;
 }
-.imgList .libox .img_3 {
-    width: 100%;
-    height: auto;
-    left: 0%;
-    top: 0%;
-    z-index: 8;
-}
-.imgList .libox a{
+.imgList li a{
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -98,11 +88,9 @@
     line-height: 0.5rem;
     border-radius: 0.5rem;
     text-align: center;
-    /* margin-top: 0.2rem; */
+    margin-top: 0.2rem;
     /* font-weight: 600; */
     font-family: 'Reeji Cloud YuanZhun GBK' !important;
-    position: absolute;
-    z-index: 88;
 }
 .indexList li:first-child{
     margin-top: 0px;
@@ -148,7 +136,7 @@
     font-size: 0.16rem;
     line-height: 0.24rem;
     color:#333;
-    z-index: 33;
+    z-index: 30;
     font-family: 'Reeji Cloud YuanZhun GBK';
 }
 .fsz34 {
@@ -169,7 +157,7 @@
     margin-left: 0.2rem;
 }
 .title {
-    position: fixed;
+    position: absolute;
     left: 60%;
     top: 2.46rem;
     z-index: 30;
@@ -245,7 +233,7 @@
 }
 .tab {
     display: flex;
-    position: fixed;
+    position: absolute;
     left: 50%;
     bottom: 10%;
     transform: translateX(-50%);
