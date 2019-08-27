@@ -26,12 +26,20 @@
                 Copyright 2019 Hexian All Rights Reserved 粤ICP备18009779号-1
             </div>
             <!-- 轮播部分 -->
-            <ul class="imgList">
+            <ul class="indexList">
+                <!-- 图片右下角序号部分 -->
+                <li data-id="0" onclick="listclick(this)">饮料</li>
+                <li data-id="1" onclick="listclick(this)">调味品</li>
+                <li data-id="2" onclick="listclick(this)">半冷链成品</li>
+                <li data-id="3" onclick="listclick(this)">蜂蜜</li>
+                <li data-id="4" onclick="listclick(this)">蜜蒜</li>
+                <div class="imgList">
                 <!-- 图片部分 -->
-                <li>
+                    <div class="libox">
                         <div class="img_box">
                             <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
                             <img class="img_2" src="./assets/images/和鲜产品/和鲜-和鲜产品1.png" alt="">
+                            <!-- <img class="img_3" src="./assets/images/和鲜产品/和鲜-公司动态.png" alt=""> -->
                         </div>
                         <div class="title title_check">
                             <p class="fsz34">和鲜苹果醋饮料</p>
@@ -92,32 +100,25 @@
                             </div>
                         </div>
                         <div class="tab">
-                            <div class="one_title all_title all_check">
+                            <div class="all_title all_check">
                                 <img src="./assets/images/和鲜产品/和鲜-和鲜产品_063.png" alt="">
                                 <p>果醋</p>
                             </div>
-                            <div class="two_title all_title">
+                            <div class="all_title">
                                 <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05.png" alt="">
                                 <p>果汁</p>
                             </div>
-                            <div class="three_title all_title">
+                            <div class="all_title">
                                 <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05_03.png" alt="">
                                 <p>矿泉水</p>
                             </div>
                         </div>
-                </li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <ul class="indexList">
-                <!-- 图片右下角序号部分 -->
-                <li data-id="0" onclick="listclick(this)">饮料</li>
-                <li data-id="1" onclick="listclick(this)">调味品</li>
-                <li data-id="2" onclick="listclick(this)">半冷链成品</li>
-                <li data-id="3" onclick="listclick(this)">蜂蜜</li>
-                <li data-id="4" onclick="listclick(this)">密蒜</li>
+                    </div>
+                    <div class="libox"></div>
+                    <div class="libox"></div>
+                    <div class="libox"></div>
+                    <div class="libox"></div>
+                </div>
             </ul>
             <ul class="bottom_nav">
                     <!-- 图片右下角序号部分 -->
@@ -193,7 +194,16 @@
         //     changeTo(curIndex);
         // }, 5500);
         }
-
+        for(let i = 0; i<$('.indexList > li').length; i++){
+            if(i>0){
+                $('.indexList > li').eq(i).css('top',(i*0.7)+'rem')
+            }
+        }
+        var list_h = $('.indexList > li').length * 0.5 + ($('.indexList > li').length -1) *0.2-0.5
+            console.log(list_h)
+            console.log((h/100 - list_h))
+        // $('.indexList').css('width',$('.indexList > li').css('width')+'rem')
+        $('.indexList').css('top',(h/100 - list_h)/2+'rem')
         // $(".indexList").click(function () {
         //     console
         //     let num = $(this).attr('data-id')
@@ -212,21 +222,30 @@
             $(this).click(function () {
                 $(this).addClass('all_check').siblings().removeClass('all_check')
                 $('.title').eq(item).addClass('title_check').siblings().removeClass('title_check')
+                $(".imgList").find(".libox").find('.title_check').find('p').removeClass("qie")
+                for(let i = 0; i < $('.title').eq(item).find('p').length; i++){
+                    setTimeout(() => {
+                    $('.title').eq(item).find('p').eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
             });
         });
 
         function changeTo(num) {
             listfirst = '';
             listtwo = '';
-            $(".imgList").find("li").removeClass("imgOn")
+            console.log(num)
+            $(".imgList").find(".libox").eq(num).find('.title').eq(0).addClass('title_check').siblings().removeClass('title_check')
+            $(".imgList").find(".libox").eq(num).find('.all_title').eq(0).addClass('all_check').siblings().removeClass('all_check')
+            $(".imgList").find(".libox").removeClass("imgOn")
             $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
-            $(".imgList").find("li").find('p').removeClass("qie")
+            $(".imgList").find(".libox").eq(num).find('.title_check').find('p').removeClass("qie")
             setTimeout(function(){
-                $(".imgList").find("li").eq(num).addClass("imgOn");
+                $(".imgList").find(".libox").eq(num).addClass("imgOn");
             },100)
-            for(let i = 0; i < $(".imgList").find("li").eq(num).find('p').length; i++){
+            for(let i = 0; i < $(".imgList").find(".libox").eq(num).find('.title_check').find('p').length; i++){
                 setTimeout(() => {
-                $(".imgList").find("li").eq(num).find('p').eq(i).addClass("qie");
+                $(".imgList").find(".libox").eq(num).find('.title_check').find('p').eq(i).addClass("qie");
                 }, i*4+'00');
             }
             // console.log($(".indexList").find("li").length)
@@ -252,6 +271,7 @@
             // $(".infoList").find("li").removeClass("infoOn").eq(num).addClass("infoOn");
             // $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
         }
+        
         function iframefixed(){
             $('#head').css('position','fixed')
             $('#head').css('height','100%')
