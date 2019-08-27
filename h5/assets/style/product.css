@@ -74,7 +74,8 @@
 .indexList {
     position: absolute;
     left: 5%;
-    top: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 30;
 }
 
@@ -285,6 +286,12 @@
         height: 40px;
         line-height: 40px;
         font-size: 12px;
+    }
+    .img_box {
+        display: none;
+    }
+    .img_check {
+        display: block;
     }
     .imgList li .img_1 {
         width: 254px;

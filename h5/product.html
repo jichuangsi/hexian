@@ -30,6 +30,17 @@
                 <!-- 图片部分 -->
                 <li>
                         <div class="img_box">
+                            <img class="img_3" src="./assets/images/和鲜产品/和鲜-公司动态.png" alt="">
+                            <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
+                            <img class="img_2" src="./assets/images/和鲜产品/和鲜-和鲜产品1.png" alt="">
+                        </div>
+                        <div class="img_box">
+                            <img class="img_2" src="./assets/images/和鲜产品/和鲜-公司动态.png" alt="">
+                            <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
+                            <img class="img_2" src="./assets/images/和鲜产品/和鲜-和鲜产品1.png" alt="">
+                        </div>
+                        <div class="img_box">
+                            <img class="img_2" src="./assets/images/和鲜产品/和鲜-公司动态.png" alt="">
                             <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
                             <img class="img_2" src="./assets/images/和鲜产品/和鲜-和鲜产品1.png" alt="">
                         </div>
@@ -92,15 +103,15 @@
                             </div>
                         </div>
                         <div class="tab">
-                            <div class="one_title all_title all_check">
+                            <div class="one_title all_title all_check" data-id="1" onclick="tabclick(this)">
                                 <img src="./assets/images/和鲜产品/和鲜-和鲜产品_063.png" alt="">
                                 <p>果醋</p>
                             </div>
-                            <div class="two_title all_title">
+                            <div class="two_title all_title" data-id="2" onclick="tabclick(this)">
                                 <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05.png" alt="">
                                 <p>果汁</p>
                             </div>
-                            <div class="three_title all_title">
+                            <div class="three_title all_title" data-id="3" onclick="tabclick(this)">
                                 <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05_03.png" alt="">
                                 <p>矿泉水</p>
                             </div>
@@ -113,11 +124,11 @@
             </ul>
             <ul class="indexList">
                 <!-- 图片右下角序号部分 -->
-                <li data-id="0" onclick="listclick(this)">饮料</li>
-                <li data-id="1" onclick="listclick(this)">调味品</li>
-                <li data-id="2" onclick="listclick(this)">半冷链成品</li>
-                <li data-id="3" onclick="listclick(this)">蜂蜜</li>
-                <li data-id="4" onclick="listclick(this)">密蒜</li>
+                <li data-id="1" onclick="listclick(this)">饮料</li>
+                <li data-id="2" onclick="listclick(this)">调味品</li>
+                <li data-id="3" onclick="listclick(this)">半冷链成品</li>
+                <li data-id="4" onclick="listclick(this)">蜂蜜</li>
+                <li data-id="5" onclick="listclick(this)">密蒜</li>
             </ul>
             <ul class="bottom_nav">
                     <!-- 图片右下角序号部分 -->
@@ -202,55 +213,51 @@
         //         curIndex = num;
         // });
         function listclick(val){
-            let num = $(val).attr('data-id')
+            let num = $(val).attr('data-id')-1
                 clearInterval(autoChange);
                 changeTo(num);
                 curIndex = num;
         }
-        
-        $(".tab>.all_title").each(function (item) {
-            $(this).click(function () {
-                $(this).addClass('all_check').siblings().removeClass('all_check')
-                $('.title').eq(item).addClass('title_check').siblings().removeClass('title_check')
-            });
-        });
+        function tabclick(val){
+            let item = $(val).attr('data-id')-1
+            $(val).addClass('all_check').siblings().removeClass('all_check')
+            $(val).parent().parent().find('.title').find('p').removeClass("qie");
+            $(val).parent().parent().find('.title').eq(item).addClass('title_check').siblings().removeClass('title_check')
+            $(val).parent().parent().find('.img_box').eq(item).addClass('img_check').siblings().removeClass('img_check')
+            for(let i = 0; i < $(val).parent().parent().find('.title_check').find('p').length; i++){
+                setTimeout(() => {
+                    $(val).parent().parent().find('.title_check').find('p').eq(i).addClass("qie");
+                }, i*4+'00');
+            }
+        }
+        // $(".tab>.all_title").each(function (item) {
+        //     $(this).click(function () {
+        //         $(this).addClass('all_check').siblings().removeClass('all_check')
+        //         $('.title').eq(item).addClass('title_check').siblings().removeClass('title_check')
+        //     });
+        // });
 
         function changeTo(num) {
-            listfirst = '';
-            listtwo = '';
             $(".imgList").find("li").removeClass("imgOn")
             $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
             $(".imgList").find("li").find('p').removeClass("qie")
+            $(".imgList").find("li").eq(num).find('img_box').eq(0).addClass('img_check').siblings().removeClass('img_check')
+            $(".imgList").find("li").eq(num).find('.title').eq(0).addClass('title_check').siblings().removeClass('title_check')
             setTimeout(function(){
                 $(".imgList").find("li").eq(num).addClass("imgOn");
             },100)
-            for(let i = 0; i < $(".imgList").find("li").eq(num).find('p').length; i++){
+            for(let i = 0; i < $(".imgList").find("li").eq(num).find('.title_check').find('p').length; i++){
                 setTimeout(() => {
-                $(".imgList").find("li").eq(num).find('p').eq(i).addClass("qie");
+                $(".imgList").find("li").eq(num).find('.title_check').find('p').eq(i).addClass("qie");
                 }, i*4+'00');
             }
-            // console.log($(".indexList").find("li").length)
-            // console.log(num)
-            // for(let i = 0; i < $(".indexList").find("li").length; i++){
-            //     if(num == $(".indexList").find("li").eq(i).attr('data-id')){
-            //         listfirst = $(".indexList").find("li").eq(i)[0]
-            //     }else{
-            //         listtwo +=  '<li data-id="'+$(".indexList").find("li").eq(i).attr('data-id')+'" onclick="listclick(this)">'+$(".indexList").find("li").eq(i).text()+'</li>'
-            //     }
-            // }
-            // console.log(listfirst)
-            // console.log(listtwo)
-            // $('.listlast').append(listtwo)
-            // console.log($('.listlast')[0])
-            // console.log($('.listlast').children()[0])
-            // $(".indexList").children().remove()
-            // $(".indexList").append(listfirst)
-            // $(".indexList").append(listtwo)
-            // $(".indexList").find('li').eq(0).addClass('indexOn')
-            // console.log($(".indexList"))
-            // $(".imgList").find("li").removeClass("imgOn").hide().eq(num).fadeIn().addClass("imgOn");
-            // $(".infoList").find("li").removeClass("infoOn").eq(num).addClass("infoOn");
-            // $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
+        }
+        function tabTo(num) {
+            for(let i = 0; i < $(".imgList").find("li").eq(num).find('.title_check').find('p').length; i++){
+                setTimeout(() => {
+                $(".imgList").find("li").eq(num).find('.title_check').find('p').eq(i).addClass("qie");
+                }, i*4+'00');
+            }
         }
         function iframefixed(){
             $('#head').css('position','fixed')
