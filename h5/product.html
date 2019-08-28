@@ -31,9 +31,8 @@
                 <li data-id="1">
                     <div class="libox" data-id="1">
                             <div class="img_box">
-                                    <img class="img_3" src="./assets/images/和鲜产品/和鲜-公司动态.png" alt="">
                                     <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
-                                    <img class="img_2" src="./assets/images/和鲜产品/和鲜-和鲜产品1.png" alt="">
+                                    <img class="img_2" src="./assets/images/和鲜产品/和鲜-和鲜产品.png" alt="">
                                 </div>
                                 <div class="title">
                                     <p class="fsz34">和鲜苹果醋饮料</p>
@@ -186,8 +185,7 @@
 
             function scroll() {
                 var l = $(document).scrollLeft()
-                var childWindow = $("#head")[0]
-                .contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+                var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
                 childWindow.scroll_top(l);
             }
         });

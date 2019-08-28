@@ -37,6 +37,7 @@
     width: 3.8rem;
     left: 6rem;
     top: 2.28rem;
+    z-index: 10;
 }
 .imgList li .img_2 {
     width: 100%;
@@ -159,7 +160,7 @@
 }
 .title {
     position: absolute;
-    left: 60%;
+    left: 11rem;
     top: 2.46rem;
     z-index: 30;
     font-size: 0.18rem;
@@ -283,7 +284,7 @@
         height: 100px;
     }
     .indexList {
-        top: 180px;
+        /* top: 180px; */
     }
     .indexList li{
         width: 110px;

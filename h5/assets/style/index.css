@@ -105,6 +105,25 @@
 .bottom_nav li .iconfont {
     font-size: 0.2rem !important;
 }
+
+.shutext {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top:4.26rem;
+    right: 1.64rem;
+}
+.shutext div {
+    font-size: 0.22rem;
+    line-height: 0.24rem;
+    color: #fff;
+    width: 0.2rem;
+    margin-left: 0.15rem;
+}
+.shutext div span{
+    display: inline-block;
+    margin-top: 0.1rem;
+}
 /* .logo {
     width: 124px;
     height: 75px;
