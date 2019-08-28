@@ -71,10 +71,10 @@
     /* height: 500px; */
     position: relative;
     padding-bottom: 10%;
-    background: -webkit-linear-gradient(#fff, #f3f3f3); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(#fff, #f3f3f3); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(#fff, #f3f3f3); /* Firefox 3.6 - 15 */
-    background: linear-gradient(#fff, #f3f3f3);
+    background: -webkit-linear-gradient(#fff, #fff,#f3f3f3); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#fff, #fff,#f3f3f3); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#fff,#fff, #f3f3f3); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#fff, #fff,#f3f3f3);
     position: absolute;
     top: 100%;
     left: 0px;
@@ -187,45 +187,80 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    margin-bottom: 0.6rem;
+    margin-top: -10%;
     transform: translateY(50px);
     opacity: 0;
     transition: all 1s linear;
     /* margin-top: -10%; */
 }
+.center .Second .first_box {
+    margin-top: 0px;
+}
 .center .Second .second_box .yuan {
-    width: 0.18rem;
-    height: 0.18rem;
-    background-color: #fff;
+    width: 1.06rem;
+    height: 1.06rem;
+    background-color: #de7a36;
     border-radius: 50%;
     position: absolute;
     left: 50%;
-    transform: translateX(-10%);  
+    transform: translateX(-45%);  
+    border: 0.03rem solid #fff;
+}
+.center .Second .second_box .yuan em {
+    position: absolute;
+    left: 77%;
+    top: 33%;
+    transform: rotate(45deg);
+    background-color: #de7a36;
+    border: 0.16rem solid #de7a36;
+    border-radius: 2px;
+}
+.center .Second .second_box .yuan em {
+    position: absolute;
+    left: 77%;
+    top: 33%;
+    transform: rotate(45deg);
+    background-color: #de7a36;
+    border: 0.16rem solid #de7a36;
+    border-radius: 4px;
+}
+.center .Second .second_box .yuan .left_em {
+    left: -7%;
 }
 .center .Second .second_box .yuan div {
-    width: 0.15rem;
-    height: 0.15rem;
+    width: 0.86rem;
+    height: 0.86rem;
     background-color: #de7a36;
     border-radius: 50%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    border: 0.03rem solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.center .Second .second_box .yuan span{
+    font-size: 0.14rem;
+    color: #fff;
+}
+.center .Second .second_box .yuan span:first-child{
+    font-size: 0.20rem;
+    margin-bottom: 0.05rem;
 }
 .center .Second .second_box .img {
-    width: 4.62rem;
-    height: 0rem;
+    width: 100%;
+    margin-bottom: 0.3rem;
     /* height: 4.62rem; */
-    background-color: #009d81;
-    border-radius: 50%;
-    overflow: hidden;
 }
 .center .Second .second_box .img img {
     /* height: 4.82rem; */
     width: 100%;
     height: auto;
     /* height: 0px; */
-    transform: translate(0.38rem,0.18rem);
 }
 .center .Second .second_box .time {
     font-size: 0.70rem;
@@ -247,6 +282,16 @@
     height: 0px;
     overflow: hidden;
     transition: all 1s linear;
+}
+.center .Second .second_box .text_more {
+    font-size: 0.16rem;
+    line-height: 0.24rem;
+    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+    transition: all 1s linear;
+    color: #de7a36;
+}
+.center .Second .second_box .text_more span{
+    margin-left: 0.15rem;
 }
 .center .Second .second_box .left_box{
     width: 40%;

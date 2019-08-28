@@ -38,6 +38,66 @@
         </div>
     </div>
     <div class="center">
+        <div id="two" class="all_center_title">
+            <img src="./assets/images/招聘职位/和鲜-加入和鲜-招聘职位_02-2.png" alt="">
+            <div class="center_title">
+                <p><span>和鲜投资,您来创业,诚聘合伙人</span><br>百万年薪+49%法定股权</p>
+                <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
+                <p>实施人才战略是和鲜的核心发展战略，我们始终把人才战略放在团队建设的第一梯队，<br>坚信人才是和鲜发展的核心竞争力和业务驱动力，任人唯贤，打造事成人爽的道场，助力每个人实现自我价值。</p>
+            </div>
+            <div class="one_title text_title">
+                <img src="./assets/images/和鲜--公司简介/xx.png" alt="">
+                <p class="number">1</p>
+                <p>公司治理结构，由和鲜产业投资支持平台<br>（和鲜科技集团）+各产业公司。<br>由维也纳酒店集团创始人黄德满领投。</p>
+            </div>
+            <div class="two_title text_title">
+                <img src="./assets/images/和鲜--公司简介/xx.png" alt="">
+                <p class="number">2</p>
+                <p>每一个产品产业公司，借助平台的资源优势，<br>独立经营与核算。成立与注册产品产业公司营<br>业执照，由和鲜总部全额投资，和鲜总部占股<span>51％</span>，人才合伙人持股<span>49％</span>的法定股权<br>（由和鲜代出资），同时，能另外获得和鲜<br>集团的<span>1000万至3000万</span>的股权分配。</p>
+            </div>
+            <div class="three_title text_title">
+                <img src="./assets/images/和鲜--公司简介/xx.png" alt="">
+                <p class="number">3</p>
+                <p>和鲜集团总部高层管理人才，将获得<span>10亿</span><br>总股本中的<span>4亿9千万</span>股权的分配，根据不同<br>的岗位将会获得<span>1000万至5000万</span>股权，<br>还可在产业公司的经营执照中，基于贡献，持<br>有一定比例的法定股权。</p>
+            </div>
+        </div>
+        <div id="three" class="all_center_title">
+            <img src="./assets/images/招聘职位/和鲜-加入和鲜-招聘职位_02.png" alt="">
+            <div class="center_title">
+                <p>核心业务</p>
+                <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
+                <p>和鲜三大核心业务，专注于0添加调味品产业、野山花三标有机蜂蜜<br>（包括药食同源配方蜜）产业和健康速冻食品产业。</p>
+            </div>
+            <div class="title_box">
+                <div class="one_title text_title">
+                    <img src="./assets/images/招聘职位/和鲜-加入和鲜-招聘职位_03.jpg" alt="">
+                    <div class="text">
+                        <p class="fsz32">调味品产业</p>
+                        <p>各式酱油、各式调味酱、各式香辛料产品、豆豉及风味豉香产品、<br>各式酿醋、蚝油、鱼露等</p>
+                    </div>
+                </div>
+                <div class="two_title text_title">
+                    <img src="./assets/images/招聘职位/和鲜-加入和鲜-招聘职位_05.jpg" alt="">
+                    <div class="text">
+                        <p class="fsz32">蜂蜜产品产业</p>
+                        <p>包括：野山花三标有机峰蜜、野山花蜜蜂王浆、各种药食同源配方蜂蜜<br>等产品（另外，还包括蜜蒜、黑蒜、桂圆干、各种食品提取物等产品在内）</p>
+                    </div>
+                </div>
+                <div class="three_title text_title">
+                    <img src="./assets/images/招聘职位/和鲜-加入和鲜-招聘职位_09.png" alt="">
+                    <div class="text">
+                        <p class="fsz32">健康速冻食品产业</p>
+                    </div>
+                </div>
+                <div class="four_title text_title">
+                    <img src="./assets/images/招聘职位/和鲜-加入和鲜-招聘职位_10.jpg" alt="">
+                    <div class="text">
+                        <p class="fsz32">饮品产业为种子业务</p>
+                    </div>
+                </div>
+            </div>
+            <p class="organ">公司业务范围集健康调味食品产业股权投资基金、健康调味食品科技研发基地、产品生产基地、<br>蜂蜜养殖基地、新零售连锁店、品牌营销策划、渠道推广和市场销售、社交营销与电商、<br>卓越运营支持与赋能共享平台等于一体。</p>
+        </div>
         <div class="center_top">
             <div class="center_title">
                 <p>招聘职位</p>
@@ -446,15 +506,42 @@
         function scroll(){
             var l = $(document).scrollLeft()
             var a = $(document).scrollTop()
-            var b = $(".center")[0].offsetTop
+            var b = $(".center_top")[0].offsetTop
+            var c = $("#two")[0].offsetTop
+            var d = $("#three")[0].offsetTop
             $('.wrapper').css('left',-l+'px')
             var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
             childWindow.scroll_top(l);
             $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
-            if(b<a+400){
+            if(c<a+100){
             for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
                     setTimeout(() => {
                     $(".center_title").eq(1).children().eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+            for(let i = 0; i < $(".all_center_title").eq(0).children().length; i++){
+                    setTimeout(() => {
+                    $(".all_center_title").eq(0).children().eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+            if(d<a+100&&a<b){
+            for(let i = 0; i < $(".center_title").eq(2).children().length; i++){
+                    setTimeout(() => {
+                    $(".center_title").eq(2).children().eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+                $(".organ").addClass('qie')
+            for(let i = 0; i < $("#three").find('.text_title').length; i++){
+                    setTimeout(() => {
+                        $("#three").find('.text_title').eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+            if(b<a){
+            for(let i = 0; i < $(".center_title").eq(3).children().length; i++){
+                    setTimeout(() => {
+                    $(".center_title").eq(3).children().eq(i).addClass("qie");
                     }, i*4+'00');
                 }
             }

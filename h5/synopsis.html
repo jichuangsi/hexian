@@ -21,7 +21,7 @@
     <iframe id="head" src="./head.html" frameborder="0"></iframe>
     <div class="center_nav">
         <a href="#one"><span><em></em>公司简介</span></a>
-        <a href="#two"><span><em></em>我们的核心发展战略</span></a>
+        <!-- <span href="#two"><span><em></em>我们的核心发展战略</span></a> -->
         <a href="#three"><span><em></em>我们的品牌核心理念</span></a>
         <a href="#four"><span><em></em>我们的企业核心文化</span></a>
     </div>
@@ -54,7 +54,7 @@
                 <p>公司业务发展集健康调味食品产业股权投资基金、健康调味食品科技研发基地、产品生产基地、蜂蜜养殖基地、新零售连<br>锁店、品牌营销策划、渠道推广和市场销售、社交营销与电商、卓越运营支持与赋能共享平台等一体。</p>
             </div>
         </div>
-        <div id="two" class="all_center_title">
+        <!-- <div id="two" class="all_center_title">
             <img src="./assets/images/和鲜--公司简介/和鲜-关于和鲜-公司简介_05.png" alt="">
             <div class="center_title">
                 <p>我们的核心发展战略</p>
@@ -76,7 +76,7 @@
                 <p class="number">3</p>
                 <p>和鲜集团总部高层管理人才，将获得<span>10亿</span><br>总股本中的<span>4亿9千万</span>股权的分配，根据不同<br>的岗位将会获得<span>1000万至5000万</span>股权，<br>还可在产业公司的经营执照中，基于贡献，持<br>有一定比例的法定股权。</p>
             </div>
-        </div>
+        </div> -->
         <div id="three" class="all_center_title">
             <img src="./assets/images/和鲜--公司简介/和鲜-关于和鲜-公司简介_02.png" alt="">
             <div class="center_title">
@@ -101,7 +101,7 @@
             </div>
             <div class="three_title_box five_title">
                 <p>客户核心价值</p>
-                <p>和鲜0添加，美味人人夸！</p>
+                <p>和鲜只做零添加，美味健康传天下！</p>
             </div>
             <div class="three_title_box six_title">
                 <p>产品理念</p>
@@ -135,9 +135,10 @@
             $('.center_nav').find('a').eq(1)[0].click()
         }else if(num == 3){
             $('.center_nav').find('a').eq(2)[0].click()
-        }else if(num == 4){
-            $('.center_nav').find('a').eq(3)[0].click()
         }
+        // else if(num == 4){
+        //     $('.center_nav').find('a').eq(3)[0].click()
+        // }
         // $(function(){
         //     $('#fullpage').fullpage();
         // });
@@ -160,7 +161,7 @@
             var a = $(document).scrollTop()+100
             var b = $(".center")[0].offsetTop
             var c = $("#one")[0].offsetTop
-            var d = $("#two")[0].offsetTop
+            // var d = $("#two")[0].offsetTop
             var e = $("#three")[0].offsetTop
             var f = $("#four")[0].offsetTop
             $('.wrapper').css('left',-l+'px')
@@ -172,7 +173,7 @@
             }else{
                 $('.center_nav').css('display','none')
             }
-            if(c<a&&a<d){
+            if(c<a&&a<e){
                 $(".center_nav > a").eq(0).addClass('check').siblings().removeClass('check')
             for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
                     setTimeout(() => {
@@ -180,24 +181,24 @@
                     }, i*4+'00');
                 }
             }
-            if(d<a&&a<e){
+            // if(d<a&&a<e){
+            //     $(".center_nav > a").eq(1).addClass('check').siblings().removeClass('check')
+            //     for(let i = 0; i < $(".center_title").eq(2).children().length; i++){
+            //         setTimeout(() => {
+            //         $(".center_title").eq(2).children().eq(i).addClass("qie");
+            //         }, i*4+'00');
+            //     }
+            //     for(let i = 0; i < $(".text_title").length; i++){
+            //         setTimeout(() => {
+            //         $(".text_title").eq(i).addClass("qie");
+            //         }, i*4+'00');
+            //     }
+            // }
+            if(e<a&&a<f){
                 $(".center_nav > a").eq(1).addClass('check').siblings().removeClass('check')
                 for(let i = 0; i < $(".center_title").eq(2).children().length; i++){
                     setTimeout(() => {
                     $(".center_title").eq(2).children().eq(i).addClass("qie");
-                    }, i*4+'00');
-                }
-                for(let i = 0; i < $(".text_title").length; i++){
-                    setTimeout(() => {
-                    $(".text_title").eq(i).addClass("qie");
-                    }, i*4+'00');
-                }
-            }
-            if(e<a&&a<f){
-                $(".center_nav > a").eq(2).addClass('check').siblings().removeClass('check')
-                for(let i = 0; i < $(".center_title").eq(3).children().length; i++){
-                    setTimeout(() => {
-                    $(".center_title").eq(3).children().eq(i).addClass("qie");
                     }, i*4+'00');
                 }
                 for(let i = 0; i < $(".three_title_box").length; i++){
@@ -207,10 +208,10 @@
                 }
             }
             if(f<a){
-                $(".center_nav > a").eq(3).addClass('check').siblings().removeClass('check')
-                for(let i = 0; i < $(".center_title").eq(4).children().length; i++){
+                $(".center_nav > a").eq(2).addClass('check').siblings().removeClass('check')
+                for(let i = 0; i < $(".center_title").eq(3).children().length; i++){
                     setTimeout(() => {
-                    $(".center_title").eq(4).children().eq(i).addClass("qie");
+                    $(".center_title").eq(3).children().eq(i).addClass("qie");
                     }, i*4+'00');
                 }
             }
