@@ -42,7 +42,7 @@
 .nav div:last-child {
     margin-right: 0px;
 }
-.big_box {
+.head .big_box {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -180,7 +180,7 @@
     border-left: 1px solid #dd7a36;
     text-indent: 0.24rem;
 }
-.none {
+.head .none {
     width: 0.48rem;
     height: 0.48rem;
     text-align: center;
