@@ -73,7 +73,7 @@
         //     console.log(h)
         // }
         for(let i = 0; i < $(".center_title").eq(0).children().length; i++){
-                setTimeout(() => {
+               setTimeout(function() {
                 $(".center_title").eq(0).children().eq(i).addClass("qie");
                 }, i*4+'00');
             }
@@ -87,7 +87,7 @@
             $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
             if(b<a+400){
             for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
-                    setTimeout(() => {
+                   setTimeout(function() {
                     $(".center_title").eq(1).children().eq(i).addClass("qie");
                     }, i*4+'00');
                 }

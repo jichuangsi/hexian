@@ -254,7 +254,7 @@
                     arr.eq(i).find('.title').addClass('title_check')
                     arr.eq(i).addClass('libox_check')
                     for (let j = 0; j < arr.eq(i).find('.title_check').find('p').length; j++) {
-                        setTimeout(() => {
+                       setTimeout(function() {
                             arr.eq(i).find('.title_check').find('p').eq(j).addClass("qie");
                         }, i * 4 + '00');
                     }
@@ -265,7 +265,7 @@
             //     'title_check')
             // $(val).parent().parent().find('.img_box').eq(item).addClass('img_check').siblings().removeClass('img_check')
             // for (let i = 0; i < $(val).parent().parent().find('.title_check').find('p').length; i++) {
-            //     setTimeout(() => {
+            //    setTimeout(function() {
             //         $(val).parent().parent().find('.title_check').find('p').eq(i).addClass("qie");
             //     }, i * 4 + '00');
             // }
@@ -291,7 +291,7 @@
                         $(".imgList").find("li").eq(i).addClass("imgOn");
                     }, 100)
                     for (let j = 0; j < $(".imgList").find("li").eq(i).find('.title_check').find('p').length; j++) {
-                        setTimeout(() => {
+                       setTimeout(function() {
                             $(".imgList").find("li").eq(i).find('.title_check').find('p').eq(j).addClass("qie");
                         }, i * 4 + '00');
                     }
@@ -307,7 +307,7 @@
 
         function tabTo(num) {
             for (let i = 0; i < $(".imgList").find("li").eq(num).find('.title_check').find('p').length; i++) {
-                setTimeout(() => {
+               setTimeout(function() {
                     $(".imgList").find("li").eq(num).find('.title_check').find('p').eq(i).addClass("qie");
                 }, i * 4 + '00');
             }

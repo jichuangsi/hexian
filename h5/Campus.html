@@ -96,7 +96,7 @@
         //     console.log(h)
         // }
         for(let i = 0; i < $(".center_title").eq(0).children().length; i++){
-                setTimeout(() => {
+               setTimeout(function() {
                 $(".center_title").eq(0).children().eq(i).addClass("qie");
                 }, i*4+'00');
             }
@@ -110,13 +110,13 @@
             $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
             if(b<a+400){
             for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
-                    setTimeout(() => {
+                   setTimeout(function() {
                     $(".center_title").eq(1).children().eq(i).addClass("qie");
                     }, i*4+'00');
                 }
             }
             for(let i = 0; i < $(".list_box").length; i++){
-                    setTimeout(() => {
+                   setTimeout(function() {
                     $(".list_box").eq(i).addClass("qie");
                     }, i*4+'00');
                 }
@@ -133,6 +133,32 @@
                 $('.center').css('zIndex','99')
             },500)
         }
+        window.addEventListener("scroll", function () {
+            var l = $(document).scrollLeft()
+            var a = $(document).scrollTop()
+            var b = $(".list")[0].offsetTop
+            $('.wrapper').css('left',-l+'px')
+            let q;
+            // var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+            // childWindow.
+            // scroll_top(l);
+            $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
+            if(b<a+400){
+            for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
+                q = i
+                   setTimeout(function() {
+                       console.log($(".center_title").eq(1).children()[q])
+                    //    $(".center_title").eq(1).children()
+                    $(".center_title").eq(1).children().eq(q).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+            for(let i = 0; i < $(".list_box").length; i++){
+                   setTimeout(function() {
+                    $(".list_box").eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+        })
         // })
     </script>
 </body>

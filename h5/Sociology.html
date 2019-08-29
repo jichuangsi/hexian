@@ -47,17 +47,17 @@
             </div>
             <div class="one_title text_title">
                 <img src="./assets/images/和鲜--公司简介/xx.png" alt="">
-                <p class="number">1</p>
+                <p class="number"><em>1</em></p>
                 <p>公司治理结构，由和鲜产业投资支持平台<br>（和鲜科技集团）+各产业公司。<br>由维也纳酒店集团创始人黄德满领投。</p>
             </div>
             <div class="two_title text_title">
                 <img src="./assets/images/和鲜--公司简介/xx.png" alt="">
-                <p class="number">2</p>
+                <p class="number"><em>2</em></p>
                 <p>每一个产品产业公司，借助平台的资源优势，<br>独立经营与核算。成立与注册产品产业公司营<br>业执照，由和鲜总部全额投资，和鲜总部占股<span>51％</span>，人才合伙人持股<span>49％</span>的法定股权<br>（由和鲜代出资），同时，能另外获得和鲜<br>集团的<span>1000万至3000万</span>的股权分配。</p>
             </div>
             <div class="three_title text_title">
                 <img src="./assets/images/和鲜--公司简介/xx.png" alt="">
-                <p class="number">3</p>
+                <p class="number"><em>3</em></p>
                 <p>和鲜集团总部高层管理人才，将获得<span>10亿</span><br>总股本中的<span>4亿9千万</span>股权的分配，根据不同<br>的岗位将会获得<span>1000万至5000万</span>股权，<br>还可在产业公司的经营执照中，基于贡献，持<br>有一定比例的法定股权。</p>
             </div>
         </div>
@@ -499,7 +499,7 @@
         //     console.log(h)
         // }
         for(let i = 0; i < $(".center_title").eq(0).children().length; i++){
-                setTimeout(() => {
+               setTimeout(function() {
                 $(".center_title").eq(0).children().eq(i).addClass("qie");
                 }, i*4+'00');
             }
@@ -515,32 +515,32 @@
             $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
             if(c<a+100){
             for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
-                    setTimeout(() => {
+                   setTimeout(function() {
                     $(".center_title").eq(1).children().eq(i).addClass("qie");
                     }, i*4+'00');
                 }
             for(let i = 0; i < $(".all_center_title").eq(0).children().length; i++){
-                    setTimeout(() => {
+                   setTimeout(function() {
                     $(".all_center_title").eq(0).children().eq(i).addClass("qie");
                     }, i*4+'00');
                 }
             }
             if(d<a+100&&a<b){
             for(let i = 0; i < $(".center_title").eq(2).children().length; i++){
-                    setTimeout(() => {
+                   setTimeout(function() {
                     $(".center_title").eq(2).children().eq(i).addClass("qie");
                     }, i*4+'00');
                 }
                 $(".organ").addClass('qie')
             for(let i = 0; i < $("#three").find('.text_title').length; i++){
-                    setTimeout(() => {
+                   setTimeout(function() {
                         $("#three").find('.text_title').eq(i).addClass("qie");
                     }, i*4+'00');
                 }
             }
             if(b<a){
             for(let i = 0; i < $(".center_title").eq(3).children().length; i++){
-                    setTimeout(() => {
+                   setTimeout(function() {
                     $(".center_title").eq(3).children().eq(i).addClass("qie");
                     }, i*4+'00');
                 }

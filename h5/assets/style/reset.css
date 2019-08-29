@@ -88,21 +88,3 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
   color: #b1babf;
   opacity: 0.6; 
 } 
-@font-face {
-  font-family: 'Reeji Cloud YuanZhun GBK';
-  src: url('../font/锐字工房云字库准圆GBK.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ruizicu';
-  src: url('../font/锐字工房云字库粗圆GBK.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'AVANTGA2';
-  src: url('../font/AVANTGA2.TTF');
-  font-weight: normal;
-  font-style: normal;
-}

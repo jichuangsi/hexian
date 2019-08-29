@@ -79,6 +79,7 @@
     left: 0px;
     z-index: 99;
     transition: top 0.06s linear;
+    overflow: hidden;
 }
 .center img {
     width: 100%;
@@ -316,7 +317,6 @@
     margin-left: 10%;
     margin-left: 0.2rem;
     line-height: 0.32rem;
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 #four .right ul .lv div{
     color: #009d81;
@@ -359,7 +359,6 @@
 }
 #five .text_title p {
     color: #fff;
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
     font-size: 0.18rem;
     line-height: 0.28rem;
     text-align: left;
@@ -414,7 +413,6 @@
     transition: all 1s linear;
 }
 #three .text_title p {
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
     font-size: 0.16rem;
     line-height: 0.28rem;
     text-align: center;
@@ -435,7 +433,6 @@
     height: 0.88rem;
     line-height: 0.88rem;
     text-align: center;
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
     font-weight: 500;
     position: absolute;
     top: 31%;
@@ -489,7 +486,6 @@
     cursor: pointer;
 }
 #six .text_title p {
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
     font-size: 0.32rem;
     line-height: 0.34rem;
     text-align: center;
@@ -595,7 +591,6 @@
     transform: translateY(50px);
     opacity: 0;
     transition: transform 1s linear;
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
     margin: 0 auto;
@@ -688,7 +683,6 @@
 }
 .big_box .text_box .box p {
     font-size: 0.18rem;
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
     margin-bottom:0.2rem;
     line-height: 0.24rem;
 }

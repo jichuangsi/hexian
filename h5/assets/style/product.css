@@ -92,7 +92,7 @@
     text-align: center;
     margin-top: 0.2rem;
     /* font-weight: 600; */
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
+
 }
 .indexList li:first-child{
     margin-top: 0px;
@@ -117,7 +117,6 @@
     font-size: 0.16rem;
     line-height: 0.24rem;
     color:#333;
-    font-family: 'Reeji Cloud YuanZhun GBK';
 }
 .bottom_nav li:last-child{
     margin-right: 0px;
@@ -139,7 +138,6 @@
     line-height: 0.24rem;
     color:#333;
     z-index: 30;
-    font-family: 'Reeji Cloud YuanZhun GBK';
 }
 .fsz34 {
     color: #009e8b;
@@ -177,7 +175,6 @@
     letter-spacing: 4px;
     transition: transform 1s linear, opacity 1s linear;
     transform: translateY(50px);
-    font-family: 'Reeji Cloud YuanZhun GBK';
 }
 .title p span {
     color: #de7a36;
@@ -219,7 +216,6 @@
     font-size: 0.18rem;
     line-height: 0.2rem;
     margin-top: 0.1rem;
-    font-family: 'Reeji Cloud YuanZhun GBK';
 }
 .title .btn .jd {
     margin-top: 0.08rem;

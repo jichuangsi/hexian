@@ -158,7 +158,6 @@
     margin: 0 auto;
 }
 #two .text_title p {
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
     font-size: 0.16rem;
     line-height: 0.32rem;
     text-align: center;
@@ -204,7 +203,6 @@
 #three .three_title_box p{
     font-size: 0.2rem;
     color: #333;
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 #three .three_title_box p:first-child {
     color: #009d81;
@@ -344,7 +342,6 @@
     transform: translateY(50px);
     opacity: 0;
     transition: transform 1s linear, opacity 1s linear;
-    font-family: 'Reeji Cloud YuanZhun GBK' !important;
 }
 .center_title img {
     width: auto;

@@ -36,7 +36,8 @@
                             <p class="fsz62_m qie">只做无添加剂健康食品</p>
                             <p class="btn qie">了解更多</p>
                         </div>
-                    <a href="./product.html"><img class="ssas" src="./assets/images/和鲜-首页-只做无添加剂健康食品.png"></a>
+                    <!-- <a href="./product.html"></a> -->
+                    <img class="ssas" src="./assets/images/和鲜-首页-只做无添加剂健康食品.png">
                 </li>
                 <li>
                     <div class="title" onclick="location.href='./Campus.html'">
@@ -50,7 +51,8 @@
                         </p>
                         <p class="btn">了解更多</p>
                     </div>
-                    <a href="./Campus.html"><img src="./assets/images/和鲜-首页-加入我们·加入和鲜.png"></a>
+                    <!-- <a href="./Campus.html"></a> -->
+                    <img src="./assets/images/和鲜-首页-加入我们·加入和鲜.png">
                 </li>
                 <li>
                     <div class="title" onclick="location.href='./dynamic.html'">
@@ -65,7 +67,8 @@
                         </p>
                         <p class="btn">了解更多</p>
                     </div>
-                    <a href="./dynamic.html"><img src="./assets/images/和鲜-3深圳十大商业杰出人物和鲜创始人黄德满董事长1 (2).png"></a>
+                    <!-- <a href="./dynamic.html"></a> -->
+                    <img src="./assets/images/和鲜-3深圳十大商业杰出人物和鲜创始人黄德满董事长1 (2).png">
                 </li>
                 <li>
                     <div class="title" onclick="location.href='./dynamic.html'">
@@ -73,7 +76,8 @@
                         <p class="fsz70">和鲜新闻资讯</p>
                         <p class="btn">了解更多</p>
                     </div>
-                    <a href="./dynamic.html"><img src="./assets/images/和鲜-首页-和鲜新闻资讯.png"></a>
+                    <!-- <a href="./dynamic.html"></a> -->
+                    <img src="./assets/images/和鲜-首页-和鲜新闻资讯.png">
                 </li>
                 <li>
                     <div class="title" onclick="location.href='./synopsis.html'">
@@ -82,7 +86,8 @@
                         <p class="fsz54">让人类在享受美食中健康起来！</p>
                         <p class="btn">了解更多</p>
                     </div>
-                    <a href="./synopsis.html"><img src="./assets/images/和鲜-首页-让人类在享受美食中健康起来！.png"></a>
+                    <!-- <a href="./synopsis.html"></a> -->
+                    <img src="./assets/images/和鲜-首页-让人类在享受美食中健康起来！.png">
                 </li>
             </ul>
             <ul class="indexList">
@@ -125,7 +130,7 @@
         //   alert(imgLen);
         // 定时器自动变换2.5秒每次
         var autoChange;
-        // go()
+        go()
         function go(){
             autoChange = setInterval(function () {
             if (curIndex < $(".imgList li").length - 1) {
@@ -148,7 +153,7 @@
                 clearInterval(autoChange);
                 changeTo(item);
                 curIndex = item;
-                // go()
+                go()
             });
         });
 
@@ -160,7 +165,9 @@
                 $(".imgList").find("li").eq(num).addClass("imgOn");
             },100)
             for(let i = 0; i < $(".imgList").find("li").eq(num).find('p').length; i++){
-                setTimeout(() => {
+                setTimeout(function() {
+                    console.log(i)
+                    console.log($(".imgList").find("li").eq(num).find('p').length)
                 $(".imgList").find("li").eq(num).find('p').eq(i).addClass("qie");
                     console.log(i+1+'00')
                 }, i*4+'00');
