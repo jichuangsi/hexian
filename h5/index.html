@@ -37,7 +37,7 @@
                             <p class="btn qie">了解更多</p>
                         </div>
                     <!-- <a href="./product.html"></a> -->
-                    <img class="ssas" src="./assets/images/和鲜-首页-只做无添加剂健康食品.png">
+                    <img src="./assets/images/和鲜-首页-只做无添加剂健康食品.png">
                 </li>
                 <li>
                     <div class="title" onclick="location.href='./Campus.html'">
@@ -125,7 +125,6 @@
             // $('.imgList>li').find('img').css('height','635px')
         }
         // console.log($('.imgList>li>img'))
-        console.log(h)
         var curIndex = 0; //当前index
         //   alert(imgLen);
         // 定时器自动变换2.5秒每次
@@ -144,12 +143,9 @@
         }
 
         $(".indexList").find("li").each(function (item) {
-            console.log($(this))
             $(this).click(function (){
-                console.log(2)
             })
             $(this).click(function () {
-                console.log(1)
                 clearInterval(autoChange);
                 changeTo(item);
                 curIndex = item;
@@ -166,10 +162,7 @@
             },100)
             for(let i = 0; i < $(".imgList").find("li").eq(num).find('p').length; i++){
                 setTimeout(function() {
-                    console.log(i)
-                    console.log($(".imgList").find("li").eq(num).find('p').length)
                 $(".imgList").find("li").eq(num).find('p').eq(i).addClass("qie");
-                    console.log(i+1+'00')
                 }, i*4+'00');
             }
             // $(".imgList").find("li").removeClass("imgOn").hide().eq(num).fadeIn().addClass("imgOn");
@@ -184,7 +177,6 @@
         //     console.log(h)
         // }iframefixed
         // var img = $('.ssas')[0]
-        // AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"))
         function iframefixed(){
             $('#head').css('position','fixed')
             $('#head').css('height','100%')
@@ -202,8 +194,13 @@
             var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
             childWindow.scroll_top(l);
         }
-    })
-        
+    }) 
+        // let img = $('img')[0]
+        // AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"))
+        // for(let j = 0; j<$('img').length; j++){
+        //     let img = $('img').eq(j)[0]
+        //     AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"))
+        // }
     </script>
 </body>
 
