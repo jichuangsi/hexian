@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/product.css">
+    <link rel="stylesheet" href="./assets/font_1340231_3b1rumcv30t/iconfont.css">
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./assets/js/reset.js"></script>
+    <!-- <script src="./libs/jquery.fullpage.js"></script> -->
+    <title>Document</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <iframe id="head" src="./head.html" frameborder="0" onload="getIframeDom()"></iframe>
+    <!-- <div id="fullpage"> -->
+    <div class="wrapper">
+        <!-- 最外层部分 -->
+        <div class="banner">
+            <div class="ite">
+                Copyright 2019 Hexian All Rights Reserved 粤ICP备18009779号-1
+            </div>
+            <!-- 轮播部分 -->
+            <ul class="imgList">
+                <!-- 图片部分 -->
+                <li data-id="1">
+                    <div class="libox" data-id="1">
+                            <div class="img_box">
+                                    <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
+                                    <img class="img_2" src="./assets/images/和鲜产品/和鲜-和鲜产品.png" alt="">
+                                </div>
+                                <div class="title">
+                                    <p class="fsz34">和鲜苹果醋饮料</p>
+                                    <div class="te_box">
+                                        <p class="te">产品特点</p>
+                                        <div class="right_box">
+                                            <p><span>·</span>0添加酿造工艺</p>
+                                            <p><span>·</span>非香精勾兑</p>
+                                            <p><span>·</span>丰裕果香</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn_box">
+                                        <p class="btn first"
+                                            onclick="location.href='https://hexianshipin.tmall.com/shop/view_shop.htm?spm=a220m.1000862.1000730.2.41614658rIy0Zp&user_number_id=4028244311&rn=1e4c7ad05801054ad9ddb4ab35c01a62'">
+                                            <span class="iconfont icon-tianmao"></span><span>天猫</span>
+                                        </p>
+                                        <p class="btn" onclick="location.href='https://mall.jd.com/index-770478.html'">
+                                            <span class="iconfont icon-jingdong"></span><span class="jd">京东</span>
+                                        </p>
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="libox" data-id="2">
+                        <div class="title">
+                            <p class="fsz34">和鲜果汁饮料</p>
+                            <div class="te_box">
+                                <p class="te">产品特点</p>
+                                <div class="right_box">
+                                    <p class="qie"><span>·</span>0添加酿造工艺</p>
+                                    <p class="qie"><span>·</span>非香精勾兑</p>
+                                    <p class="qie"><span>·</span>丰裕果香</p>
+                                    <p class="qie"><span>·</span>口味纯正</p>
+                                </div>
+                            </div>
+                            <div class="btn_box">
+                                <p class="btn first"
+                                    onclick="location.href='https://hexianshipin.tmall.com/shop/view_shop.htm?spm=a220m.1000862.1000730.2.41614658rIy0Zp&user_number_id=4028244311&rn=1e4c7ad05801054ad9ddb4ab35c01a62'">
+                                    <span class="iconfont icon-tianmao"></span><span>天猫</span>
+                                </p>
+                                <p class="btn" onclick="location.href='https://mall.jd.com/index-770478.html'">
+                                    <span class="iconfont icon-jingdong"></span><span class="jd">京东</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="libox" data-id="3">
+                        <div class="title">
+                            <p class="fsz34">和鲜矿泉水饮料</p>
+                            <div class="te_box">
+                                <p class="te">产品特点</p>
+                                <div class="right_box">
+                                    <p class="qie"><span>·</span>拉雅山冰川矿泉水</p>
+                                    <p class="qie"><span>·</span>巴马山泉水</p>
+                                    <p class="qie"><span>·</span>优质天然弱碱性矿泉水</p>
+                                </div>
+                            </div>
+                            <div class="btn_box">
+                                <p class="btn first"
+                                    onclick="location.href='https://hexianshipin.tmall.com/shop/view_shop.htm?spm=a220m.1000862.1000730.2.41614658rIy0Zp&user_number_id=4028244311&rn=1e4c7ad05801054ad9ddb4ab35c01a62'">
+                                    <span class="iconfont icon-tianmao"></span><span>天猫</span>
+                                </p>
+                                <p class="btn" onclick="location.href='https://mall.jd.com/index-770478.html'">
+                                    <span class="iconfont icon-jingdong"></span><span class="jd">京东</span>
+                                </p>
+                            </div>
+                        </div>
+                </li>
+                <li data-id="2"></li>
+                <li data-id="3"></li>
+                <li data-id="4"></li>
+                <li data-id="5"></li>
+                <div class="tab" data-id="1">
+                    <div class="all_title" data-id="1" onclick="tabclick(this)">
+                        <img src="./assets/images/和鲜产品/和鲜-和鲜产品_063.png" alt="">
+                        <p>果醋</p>
+                    </div>
+                    <div class="all_title" data-id="2" onclick="tabclick(this)">
+                            <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05_03.png" alt="">
+                        <p>果汁</p>
+                    </div>
+                    <div class="all_title" data-id="3" onclick="tabclick(this)">
+                            <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05.png" alt="">
+                        <p>矿泉水</p>
+                    </div>
+                </div>
+                <div class="tab" data-id="2">
+                    <div class="all_title" data-id="1" onclick="tabclick(this)">
+                        <img src="http://127.0.0.1:8080/ms-mcms/upload/1//article/1566906091541.png" alt="">
+                        <p>酱油</p>
+                    </div>
+                    <div class="all_title" data-id="2" onclick="tabclick(this)">
+                        <img src="http://127.0.0.1:8080/ms-mcms/upload/1//article/1566906285068.png" alt="">
+                        <p>调味酱</p>
+                    </div>
+                    <div class="all_title" data-id="3" onclick="tabclick(this)">
+                        <img src="http://127.0.0.1:8080/ms-mcms/upload/1//article/1566906328165.png" alt="">
+                        <p>香辛料</p>
+                    </div>
+                </div>
+                <div class="tab" data-id="3">
+
+                </div>
+                <div class="tab" data-id="4">
+
+                </div>
+                <div class="tab" data-id="5">
+                </div>
+
+            </ul>
+            <ul class="indexList">
+                <!-- 图片右下角序号部分 -->
+                <li data-id="1" onclick="listclick(this)">饮料</li>
+                <li data-id="2" onclick="listclick(this)">调味品</li>
+                <li data-id="3" onclick="listclick(this)">半冷链成品</li>
+                <li data-id="4" onclick="listclick(this)">蜂蜜</li>
+                <li data-id="5" onclick="listclick(this)">密蒜</li>
+            </ul>
+            <ul class="bottom_nav">
+                <!-- 图片右下角序号部分 -->
+                <li onclick="top.location.href='./Mall.html'">和鲜商城</li>
+                <li>/</li>
+                <li onclick="top.location.href='./synopsis.html'">关于和鲜</li>
+                <li>/</li>
+                <li onclick="top.location.href='./Campus.html'">加入和鲜</li>
+                <li><span class="iconfont icon-icoweibo"></span><span class="iconfont icon-weixin"></span></li>
+            </ul>
+        </div>
+    </div>
+    <!-- </div> -->
+    <script type="text/javascript">
+        $(function () {
+            var url = window.location.href.split('?')[1] ? window.location.href.split('?')[1] : ''
+            var num;
+            if (url != '') {
+                num = url ? url.split('=')[1] : ''
+            }
+            if (num == 1) {
+                $('.indexList').find('li').eq(0).click()
+            } else if (num == 2) {
+                $('.indexList>li').eq(1)[0].click()
+            } else if (num == 3) {
+                $('.indexList>li').eq(2)[0].click()
+            } else if (num == 4) {
+                $('.indexList>li').eq(3)[0].click()
+            } else if (num == 5) {
+                $('.indexList>li').eq(4)[0].click()
+            } else {
+                $('.indexList>li').eq(0)[0].click()
+            }
+
+            function scroll() {
+                var l = $(document).scrollLeft()
+                var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+                childWindow.scroll_top(l);
+            }
+        });
+
+        function getIframeDom() {
+            $('#head').contents().find('.nav').find('div').css('color', 'black')
+        }
+        var w = window.innerWidth
+        var h = window.innerHeight
+        if (w >= 1200) {
+            $('.imgList').css('height', h + 'px')
+            $('.imgList>li').css('height', h + 'px')
+            // $('.imgList>li').find('img').css('height',h+'px')
+        } else {
+            $('.imgList').css('height', '635px')
+            $('.imgList>li').css('height', '635px')
+            // $('.imgList>li').find('img').css('height','635px')
+        }
+        // $('.imgList>li').find('img').css('height',h+'px')
+        // console.log($('.imgList>li>img'))
+        var curIndex = 0; //当前index
+        var listfirst;
+        var listtwo;
+        //   alert(imgLen);
+        // 定时器自动变换2.5秒每次
+        var autoChange;
+        go()
+
+        function go() {
+            //     autoChange = setInterval(function () {
+            //     if (curIndex < $(".imgList li").length - 1) {
+            //         curIndex++;
+            //     } else {
+            //         curIndex = 0;
+            //     }
+            //     //调用变换处理函数
+            //     changeTo(curIndex);
+            // }, 5500);
+        }
+
+        // $(".indexList").click(function () {
+        //     console
+        //     let num = $(this).attr('data-id')
+        //         clearInterval(autoChange);
+        //         changeTo(num);
+        //         curIndex = num;
+        // });
+        function listclick(val) {
+            let num = $(val).attr('data-id')
+            clearInterval(autoChange);
+            changeTo(num);
+            curIndex = num;
+        }
+
+        function tabclick(val) {
+            let item = $(val).attr('data-id')
+            $(val).addClass('all_check').siblings().removeClass('all_check')
+            $(".imgList").find("li").find('p').removeClass("qie")
+            $(".imgList").find(".img_box").removeClass('img_check')
+            $(".imgList").find('.libox').removeClass('libox_check')
+            let arr = $(".imgList").find("li").find('.title_check').parent().parent().parent().find('.libox')
+            $(".imgList").find(".title").removeClass('title_check')
+            for (let i = 0; i < arr.length; i++) {
+                if(arr.eq(i).attr('data-id') == item) {
+                    arr.eq(i).find('.img_box').addClass('img_check')
+                    arr.eq(i).find('.title').addClass('title_check')
+                    arr.eq(i).addClass('libox_check')
+                    for (let j = 0; j < arr.eq(i).find('.title_check').find('p').length; j++) {
+                       setTimeout(function() {
+                            arr.eq(i).find('.title_check').find('p').eq(j).addClass("qie");
+                        }, i * 4 + '00');
+                    }
+                }
+            }
+            // $(val).parent().parent().find('.title').find('p').removeClass("qie");
+            // $(val).parent().parent().find('.title').eq(item).addClass('title_check').siblings().removeClass(
+            //     'title_check')
+            // $(val).parent().parent().find('.img_box').eq(item).addClass('img_check').siblings().removeClass('img_check')
+            // for (let i = 0; i < $(val).parent().parent().find('.title_check').find('p').length; i++) {
+            //    setTimeout(function() {
+            //         $(val).parent().parent().find('.title_check').find('p').eq(i).addClass("qie");
+            //     }, i * 4 + '00');
+            // }
+        }
+        // $(".tab>.all_title").each(function (item) {
+        //     $(this).click(function () {
+        //         $(this).addClass('all_check').siblings().removeClass('all_check')
+        //         $('.title').eq(item).addClass('title_check').siblings().removeClass('title_check')
+        //     });
+        // });
+
+        function changeTo(num) {
+            $(".imgList").find("li").removeClass("imgOn")
+            $(".imgList").find("li").find('p').removeClass("qie")
+            $('.tab').removeClass('tab_check')
+            for (let i = 0; i < $(".imgList").find("li").length; i++) {
+                if($(".imgList").find("li").eq(i).attr('data-id') == num) {
+                    $(".indexList").find("li").removeClass("indexOn").eq(i).addClass("indexOn");
+                    $(".imgList").find("li").eq(i).find('.img_box').eq(0).addClass('img_check').siblings().removeClass('img_check')
+                    $(".imgList").find("li").eq(i).find('.title').eq(0).addClass('title_check').siblings().removeClass('title_check')
+                    $(".imgList").find("li").eq(i).find('.libox').eq(0).addClass('libox_check')
+                    setTimeout(function () {
+                        $(".imgList").find("li").eq(i).addClass("imgOn");
+                    }, 100)
+                    for (let j = 0; j < $(".imgList").find("li").eq(i).find('.title_check').find('p').length; j++) {
+                       setTimeout(function() {
+                            $(".imgList").find("li").eq(i).find('.title_check').find('p').eq(j).addClass("qie");
+                        }, i * 4 + '00');
+                    }
+                    for (let j = 0; j < $('.tab').length; j++) {
+                        if($('.tab').eq(j).attr('data-id') == num) {
+                            $('.tab').eq(j).addClass('tab_check')
+                            $('.tab').eq(j).find('.all_title').eq(0).addClass('all_check')
+                        }
+                    }
+                }
+            }
+        }
+
+        function tabTo(num) {
+            for (let i = 0; i < $(".imgList").find("li").eq(num).find('.title_check').find('p').length; i++) {
+               setTimeout(function() {
+                    $(".imgList").find("li").eq(num).find('.title_check').find('p').eq(i).addClass("qie");
+                }, i * 4 + '00');
+            }
+        }
+
+        function iframefixed() {
+            $('#head').css('position', 'fixed')
+            $('#head').css('height', '100%')
+        }
+
+        function iframeabsolute() {
+            setTimeout(function () {
+                $('#head').css('position', 'absolute')
+                $('#head').css('height', '150px')
+            }, 500)
+        }
+    </script>
+</body>
+
+</html>

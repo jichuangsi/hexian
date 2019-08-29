@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/news_details.css">
+    <link rel="stylesheet" href="./assets/font_1340231_3b1rumcv30t/iconfont.css">
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./assets/js/reset.js"></script>
+    <!-- <script src="./libs/jquery.fullpage.js"></script> -->
+    <title>Document</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onscroll="scroll()"> 
+    
+    <iframe id="head" src="./head.html" frameborder="0"></iframe>
+    <!-- <div id="fullpage"> -->
+    <div class="center">
+        <div class="center_box">
+            <div class="time">2019年05月24日 14:03</div>
+            <div class="title">和鲜集团出席2019年<br>中国食醋及调味料酒产业创新发</div>
+            <img src="./assets/images/和鲜-公司动态详情页/和鲜-公司动态-详情页_03.png" alt="">
+                <p class="text">
+                    5月21日—23日，2019年中国食醋及调味料酒产业创新发展论坛在山西太原召开。本届论坛由中国调味品协会食醋专业委员会、中国调味品协会调味料酒专业委员会、清徐县人民政府主办，清徐醋产业协会承办。
+                </p>
+                <p>
+                        来自食醋及调味料酒企业负责人及高管，生产技术与学术研究专家、学者，设备、包装及物流企业负责人，原料供应商，投资商齐聚一堂，共同探讨中国食醋及调味料酒行业发展现状及未来趋势，交流相关技术和管理经验，引领行业高质量发展。食醋和调味料酒一直都是调味品行业不可或缺的重要组成部分，在国民生活中有着举足轻重的作用，关系到国民日常饮食的健康问题。促进中国食醋以及调味料酒行业的创新与健康发展，也是倡导健康饮食生活理念的和鲜集团义不容辞的责任。和鲜食品科技集团于2016年正式成立，是一家以“药食同源”、“食补养生”理念为基础，以“让人类在享受美食中健康起来”为使命，致力于实现全品类无添加剂的健康食品企业。旗下产品包含零添加调味品系列，零添加健康食品系列以及零添加果汁饮料系列。
+                </p>
+                <p>
+                        调味品事业群是和鲜集团未来几年着重发力的方向，通过参与2019年中国食醋及调味料酒产业创新发展论坛，和鲜集团不仅对食醋及调味料酒行业的新发展和新动向有了新的认知，也从其他优秀企业身上汲取了宝贵的技术和管理经验。未来，和鲜集团将顺应产业发展趋势，深化科学技术应用，完善产品生产体系，为消费者带来健康零添加的调味品产品。
+                </p>
+                <p>
+                        来自食醋及调味料酒企业负责人及高管，生产技术与学术研究专家、学者，设备、包装及物流企业负责人，原料供应商，投资商齐聚一堂，共同探讨中国食醋及调味料酒行业发展现状及未来趋势，交流相关技术和管理经验，引领行业高质量发展。食醋和调味料酒一直都是调味品行业不可或缺的重要组成部分，在国民生活中有着举足轻重的作用，关系到国民日常饮食的健康问题。促进中国食醋以及调味料酒行业的创新与健康发展，也是倡导健康饮食生活理念的和鲜集团义不容辞的责任。和鲜食品科技集团于2016年正式成立。
+                </p>
+                <div class="btn">
+                    <div class="left_btn">上一篇</div>
+                    <div class="right_btn">下一篇</div>
+                </div>
+        </div>
+    </div>
+    <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
+    <!-- </div> -->
+    <script type="text/javascript">
+    
+        // $(function(){
+        // for(let i = 0; i < $(".center_title").children().length; i++){
+        //        setTimeout(function() {
+        //         $(".center_title").children().eq(i).addClass("qie");
+        //         }, i*4+'00');
+        //     }
+        function scroll(){
+            var l = $(document).scrollLeft()
+            // $('.wrapper').css('left',-l+'px')
+            var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+            childWindow.scroll_top(l);
+        }
+        function iframefixed(){
+            $('#head').css('position','fixed')
+            $('#head').css('height','100%')
+        }
+        function iframeabsolute(){
+            setTimeout(function(){
+                $('#head').css('position','relative')
+                $('#head').css('height','1rem')
+            },500)
+        }
+        // })
+    </script>
+</body>
+
+</html>

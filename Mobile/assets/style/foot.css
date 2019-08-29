@@ -1,0 +1,62 @@
+
+.foot {
+    width: 100%;
+    height: 3.52rem;
+    /* line-height: 1rem; */
+    /* display: flex; */
+    /* align-items: center; */
+    background-color: #fff;
+}
+.foot .ite{
+    width: 100%;
+    font-size: 0.20rem;
+    line-height: 0.34rem;
+    text-align: center;
+    /* transform: scale(.8) translateX(-5%); */
+    /* margin-left: 0.6rem; */
+    color: #333;
+    margin-bottom: 0.4rem;
+}
+.bottom_nav  {
+    width: 6.58rem;
+    height: 1.11rem;
+    border-bottom: 1px solid #d0d0d0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.4rem;
+}
+.bottom_nav li {
+    padding: 0rem 0.32rem 0rem 0.42rem;
+    cursor: pointer;
+    font-size: 0.26rem;
+    color:#333;
+    border-right: 1px solid #d0d0d0;
+    white-space: nowrap;
+}
+.bottom_nav li:last-child{
+    border-right: none;
+}
+.btn_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn_box  .bottom_btn {
+    width: 0.74rem;
+    height: 0.74rem;
+    border: 1px solid #f7f7f7;
+    margin-left: 0.29rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btn_box .bottom_btn:first-child {
+    margin-left: 0rem;
+}
+.btn_box .bottom_btn .iconfont{
+    color:#b2b2b2;
+}
