@@ -27,7 +27,9 @@
                 <img class="title_img" src="./assets/images/校园招聘/和鲜-加入和鲜-招聘职位_03.png" alt="">
                 <p class="fsz56">加入和鲜</p>
                 <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
-                <p>“让人类在享受美食中健康起来”是我们的企业愿景，我们期待每一位志同道合<br>的和鲜人的加入，与我们一起推动健康生活新浪潮，树立食品行业新标杆，<br>让和鲜产品走进全球每一个家庭。</p>
+                <p>“让人类在享受美食中健康起来”<br>是我们的企业愿景，我们期待每一位志同道合的和鲜<br>人的加入，与我们一起推动健康生活新浪潮，树立食<br>品行业新标杆，让和鲜产品走进全球每一个家庭。</p>
+            </div>
+            <div class="center_title_btn">
                 <p class="btn check">校园招聘</p>
                 <p class="btn" onclick="location.href='./Sociology.html'">社会招聘</p>
             </div>
@@ -38,11 +40,10 @@
         </div>
     </div>
     <div class="center">
-        <img src="./assets/images/校园招聘/和鲜-加入和鲜-校园招聘_03.png" alt="">
         <div class="center_title">
             <p>应届毕业生招聘</p>
             <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
-            <p>我们还有各类激动人心并适合应届毕业生担任的若干职能领域岗位。<br>如果您有工作热情，学习能力强，希望成就一番事业，有志于从事大健康行业，那么欢迎您加入我们。</p>
+            <p>我们还有各类激动人心并适合应届毕业生担任的若干<br>职能领域岗位。如果您有工作热情，学习能力强，希<br>望成就一番事业，有志于从事大健康行业，那么欢迎<br>您加入我们。</p>
         </div>
         <div class="list">
             <div class="list_box">
@@ -128,8 +129,8 @@
         }
         function iframeabsolute(){
             setTimeout(function(){
-                $('#head').css('position','absolute')
-                $('#head').css('height','2rem')
+                $('#head').css('position','relative')
+                $('#head').css('height','1rem')
                 $('.center').css('zIndex','99')
             },500)
         }
@@ -143,11 +144,11 @@
             // childWindow.
             // scroll_top(l);
             $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
+            $('.banner>.center_title_btn').css('bottom',((a))+'px')
             if(b<a+400){
             for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
                 q = i
                    setTimeout(function() {
-                       console.log($(".center_title").eq(1).children()[q])
                     //    $(".center_title").eq(1).children()
                     $(".center_title").eq(1).children().eq(q).addClass("qie");
                     }, i*4+'00');

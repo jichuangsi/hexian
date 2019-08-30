@@ -8,9 +8,11 @@ OSnow();
         // // alert('是否是Android：'+isAndroid);
         // // alert('是否是iOS：'+isiOS);
         // if(isAndroid){
-        //     document.write("<link rel='stylesheet' href='./assets/style/reset_android.css'>")
+        //     alert('12123')
+        //     // document.write("<link rel='stylesheet' href='./assets/style/reset_android.css'>")
         // }else if(isiOS){
-        //     document.write("<link rel='stylesheet' href='./assets/style/reset_ios.css'>")
+        //     alert('23132123')
+        //     // document.write("<link rel='stylesheet' href='./assets/style/reset_ios.css'>")
         // }
 
         

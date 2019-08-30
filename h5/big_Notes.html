@@ -206,13 +206,14 @@
         // });
         // var h = window.innerHeight
         //     console.log(h)
-        // $('.imgList').css('height',h+'px')
+        // $('.imgList').css('height',h+'px')   
 
         // onresize = function(){
         //     h = window.innerHeight
         //     $('.imgList').css('height',h+'px')
         //     console.log(h)
         // }
+        
         for(let i = 0; i < $(".center_title").eq(0).children().length; i++){
                 setTimeout(function() {
                 $(".center_title").eq(0).children().eq(i).addClass("qie");
@@ -285,6 +286,9 @@
                 // $('.second_box').eq(i).css('transform','translateY(-50%) !important;')
                 // $('.second_box').eq($('.second_box').length-1).css('marginTop','0%')
             }
+        }
+        if($('.second_box').length%2 == 0){
+            $('.center_second_box').css('paddingBottom',$('.second_box').eq($('.second_box').length-1).outerWidth(true)/2+'px')
         }
         // })
     </script>

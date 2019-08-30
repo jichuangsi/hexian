@@ -19,12 +19,12 @@
 <body onscroll="scroll()">
     <!-- <div id="fullpage"> -->
     <iframe id="head" src="./head.html" frameborder="0"></iframe>
-    <!-- <div class="center_nav">
+    <div class="center_nav">
         <a href="#one"><span><em></em>公司简介</span></a>
-        <span href="#two"><span><em></em>我们的核心发展战略</span></a>
+        <!-- <span href="#two"><span><em></em>我们的核心发展战略</span></a> -->
         <a href="#three"><span><em></em>我们的品牌核心理念</span></a>
         <a href="#four"><span><em></em>我们的企业核心文化</span></a>
-    </div> -->
+    </div>
     <div class="wrapper">
         <!-- 最外层部分 -->
         <div class="banner">
@@ -118,7 +118,7 @@
             <div class="center_title">
                 <p>我们的企业核心文化</p>
                 <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
-                <p>坚持以客户为中心，以创造客户价值为中心；<br>坚持奋斗与贡献，以奋斗者为本，给有贡献的奋斗者丰厚回报；<br>坚持改进与创新，反省不足，追求卓越！<br>坚持人才战略，任人唯贤，主营造人。分享成果，成就人才，事成人爽！</p>
+                <p>坚持以客户为中心，以创造客户价值为中心；<br>坚持奋斗与贡献，以奋斗者为本，给有贡献的奋斗者<br>丰厚回报；<br>坚持改进与创新，反省不足，追求卓越！<br>坚持人才战略，任人唯贤，主营造人。分享成果，成<br>就人才，事成人爽！</p>
             </div>
         </div>
         <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
@@ -166,14 +166,15 @@
             var e = $("#three")[0].offsetTop
             var f = $("#four")[0].offsetTop
             $('.wrapper').css('left',-l+'px')
+            console.log(a)
             var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
             childWindow.scroll_top(l);
             $('.banner>.center_title').css('transform','translate(-50%,'+(-(a-100)/2)+'px)')
             $('.banner>.center_title_btn').css('bottom',((a-100))+'px')
             if(b < a){
-                $('.center_nav').css('display','block')
+                // $('.center_nav').css('display','block')
             }else{
-                $('.center_nav').css('display','none')
+                // $('.center_nav').css('display','none')
             }
             if(c<a&&a<e){
                 $(".center_nav > a").eq(0).addClass('check').siblings().removeClass('check')
@@ -226,8 +227,8 @@
         }
         function iframeabsolute(){
             setTimeout(function(){
-            $('#head').css('position','absolute')
-            $('#head').css('height','2rem')
+            $('#head').css('position','relative')
+            $('#head').css('height','1rem')
             $('.center').css('zIndex','99')
             $('.btn').css('zIndex','30')
             },500)

@@ -1,5 +1,7 @@
 
 .wrapper {
+    width: 100%;
+    height: 12.2rem;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -8,20 +10,22 @@
 
 #head {
     width: 100%;
-    height: 2rem;
-    position: absolute;
+    height: 1rem;
+    position: relative;
     z-index: 66;
 }
 #foot {
     width: 100%;
-    height: 1rem;
+    height: 3.52rem;
     position: absolute;
     left: 0%;
     bottom: 0%;
 }
 .imgList {
     width: 100%;
+    height: 12.2rem;
     z-index: 10;
+    background-color: #009d81
     /* overflow: hidden; */
 }
 .imgList img{
@@ -70,8 +74,9 @@
     width: 100%;
     /* height: 500px; */
     background-color: #f4f8f9;
+    padding-bottom: 3.52rem;
     position: absolute;
-    top: 100%;
+    top: 12.2rem;
     left: 0px;
     z-index: 99;
     transition: top 0.06s linear;
@@ -82,10 +87,19 @@
     background-color: #fff;
     padding-bottom: 1.25rem;
 }
+.center_top .center_title p:first-child{
+    font-size: 0.66rem;
+}
+.center_top .center_title p {
+    font-size: 0.28rem;
+    line-height: 0.38rem;
+}
 .center .img {
-    width: 14rem;
+    width: 6.51rem;
+    height: 7.58rem;
     position: relative;
     margin: 0 auto;
+    background-color: #de7a36;
 }
 .center .img img {
     display: block;
@@ -103,36 +117,42 @@
 }
 .center .center_title img {
     display: block;
-    width: auto;
+    width: 0.58rem;
     margin: 0 auto;
     margin-top: 0px;
+    margin-bottom: 0.46rem;
 }
 .center .center_title p:last-child {
     color: #009d81;
-    font-size: 0.24rem;
-    margin-top: 0.38rem;
+    font-size: 0.32rem;
+    margin-top: 0.42rem;
 }
 .center .text {
-    position: absolute;
-    left: 1.2rem;
-    top: 1.8rem;
+    position: relative;
+    padding-left: 0.75rem;
+    padding-top: 0.62rem;
     color: #fff;
 }
 .center .text p{
-    font-size: 0.2rem;
-    line-height: 0.28rem;
+    font-size: 0.26rem;
+    line-height: 0.38rem;
+}
+.center .text p:nth-child(1){
+    font-size: 0.32rem;
+}
+.center .text p:nth-child(4){
+    font-size: 0.32rem;
 }
 .center .text .bottom {
     margin-bottom: 0.45rem;
 }
 .center .sel{
-    width: 14rem;
-    height: 0.8rem;
-    margin: 0.4rem auto;
+    width: 100%;
+    height: 1rem;
+    margin: 0.2rem auto;
     display: flex;
     background-color: #fff;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 0rem;
     transform: translateY(-50%);
 }
 .center .sel .sel_box{
@@ -154,9 +174,9 @@
 .center .sel .sel_box div span{
     width: 100%;
     height: 100%;
-    line-height: 0.8rem;
+    line-height: 1rem;
     display: inline-block;
-    font-size: 0.18rem;
+    font-size: 0.26rem;
     text-indent: 0.32rem;
     color: #333;
     position: absolute;
@@ -231,49 +251,44 @@
     color: #de7a36;
 }
 .center .list {
-    width: 14rem;
+    width: 100%;
     margin: 0 auto;
-    padding: 0.38rem 0.4rem;
+    /* padding: 0.38rem 0.4rem; */
     background-color: #fff;
-    margin-bottom: 10%;
+    margin-bottom: 2.58rem;
+    position: relative;
 }
 .center .list .list_box{
     width: 100%;
     /* height: 60px; */
     /* line-height: 60px; */
-    padding: 0.2rem 0px;
+    padding: 0.35rem 0.2rem;
     /* border-bottom: 1px solid #f3f3f3; */
-    font-size: 0.18rem;
+    font-size: 0.28rem;
     display: flex;
     align-items: center;
     cursor: pointer;
     flex-wrap: wrap;
+    text-align: center;
+    padding-bottom: 0rem;
 }
 .center .list .first {
     font-size: 0.2rem;
     border-bottom: 1px solid #f3f3f3;
+    background-color: #009e82;
+    padding: 0rem;
+    color: #fff;
+    line-height: 1rem;
+    text-align: center;
+}
+.center .list .first div {
+    padding-bottom: 0rem !important;
+    font-size: 0.28rem;
 }
 .center .list .list_box div {
-    width: 18%;
+    width: 25%;
     position: relative;
-    padding-bottom: 0.2rem;
-}
-.center .list .list_box .one {
-    width: 10%;
-}
-.center .list .list_box .six{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.center .list .list_box em {
-    width: 0.15rem;
-    height: 0.15rem;
-    display: inline-block;
-    border: 1px solid #d9d9d9;
-    border-color: transparent #d9d9d9 #d9d9d9 transparent;
-    transform: rotate(45deg);
-    margin-right: 0.37rem;
+    padding-bottom: 0.35rem;
 }
 .center .list .list_box .box {
     width: 100%;
@@ -287,7 +302,8 @@
     transition: all 1s linear;
 }
 .center .list .list_box .box .left{
-    width: 62%;
+    width: 100%;
+    text-align: left;
 }
 .center .list .list_box .box .right{
     width: 48%;
@@ -296,33 +312,34 @@
     /* width: auto; */
 }
 .center .list .list_box .box p {
-    line-height: 0.24rem;
+    line-height: 0.26rem;
     margin-bottom: 0.16rem;
     white-space: nowrap;
-    font-size: 0.16rem;
+    font-size: 0.24rem;
 }
 .center .list .list_box .box .h1{
-    font-size: 0.26rem;
+    font-size: 0.28rem;
     margin-bottom: 0.3rem;
     margin-top: 0.4rem;
     color: #de7a36;
 }
 .center .list .list_box .box .emil{
-    margin-bottom: 0.3rem;
-    margin-top: 0.4rem;
-    font-size: 0.18rem;
+    margin-bottom: 0.6rem;
+    margin-top: 0.8rem;
+    font-size: 0.28rem;
     color: #009d81;
 }
 .center .list .ym {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 0.2rem;
+    position: absolute;
+    bottom: -1.66rem;
 }
 .center .list .ym .left_span{
     display: flex;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
     background-color: #f3f3f3;
     align-items: center;
     justify-content: center;
@@ -339,8 +356,8 @@
 }
 .center .list .ym .right_span{
     display: flex;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
     background-color: #f3f3f3;
     align-items: center;
     justify-content: center;
@@ -357,9 +374,9 @@
 .center .list .ym .number_span {
     font-size: 0.1rem;
     display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
-    line-height: 0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    line-height: 0.75rem;
     text-align: center;
     background-color: #fff;
     border: 1px solid #f3f3f3;
@@ -384,49 +401,57 @@
     transition: all 0.6s linear;
 }
 .fsz56 {
-    font-size: 0.70rem !important;
+    font-size: 0.86rem !important;
+    line-height: 0.90rem;
     margin-bottom: 0.46rem !important;
-    margin-top: -2.5% !important;
+    margin-top: -6% !important;
 }
 .center_title p {
-    font-size: 0.18rem;
-    line-height: 0.3rem;
+    font-size: 0.30rem;
+    line-height: 0.42rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: transform 1s linear,opacity 1s linear;
+    transition: transform 1s linear, opacity 1s linear;
 }
 .center_title img {
+    width: 0.58rem;
+    margin: 0 auto;
     margin-bottom: 0.46rem;
     transform: translateY(50px);
     opacity: 0;
-    transition: transform 1s linear,opacity 1s linear;
+    transition: transform 1s linear, opacity 1s linear;
 }
 .center_title img:first-child {
-    width: 6.12rem;
+    width: 4.92rem;
 }
 .center_title p:first-child {
-    font-size: 0.70rem;
-    line-height: 0.74rem;
+    font-size: 0.86rem;
+    line-height: 0.90rem;
     margin-bottom: 0.46rem;
 }
 .center_title p:last-child {
-    font-size: 0.18rem;
+    font-size: 0.30rem;
 }
-.center_title .btn{
-    margin-top: 0.9rem;
-    margin-left: 0.3rem;
-    width: 2.06rem;
-    height: 0.6rem;
-    font-size: 0.2rem;
-    line-height: 0.6rem;
+.center_title_btn {
+    width: 100%;
+    height: 1.2rem;
+    position: absolute;
+    bottom: 0%;
+    display: flex;
+    z-index: 33;
+}
+.center_title_btn .btn{
+    flex: 1;
+    height: 1.2rem;
+    font-size: 0.32rem !important;
+    line-height: 1.2rem !important;
+    margin-bottom: 0rem !important;
     text-align: center;
-    background-color: #d6d6d6;
-    color: #333;
-    border-radius: 0.6rem;
-    display: inline-block;
-    cursor: pointer;
+    background-color: #009d81;
+    color: #fff;
+    display: block;
 }
-.center_title .check{
+.center_title_btn .check{
     background-color: #de7a36;
     color: #fff;
 }
@@ -462,6 +487,8 @@
 
 #two {
     position: relative;
+    width: 100%;
+    height: 21.08rem;
     overflow: hidden;
 }
 #two img{
@@ -470,8 +497,8 @@
     display: block;
 }
 #two .center_title{
-    top: 1.28rem;
-    color: #333;
+    top: 0.78rem;
+    color: #fff;
     position: absolute;
     left: 0%;
     transition: none;
@@ -485,52 +512,52 @@
     text-align: center;
 }
 #two .center_title p span{
-    font-size: 0.54rem;
+    font-size: 0.46rem;
 }
 #two .center_title p:first-child{
     top: 10%;
     margin: 0.46rem auto;
     margin-top: 0rem;
+    font-size: 0.56rem;
+    line-height: 0.64rem;
 }
 #two .center_title p:last-child{
-    font-size: 0.22rem;
+    font-size: 0.28rem;
 }
 #two .center_title img{
     display: block;
-    width: auto;
+    width: 0.58rem;
     margin-bottom: 0.46rem;
 }
-#two .one_title {
-    width: 18%;
+#two .two_box{
     position: absolute;
-    left: 16%;
-    top: 45%;
-}
-#two .two_title {
-    width: 18%;
-    position: absolute;
-    left: 41%;
-    top: 45%;
-}
-#two .three_title {
-    width: 18%;
-    position: absolute;
-    left: 66%;
-    top: 45%;
+    left: 50%;
+    top: 5.55rem;
+    transform: translateX(-50%) !important;
 }
 #two .text_title {
+    width: 6.7rem;
+    background-color: #fff;
     transform: translateY(50px);
     opacity: 0;
-    transition: all 1s linear;
+    transition: transform 1s linear,opacity 1s linear;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.42rem;
+    padding-left: 0.52rem;
+    margin-bottom: 0.3rem;
+}
+#two .text_title .two_box_left {
+    margin-right: 0.58rem;
 }
 #two .text_title img {
-    width: 60%;
+    width: 1.45rem;
     display: block;
     margin: 0 auto;
 }
 #two .text_title p {
-    font-size: 0.16rem;
-    line-height: 0.32rem;
+    font-size: 0.26rem;
+    line-height: 0.38rem;
     text-align: center;
 }
 #two .text_title p:first-child{
@@ -538,11 +565,10 @@
     transform: translateX(-5%);
 }
 #two .text_title .number {
-    font-size: 0.81rem;
+    font-size: 0.64rem;
     color: #009d81;
-    margin-top: 3%;
+    margin-top: 2%;
     font-weight: 600;
-    margin-bottom: 0.93rem;
 }
 #two .text_title .number em {
     display: inline-block;
@@ -554,28 +580,33 @@
 }
 #three {
     position: relative;
+    height: 25.16rem;
 }
 #three img{
     width: 100%;
     display: block;
 }
 #three .center_title {
-    top: 1.25rem;
+    top: 1.13rem;
     color:#333;
     position: absolute;
     padding-top: 0rem;
 }
 #three .center_title img{
-    width: auto;    
+    width: 0.58rem;    
+}
+#three .center_title p:first-child {
+    color:#333;
+    font-size: 0.66rem
 }
 #three .center_title p:last-child {
     color:#333;
-    font-size: 0.2rem
+    font-size: 0.28rem
 }
 #three .title_box {
     position: absolute;
     width: 100%;
-    top: 4.4rem;
+    top: 4.8rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -583,8 +614,7 @@
 #three .title_box .text_title{
     width: 6.74rem;
     height: 3.4rem;
-    margin-bottom: 0.5rem;
-    margin-left: 0.5rem;
+    margin-bottom: 0.48rem;
     position: relative;
     transform: translateY(50px);
     opacity: 0;
@@ -604,7 +634,7 @@
     color: #fff;
     position: absolute;
     left: 0.42rem;
-    bottom: 0.46rem;
+    bottom: 0.32rem;
     top: auto;
 }
 #three .title_box .text_title .text .fsz32{
@@ -613,133 +643,18 @@
 }
 #three .title_box .text_title .text p{
     margin-top: 0.2rem;
-    font-size: 0.18rem;
-    line-height: 0.24rem;
+    font-size: 0.24rem;
+    line-height: 0.32rem;
 }
 #three .organ {
     width: 100%;
     text-align: center;
-    font-size: 0.22rem;
-    line-height: 0.32rem;
+    font-size: 0.28rem;
+    line-height: 0.38rem;
     color: #de7a36;
     position: absolute;
-    bottom: 1rem;
+    bottom: 1.61rem;
     transform: translateY(50px);
     opacity: 0;
     transition: transform 1s linear,opacity 1s linear;
-}
-@media screen and (max-width : 1200px){
-    .imgList {
-        width: 1200px;
-    }
-    .center {
-        width: 1200px;
-    }
-    #head {
-        width: 1200px;
-        height: 100px;
-    }
-    #foot {
-        width: 1200px;
-        height: 66px;
-        /* height: 100px;   */
-    }
-    .fsz56 {
-        font-size: 36px!important;
-        margin-bottom: 26px!important;
-        margin-top: -2% !important;
-    }
-    .center_title p {
-        font-size: 12px;
-        line-height: 18px;
-    }
-    .center_title .btn{
-        margin-top: 60px;
-        margin-left: 30px;
-        width: 136px;
-        height: 40px;
-        line-height: 40px;
-        border-radius: 40px;
-    }
-    .center_title p:first-child{
-        font-size: 36px;
-        margin-bottom: 26px;
-    }
-    .center_title img:first-child{
-        width: 400px;
-    }
-    .center_title img {
-        margin-bottom: 16px;
-    }
-    .center_title p:last-child {
-        font-size: 12px;
-    }
-    .center .img {
-        width: 860px;
-    }
-    .center .text {
-        top: 115px;
-        left: 60px;
-    }
-    .center .sel {
-        width: 860px;
-        height: 40px;
-    }
-    .center .sel .btn {
-        font-size: 12px;
-        line-height: 40px;
-        width: 120px;
-    }
-    .center .zw{
-        width: 860px;
-    }
-    .center .list{
-        width: 860px;
-    }
-    .center .list .list_box em {
-        width: 10px;
-        height: 10px;
-    }
-    .center .list .list_box {
-        padding: 16px;
-        padding-bottom: 0px;
-    }
-    .center .list .list_box div{
-        padding-bottom: 16px;
-    }
-    .center .list .list_box .box .h1 {
-        font-size: 22px;
-        margin-bottom: 24px;
-        margin-top: 20px;
-    }
-    .center .list .list_box .box p{
-        line-height: 18px;
-        margin-bottom: 8px;
-    }
-    .center .list .list_box .box .emil {
-        margin-bottom: 20px;
-        margin-top: 24px;
-    }
-    .center .list .ym .left_span{
-        width: 36px;
-        height: 36px;
-    }
-    .center .list .ym .left_span em {
-        width: 14px;
-        height: 14px;
-    }
-    .center .list .ym .right_span{
-        width: 36px;
-        height: 36px;
-    }
-    .center .list .ym .right_span em {
-        width: 14px;
-        height: 14px;
-    }
-    .center .list .ym .number_span{
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-        font-size: 12px;
-    }
 }

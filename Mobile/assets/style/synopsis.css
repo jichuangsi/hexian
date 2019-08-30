@@ -17,7 +17,7 @@
 #foot {
     width: 100%;
     height: 3.52rem;
-    position: relative;
+    position: absolute;
     left: 0%;
     bottom: 0%;
 }
@@ -82,8 +82,8 @@
 }
 .center {
     width: 100%;
-    /* height: 500px; */    
-    padding-bottom: 5%;
+    /* height: 500px; */   
+    padding-bottom: 3.52rem;
     background-color: #fff;
     position: absolute;
     top: 12.2rem;
@@ -244,7 +244,7 @@
 #four .center_title{
     top: 1.8rem;
     color: #333;
-    width: 90%;
+    width: 100%;
 }
 #four .center_title p{
     top: 10%;
@@ -327,6 +327,7 @@
 }
 .fsz56 {
     font-size: 0.86rem !important;
+    line-height: 0.90rem;
     margin-bottom: 0.46rem !important;
     margin-top: -6% !important;
 }
