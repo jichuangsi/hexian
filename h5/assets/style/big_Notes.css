@@ -196,6 +196,7 @@
     opacity: 0;
     transition: all 1s linear;
     /* margin-top: -10%; */
+    margin-top: 0.87rem;
 }
 .center .Second .first_box {
     margin-top: 0px;
@@ -433,6 +434,9 @@
     transform: translateX(0px) !important;
     /* margin-top: 0px; */
     opacity: 1 !important;
+}
+.second_top {
+    transform: translateY(50%) !important;
 }
 @media screen and (max-width : 1200px){
     .imgList {

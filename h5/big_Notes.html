@@ -277,10 +277,13 @@
         for(let i = 0; i< $('.second_box').length; i++){
             if(i%2 != 0){
                 $('.second_box').eq(i).find('.yuan').css('left','117%')
-                $('.second_box').eq(i).css('marginTop','20%')
+                // $('.second_box').eq(i).css('marginTop','20%')
+                $('.second_box').eq(i).addClass('second_top')
             }else{
-                $('.second_box').eq(i).css('marginTop','-20%')
-                $('.second_box').eq($('.second_box').length-1).css('marginTop','0%')
+                // $('.second_box').eq(i).css('marginTop','-20%')
+                // $('.second_box').eq(i).css('transform','-20%')
+                // $('.second_box').eq(i).css('transform','translateY(-50%) !important;')
+                // $('.second_box').eq($('.second_box').length-1).css('marginTop','0%')
             }
         }
         // })

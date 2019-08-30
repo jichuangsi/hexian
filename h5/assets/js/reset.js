@@ -1,5 +1,6 @@
 // window.onload = function () {
 setHTML();
+OSnow();
 
         // var u = navigator.userAgent;
         // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
@@ -47,4 +48,15 @@ let fontsize = screenWidth * baseVal / pageWidth;
 document.querySelector("html").style.fontSize = fontsize + "px";
 
 }
+function OSnow(){
+    var agent = navigator.userAgent.toLowerCase();
+    var isMac = /macintosh|mac os x/i.test(navigator.userAgent);
+    if (agent.indexOf("win32") >= 0 || agent.indexOf("wow32") >= 0) {
+      }
+    if (agent.indexOf("win64") >= 0 || agent.indexOf("wow64") >= 0) {
+    }
+    if(isMac){
+        document.write("<link rel='stylesheet' href='./assets/style/reset_mac.css'>")
+    }
+  }
 // }

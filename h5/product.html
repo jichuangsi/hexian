@@ -29,6 +29,11 @@
             <ul class="imgList">
                 <!-- 图片部分 -->
                 <li data-id="1">
+                </li>
+                <li data-id="2"></li>
+                <li data-id="3"></li>
+                <li data-id="4"></li>
+                <li data-id="5">
                     <div class="libox" data-id="1">
                             <div class="img_box">
                                     <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
@@ -100,25 +105,7 @@
                             </div>
                         </div>
                 </li>
-                <li data-id="2"></li>
-                <li data-id="3"></li>
-                <li data-id="4"></li>
-                <li data-id="5"></li>
                 <div class="tab" data-id="1">
-                    <div class="all_title" data-id="1" onclick="tabclick(this)">
-                        <img src="./assets/images/和鲜产品/和鲜-和鲜产品_063.png" alt="">
-                        <p>果醋</p>
-                    </div>
-                    <div class="all_title" data-id="2" onclick="tabclick(this)">
-                            <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05_03.png" alt="">
-                        <p>果汁</p>
-                    </div>
-                    <div class="all_title" data-id="3" onclick="tabclick(this)">
-                            <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05.png" alt="">
-                        <p>矿泉水</p>
-                    </div>
-                </div>
-                <div class="tab" data-id="2">
                     <div class="all_title" data-id="1" onclick="tabclick(this)">
                         <img src="http://127.0.0.1:8080/ms-mcms/upload/1//article/1566906091541.png" alt="">
                         <p>酱油</p>
@@ -132,6 +119,8 @@
                         <p>香辛料</p>
                     </div>
                 </div>
+                <div class="tab" data-id="2">
+                </div>
                 <div class="tab" data-id="3">
 
                 </div>
@@ -139,16 +128,28 @@
 
                 </div>
                 <div class="tab" data-id="5">
+                        <div class="all_title" data-id="1" onclick="tabclick(this)">
+                            <img src="./assets/images/和鲜产品/和鲜-和鲜产品_063.png" alt="">
+                            <p>果醋</p>
+                        </div>
+                        <div class="all_title" data-id="2" onclick="tabclick(this)">
+                                <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05_03.png" alt="">
+                            <p>果汁</p>
+                        </div>
+                        <div class="all_title" data-id="3" onclick="tabclick(this)">
+                                <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05.png" alt="">
+                            <p>矿泉水</p>
+                        </div>
                 </div>
 
             </ul>
             <ul class="indexList">
                 <!-- 图片右下角序号部分 -->
-                <li data-id="1" onclick="listclick(this)">饮料</li>
-                <li data-id="2" onclick="listclick(this)">调味品</li>
-                <li data-id="3" onclick="listclick(this)">半冷链成品</li>
-                <li data-id="4" onclick="listclick(this)">蜂蜜</li>
-                <li data-id="5" onclick="listclick(this)">密蒜</li>
+                <li data-id="1" onclick="listclick(this)">调味品</li>
+                <li data-id="2" onclick="listclick(this)">半冷链成品</li>
+                <li data-id="3" onclick="listclick(this)">蜂蜜</li>
+                <li data-id="4" onclick="listclick(this)">密蒜</li>
+                <li data-id="5" onclick="listclick(this)">饮料</li>
             </ul>
             <ul class="bottom_nav">
                 <!-- 图片右下角序号部分 -->
@@ -181,6 +182,12 @@
                 $('.indexList>li').eq(4)[0].click()
             } else {
                 $('.indexList>li').eq(0)[0].click()
+            }
+            console.log(num)
+            for(let i = 0; i< $('.indexList>li').length; i++){
+                if ($('.indexList>li').eq(i).attr('data-id') == num) {
+                    console.log($('.indexList>li').eq(i)[0])
+                }
             }
 
             function scroll() {
@@ -281,6 +288,8 @@
             $(".imgList").find("li").removeClass("imgOn")
             $(".imgList").find("li").find('p').removeClass("qie")
             $('.tab').removeClass('tab_check')
+            $('.all_title').removeClass('all_check')
+            $('.title').removeClass('title_check')
             for (let i = 0; i < $(".imgList").find("li").length; i++) {
                 if($(".imgList").find("li").eq(i).attr('data-id') == num) {
                     $(".indexList").find("li").removeClass("indexOn").eq(i).addClass("indexOn");

@@ -218,6 +218,7 @@ body {
 }
 .video {
     position: relative;
+    cursor: pointer;
 }
 .video .video_text{
     position: absolute;
@@ -233,6 +234,24 @@ body {
 }
 .video .video_text p:last-child{
     margin-top: 0.1rem;
+}
+.video .video_btn{
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #f5781b;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0.38rem;
+    right: 0.32rem;
+}
+.video .video_btn em {
+    display: inline-block;
+    border: 0.1rem solid #000816;
+    border-color: transparent transparent transparent #000816;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-20%,-50%);
 }
 @media screen and (max-width : 1200px){
     .imgList {
