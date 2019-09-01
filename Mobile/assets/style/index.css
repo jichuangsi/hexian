@@ -153,11 +153,12 @@
 .title {
     position: absolute;
     left: 0.42rem;
-    top: 50%;
-    transform: translateY(-50%);
+    /* top: 50%;
+    transform: translateY(-50%); */
+    bottom: 1.8rem;
     z-index: 30;
-    font-size: 0.50rem;
-    line-height: 0.68rem;
+    font-size: 0.36rem;
+    line-height: 0.58rem;
     color:rgba(255, 255, 255, 1);
     cursor: pointer;
 }
@@ -168,15 +169,15 @@
     transform: translateY(50px);
 }
 .title .fsz62_m{
-    font-size: 0.60rem;
+    font-size: 0.54rem;
     line-height: 0.64rem;
     margin-top: 0.2rem;
 }
 .title .fsz70{
-    font-size: 0.6rem;
+    font-size: 0.56rem;
 }
 .title .fsz54{
-    font-size: 0.54rem;
+    font-size: 0.4rem;
     margin-top: 0.1rem;
 }
 .title .fsz16{
@@ -185,8 +186,11 @@
     letter-spacing: 0px;
 }
 .title .ruizi{
-    font-size: 0.40rem;
+    font-size: 0.36rem;
     letter-spacing: 4px;
+}
+.title .ruizi_2 {
+    font-size: 0.32rem
 }
 .title .ruizi span{
     font-size: 0.58rem;

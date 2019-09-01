@@ -1,11 +1,13 @@
 #head {
     width: 100%;
-    height: 2rem;
-    position: absolute;
+    height: 1rem;
+    position: relative;
     z-index: 33;
 }
-#head .nav div {
-    color: #333 !important;
+#foot {
+    width: 100%;
+    height: 3.52rem;
+    position: relative;
 }
 
 .wrapper {
@@ -13,13 +15,15 @@
 }
 .imgList {
     width: 100%;
+    height: 14rem;
     z-index: 10;
-    background: url('../images/和鲜产品/和鲜-公司动态.png') no-repeat;
-    background-size: 100% 100%;
+    position: absolute;
+    /* display: none; */
 }
 
 .imgList li {
     width: 100%;
+    height: 14rem;
     opacity: 0;
     position: absolute;
     left: 0px;
@@ -34,9 +38,11 @@
     position: absolute;
 }
 .imgList li .img_1 {
-    width: 3.8rem;
-    left: 6rem;
-    top: 2.28rem;
+    width: 4.24rem;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0.8rem;
     z-index: 10;
 }
 .imgList li .img_2 {
@@ -73,24 +79,20 @@
 }
 
 .indexList {
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 30;
+    position: relative;
 }
 
 .indexList li {
     cursor: pointer;
-    color: #de7a36;
-    border: 2px solid #de7a36;
-    width: 1.8rem;
-    font-size: 0.18rem;
-    height: 0.5rem;
-    line-height: 0.5rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    margin-top: 0.2rem;
+    background-color: #de7a36;
+    color: #fff;
+    text-indent: 0.47rem;
+    width: 100%;
+    font-size: 0.46rem;
+    height: 1.21rem;
+    line-height: 1.2rem;
+    text-align: left;
+    border-bottom: 0.01rem solid #fff;
     /* font-weight: 600; */
 
 }
@@ -102,6 +104,9 @@
     color: white;
     background-color: #009e8b;
     border-color: #009e8b;
+}
+.indexList_box {
+    height: 14rem;
 }
 .bottom_nav {
     position: absolute;
@@ -157,12 +162,13 @@
     margin-left: 0.2rem;
 }
 .title {
+    width: 80%;
     position: absolute;
-    left: 11rem;
-    top: 2.46rem;
+    left: 0.49rem;
+    top: 6.56rem;
     z-index: 30;
-    font-size: 0.18rem;
-    line-height: 0.24rem;
+    font-size: 0.28rem;
+    line-height: 0.44rem;
     color:#333;
     cursor: pointer;
     display: none;
@@ -172,12 +178,15 @@
 }
 .title p {
     opacity: 0;
-    letter-spacing: 4px;
+    letter-spacing: 0.02rem;
     transition: transform 1s linear, opacity 1s linear;
     transform: translateY(50px);
 }
 .title p span {
     color: #de7a36;
+}
+.title .right_box {
+    width: 70%;
 }
 .title .btn_box {
     display: flex;
@@ -186,14 +195,14 @@
 .title .btn {
     margin-top: 1.31rem;
     /* display: inline-block; */
-    font-size: 0.18rem;
+    font-size: 0.32rem;
     /* padding: 20px 52px; */
-    border-radius: 0.5rem;
+    border-radius: 0.9rem;
     background-color: #de7a36;
     color: #fff;
     display: flex;
-    width: 1.8rem;
-    height: 0.5rem;
+    width: 3.06rem;
+    height: 0.9rem;
     justify-content: center;
     align-items: center;
     margin-left: 0.2rem;
@@ -215,10 +224,10 @@
     color: #fff;
     font-size: 0.18rem;
     line-height: 0.2rem;
-    margin-top: 0.1rem;
+    /* margin-top: 0.1rem; */
 }
 .title .btn .jd {
-    margin-top: 0.08rem;
+    /* margin-top: 0.08rem; */
 }
 .title .btn:last-child {
     background-color: #009e8b;
@@ -247,82 +256,15 @@
     position: relative !important;
 }
 .all_title {
-    width: 0.86rem;
+    width: 0.22rem;
+    height: 0.22rem;
+    background-color: #de7a36;
+    border-radius: 50%;
     margin-left: 0.6rem;
 }
 .all_title:first-child {
     margin-left: 0px;
 }
-.all_title p{
-    text-align: center;
-    margin-top: 0.1rem;
-    font-size: 0.1rem;
-}
-.all_check p{
-    color: #de7a36;
-}
-@media screen and (max-width : 1200px){
-    .imgList {
-        width: 1200px;
-    }
-    .imgList li {
-        width: 1200px;
-    }
-    .wrapper {
-        width: 1200px;
-    }
-    .banner {width: 1200px;}
-    .center {
-        width: 1200px;
-    }
-    #head {
-        width: 1200px;
-        height: 100px;
-    }
-    .indexList {
-        /* top: 180px; */
-    }
-    .indexList li{
-        width: 110px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 12px;
-    }
-    .libox {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-    }
-    .libox_check {
-        z-index: 10;
-    }
-    .img_box {
-        display: none;
-    }
-    .img_check {
-        display: block;
-    }
-    .imgList li .img_1 {
-        width: 254px;
-        top: 137px;
-    }
-    .imgList li .img_2 {
-        height: 100%;
-    }
-    .title {
-        top: 147px;
-        font-size: 14px;
-        line-height: 24px;
-    }
-    .fsz34 {
-        font-size: 28px;
-    }
-    .title .btn{
-        width: 86px;
-        height: 40px;
-    }
-    .title .btn img {
-        width: 20%;
-        margin-right: 8px;
-    }
+.all_check {
+    background-color: #009e8b;
 }

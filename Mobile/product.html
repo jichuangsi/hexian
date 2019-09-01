@@ -22,9 +22,6 @@
     <div class="wrapper">
         <!-- 最外层部分 -->
         <div class="banner">
-            <div class="ite">
-                Copyright 2019 Hexian All Rights Reserved 粤ICP备18009779号-1
-            </div>
             <!-- 轮播部分 -->
             <ul class="imgList">
                 <!-- 图片部分 -->
@@ -37,7 +34,7 @@
                         <div class="libox" data-id="1">
                                 <div class="img_box">
                                         <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
-                                        <img class="img_2" src="./assets/images/和鲜产品/和鲜-和鲜产品.png" alt="">
+                                        <img class="img_2" src="./assets/images/和鲜产品/和鲜-手机版-产品展示_03.png" alt="">
                                     </div>
                                     <div class="title">
                                         <p class="fsz34">和鲜苹果醋饮料</p>
@@ -46,7 +43,8 @@
                                             <div class="right_box">
                                                 <p><span>·</span>0添加酿造工艺</p>
                                                 <p><span>·</span>非香精勾兑</p>
-                                                <p><span>·</span>丰裕果香</p>
+                                                <p><span>·</span>以山东烟台生态果园的红富士苹果为原料</p>
+                                                <p><span>·</span>自然原香</p>
                                             </div>
                                         </div>
                                         <div class="btn_box">
@@ -61,6 +59,10 @@
                                     </div>
                         </div>
                         <div class="libox" data-id="2">
+                                <div class="img_box">
+                                        <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
+                                        <img class="img_2" src="./assets/images/和鲜产品/和鲜-手机版-产品展示_03.png" alt="">
+                                    </div>
                             <div class="title">
                                 <p class="fsz34">和鲜果汁饮料</p>
                                 <div class="te_box">
@@ -84,6 +86,10 @@
                             </div>
                         </div>
                         <div class="libox" data-id="3">
+                                <div class="img_box">
+                                        <img class="img_1" src="./assets/images/和鲜产品/和鲜-和鲜产品_03.png" alt="">
+                                        <img class="img_2" src="./assets/images/和鲜产品/和鲜-手机版-产品展示_03.png" alt="">
+                                    </div>
                             <div class="title">
                                 <p class="fsz34">和鲜矿泉水饮料</p>
                                 <div class="te_box">
@@ -107,6 +113,8 @@
                 </li>
                 <div class="tab" data-id="1">
                 </div>
+                <div class="tab" data-id="2">
+                </div>
                 <div class="tab" data-id="3">
 
                 </div>
@@ -115,30 +123,10 @@
                 </div>
                 <div class="tab" data-id="5">
                     <div class="all_title" data-id="1" onclick="tabclick(this)">
-                        <img src="./assets/images/和鲜产品/和鲜-和鲜产品_063.png" alt="">
-                        <p>果醋</p>
                     </div>
                     <div class="all_title" data-id="2" onclick="tabclick(this)">
-                            <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05_03.png" alt="">
-                        <p>果汁</p>
                     </div>
                     <div class="all_title" data-id="3" onclick="tabclick(this)">
-                            <img src="./assets/images/和鲜产品/和鲜-和鲜产品_05.png" alt="">
-                        <p>矿泉水</p>
-                    </div>
-                </div>
-                <div class="tab" data-id="2">
-                    <div class="all_title" data-id="1" onclick="tabclick(this)">
-                        <img src="http://127.0.0.1:8080/ms-mcms/upload/1//article/1566906091541.png" alt="">
-                        <p>酱油</p>
-                    </div>
-                    <div class="all_title" data-id="2" onclick="tabclick(this)">
-                        <img src="http://127.0.0.1:8080/ms-mcms/upload/1//article/1566906285068.png" alt="">
-                        <p>调味酱</p>
-                    </div>
-                    <div class="all_title" data-id="3" onclick="tabclick(this)">
-                        <img src="http://127.0.0.1:8080/ms-mcms/upload/1//article/1566906328165.png" alt="">
-                        <p>香辛料</p>
                     </div>
                 </div>
 
@@ -151,17 +139,9 @@
                 <li data-id="4" onclick="listclick(this)">密蒜</li>
                 <li data-id="5" onclick="listclick(this)">饮料</li>
             </ul>
-            <ul class="bottom_nav">
-                <!-- 图片右下角序号部分 -->
-                <li onclick="top.location.href='./Mall.html'">和鲜商城</li>
-                <li>/</li>
-                <li onclick="top.location.href='./synopsis.html'">关于和鲜</li>
-                <li>/</li>
-                <li onclick="top.location.href='./Campus.html'">加入和鲜</li>
-                <li><span class="iconfont icon-icoweibo"></span><span class="iconfont icon-weixin"></span></li>
-            </ul>
         </div>
     </div>
+    <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     <!-- </div> -->
     <script type="text/javascript">
         $(function () {
@@ -196,20 +176,20 @@
             }
         });
 
-        function getIframeDom() {
-            $('#head').contents().find('.nav').find('div').css('color', 'black')
-        }
-        var w = window.innerWidth
-        var h = window.innerHeight
-        if (w >= 1200) {
-            $('.imgList').css('height', h + 'px')
-            $('.imgList>li').css('height', h + 'px')
-            // $('.imgList>li').find('img').css('height',h+'px')
-        } else {
-            $('.imgList').css('height', '635px')
-            $('.imgList>li').css('height', '635px')
-            // $('.imgList>li').find('img').css('height','635px')
-        }
+        // function getIframeDom() {
+        //     $('#head').contents().find('.nav').find('div').css('color', 'black')
+        // }
+        // var w = window.innerWidth
+        // var h = window.innerHeight
+        // if (w >= 1200) {
+        //     $('.imgList').css('height', h + 'px')
+        //     $('.imgList>li').css('height', h + 'px')
+        //     // $('.imgList>li').find('img').css('height',h+'px')
+        // } else {
+        //     $('.imgList').css('height', '635px')
+        //     $('.imgList>li').css('height', '635px')
+        //     // $('.imgList>li').find('img').css('height','635px')
+        // }
         // $('.imgList>li').find('img').css('height',h+'px')
         // console.log($('.imgList>li>img'))
         var curIndex = 0; //当前index
@@ -284,6 +264,7 @@
         // });
 
         function changeTo(num) {
+            $('.indexList_box').remove()
             $(".imgList").find("li").removeClass("imgOn")
             $(".imgList").find("li").find('p').removeClass("qie")
             $('.tab').removeClass('tab_check')
@@ -296,6 +277,9 @@
                     setTimeout(function () {
                         $(".imgList").find("li").eq(i).addClass("imgOn");
                     }, 100)
+                    $(".indexList").find("li").eq(i).after('<div class="indexList_box"></div>')
+                    console.log($('.indexList_box').offset().top)
+                    $('.imgList').css('top',$('.indexList_box').offset().top-50+'px')
                     for (let j = 0; j < $(".imgList").find("li").eq(i).find('.title_check').find('p').length; j++) {
                        setTimeout(function() {
                             $(".imgList").find("li").eq(i).find('.title_check').find('p').eq(j).addClass("qie");
@@ -326,8 +310,8 @@
 
         function iframeabsolute() {
             setTimeout(function () {
-                $('#head').css('position', 'absolute')
-                $('#head').css('height', '150px')
+                $('#head').css('position', 'relative')
+                $('#head').css('height', '1rem')
             }, 500)
         }
     </script>

@@ -191,7 +191,12 @@
 }
 #three {
     position: relative;
-    height: 24.02rem;
+    height: 27.02rem;
+}
+#three .three_img {
+    position: absolute;
+    left: 0rem;
+    bottom: 0rem;
 }
 #three .center_title{
     top: 1.23rem;
@@ -205,8 +210,13 @@
 #three .center_title img{
     width: 0.58rem;
 }
+#three .three_box {
+    position: absolute;
+    left: 0%;
+    top: 9.5rem;
+}
 #three .three_title_box {
-    width: 90%;
+    width: 95%;
     padding-left: 0.43rem;
     margin-bottom: 0.6rem;
     position: relative;
