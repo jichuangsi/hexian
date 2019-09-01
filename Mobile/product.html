@@ -270,6 +270,8 @@
             $(".imgList").find("li").removeClass("imgOn")
             $(".imgList").find("li").find('p').removeClass("qie")
             $('.tab').removeClass('tab_check')
+            $('.all_title').removeClass('all_check')
+            $('.title').removeClass('title_check')
             for (let i = 0; i < $(".imgList").find("li").length; i++) {
                 if($(".imgList").find("li").eq(i).attr('data-id') == num) {
                     $(".indexList").find("li").removeClass("indexOn").eq(i).addClass("indexOn");
