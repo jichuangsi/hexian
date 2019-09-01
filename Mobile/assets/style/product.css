@@ -93,6 +93,7 @@
     line-height: 1.2rem;
     text-align: left;
     border-bottom: 0.01rem solid #fff;
+    position: relative;
     /* font-weight: 600; */
 
 }
@@ -104,6 +105,21 @@
     color: white;
     background-color: #009e8b;
     border-color: #009e8b;
+}
+.indexList em {
+    display: inline-block;
+    width: 0.36rem;
+    height: 0.36rem;
+    border: 0.01rem solid #fff;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-75%) rotate(45deg);
+    border-color: transparent #fff #fff transparent;
+}
+.indexList .bottom_em {
+    transform: translateY(-25%) rotate(45deg);
+    border-color: #fff transparent transparent #fff;
 }
 .indexList_box {
     height: 14rem;

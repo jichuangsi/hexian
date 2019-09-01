@@ -133,11 +133,11 @@
             </ul>
             <ul class="indexList">
                 <!-- 图片右下角序号部分 -->
-                <li data-id="1" onclick="listclick(this)">调味品</li>
-                <li data-id="2" onclick="listclick(this)">半冷链成品</li>
-                <li data-id="3" onclick="listclick(this)">蜂蜜</li>
-                <li data-id="4" onclick="listclick(this)">密蒜</li>
-                <li data-id="5" onclick="listclick(this)">饮料</li>
+                <li data-id="1" onclick="listclick(this)">调味品<em></em></li>
+                <li data-id="2" onclick="listclick(this)">半冷链成品<em></em></li>
+                <li data-id="3" onclick="listclick(this)">蜂蜜<em></em></li>
+                <li data-id="4" onclick="listclick(this)">密蒜<em></em></li>
+                <li data-id="5" onclick="listclick(this)">饮料<em></em></li>
             </ul>
         </div>
     </div>
@@ -220,6 +220,8 @@
         //         curIndex = num;
         // });
         function listclick(val) {
+            $(val).siblings().find('em').removeClass('bottom_em')
+            $(val).find('em').addClass('bottom_em')
             let num = $(val).attr('data-id')
             clearInterval(autoChange);
             changeTo(num);
