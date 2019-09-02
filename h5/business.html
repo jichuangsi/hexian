@@ -34,7 +34,7 @@
                     <img src="./assets/images/招商专区/和鲜-招商介绍-招商专区_0335.png" alt="">
                 <p class="fsz56">招商介绍</p>
                 <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
-                <p>我们期待每一位志同道合的和鲜人的加入，与我们一起推动健康生活新浪潮，树立食品行业新标杆，让和鲜产品走进全球每一个家庭。</p>
+                <p>我们期待每一位志同道合的和鲜人的加入，与我们一起推动健康生活新浪潮，<br>树立食品行业新标杆，让和鲜产品走进全球每一个家庭。</p>
             </div>
             <!-- 轮播部分 -->
             <div class="imgList">
@@ -135,15 +135,15 @@
                         <li><div></div></li>
                         <li><div></div></li>
                         <li><div></div></li>
-                        <li class="number"><div>2</div><p>针对合作客户进行专人对接，提供运营管理系统、信息管理系统和运营培训系统服务</p></li>
+                        <li class="number"><div>2</div><p>针对合作客户进行专人对接，提供运营管理系<br>统、信息管理系统和运营培训系统服务</p></li>
                         <li><div></div></li>
                         <li><div></div></li>
                         <li><div></div></li>
-                        <li class="number"><div>3</div><p>市级经销商由城市经理带领专业销售团队进驻配合渠道和网点开发</p></li>
+                        <li class="number"><div>3</div><p>市级经销商由城市经理带领专业销售团队进驻<br>配合渠道和网点开发</p></li>
                         <li><div></div></li>
                         <li><div></div></li>
                         <li><div></div></li>
-                        <li class="number"><div>4</div><p>核心区域市场投放导购员，针对性进行产品体验营，加强消费者培养，拉动市场动销</p></li>
+                        <li class="number"><div>4</div><p>核心区域市场投放导购员，针对性进行产品体<br>验营，加强消费者培养，拉动市场动销</p></li>
                     </ul>
                 </div>
             </div>
@@ -183,29 +183,29 @@
             <div class="one_title text_title">
                     <p>1</p>
                     <p>户外广告支持</p>
-                    <p class="btn" onclick="$('.big_box').css('display','block')">查看更多</p>
+                    <p class="btn" onclick="businessbox(0)">查看更多</p>
                 </div>
                 <div class="two_title text_title">
                     <p>2</p>
                     <p>权威营销 信任背书</p>
-                    <p class="btn" onclick="$('.big_box').css('display','block')">查看更多</p>
+                    <p class="btn" onclick="businessbox(1)">查看更多</p>
                 </div>
                 <div class="three_title text_title">
                     <p>3</p>
                     <p>线上组合媒体推广</p>
-                    <p class="btn" onclick="$('.big_box').css('display','block')">查看更多</p>
+                    <p class="btn" onclick="businessbox(2)">查看更多</p>
                 </div>
                 <div class="four_title text_title">
                     <p>4</p>
                     <p>线下推广支持</p>
-                    <p class="btn" onclick="$('.big_box').css('display','block')">查看更多</p>
+                    <p class="btn" onclick="businessbox(3)">查看更多</p>
                 </div>
         </div>
         <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     </div>
-    <div class="big_box">
+    <div class="business_box">
         <div class="text_box">
-            <div class="none iconfont icon-quxiao" onclick="$('.big_box').css('display','none')"></div>
+            <div class="none iconfont icon-quxiao" onclick="outbox(0)"></div>
             <div class="box">
                     <p class="h1">
                             户外广告支持
@@ -220,6 +220,14 @@
                             <p>
                                     覆盖广东省珠三角、粤东、粤西等区域各主要地级市，动态画面立体传播，精准聚焦消费人群，空间内高频次传播，区域市场媒体等资源向支持当地经销商的覆盖门店精准导流，提升渠道客流及产品销量。
                             </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="business_box">
+        <div class="text_box">
+            <div class="none iconfont icon-quxiao" onclick="outbox(1)"></div>
+            <div class="box">
                         <p class="h1">
                             权威营销 信任背书
                         </p>
@@ -268,6 +276,14 @@
                         <p class="hui">
                            下载栏目视频，通过微博、微信、视频网站二次传播。引导中老年人通过微信转发实现大面积深度精准推送，促进产品的销售。
                         </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="business_box">
+        <div class="text_box">
+            <div class="none iconfont icon-quxiao" onclick="outbox(2)"></div>
+            <div class="box">
                         <p class="h1">
                             线上组合媒体推广
                         </p>
@@ -301,6 +317,14 @@
                         <p>
                             百度搜索引擎进行品牌关键词及产品文案建设，塑造良好用户口碑。
                         </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="business_box">
+        <div class="text_box">
+            <div class="none iconfont icon-quxiao" onclick="outbox(3)"></div>
+            <div class="box">
                         <p class="h1">
                             线下推广支持
                         </p>
@@ -475,7 +499,6 @@
             },500)
         }
         $('#two').find('.btn').click(function(){
-            console.log(this)
             $(this).addClass('check').siblings().removeClass('check')
             if($(this).text() == '资金优势' ){
                 $(this).parent().find('.fsz24').text('资金优势')
@@ -507,6 +530,14 @@
                 $('.one_all_title').eq(item).addClass('check').siblings().removeClass('check')
             });
         });
+        function businessbox(index){
+            console.log(index)
+            $('.business_box').css('display','none')
+            $('.business_box').eq(index).css('display','block')
+        }
+        function outbox(index){
+            $('.business_box').css('display','none')
+        }
         // })
     </script>
 </body>

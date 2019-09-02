@@ -140,7 +140,8 @@
             // $('.big_box').css('left','50%')
             // $('.search').css('opacity','0')
             // $('.search').css('transform','scale(0.1)')
-            $('.search').css('top','-100%')
+            // $('.search').css('top','-100%')
+            $('.search').css('display','none')
             // $('.search').css('left','50%')
             parent.window.iframeabsolute()
             setTimeout(function(){
@@ -155,10 +156,13 @@
             // $('.big_box').css('left','0px')
             // $('.search').css('opacity','1')
             // $('.search').css('transform','scale(1)')
-            $('.search').css('top','0px')
+            // $('.search').css('top','0px')
+            $('.search').css('display','block')
             // $('.search').css('left','0px')
             $('.search_box').css('display','none')
             $('.search_list').css('display','block')
+            $('.search_list').find('.one').css('opacity',1)
+            $('.search_list').find('.one').css('transform','translate(-0px,-0px)')
             parent.window.iframefixed()
         }
         $('.ipt_text > ul >li').click(function(){

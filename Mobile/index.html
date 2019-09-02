@@ -144,12 +144,7 @@
         }
 
         $(".indexList").find("li").each(function (item) {
-            console.log($(this))
-            $(this).click(function (){
-                console.log(2)
-            })
             $(this).click(function () {
-                console.log(1)
                 clearInterval(autoChange);
                 changeTo(item);
                 curIndex = item;
@@ -167,7 +162,6 @@
             for(let i = 0; i < $(".imgList").find("li").eq(num).find('p').length; i++){
                setTimeout(function() {
                 $(".imgList").find("li").eq(num).find('p').eq(i).addClass("qie");
-                    console.log(i+1+'00')
                 }, i*4+'00');
             }
             // $(".imgList").find("li").removeClass("imgOn").hide().eq(num).fadeIn().addClass("imgOn");
@@ -201,6 +195,61 @@
     //         childWindow.scroll_top(l);
     //     }
     // })
+    var startX, startY, moveEndX, moveEndY, X, Y, endPos,isScrolling;
+ 
+        $(".imgList").on("touchstart", function(e) {
+            // e.preventDefault();
+            startX = e.originalEvent.changedTouches[0].pageX,
+            startY = e.originalEvent.changedTouches[0].pageY;
+        });
+        $(".imgList").on("touchmove", function(e) {
+            // e.preventDefault();
+            moveEndX = e.originalEvent.changedTouches[0].pageX,
+            moveEndY = e.originalEvent.changedTouches[0].pageY,
+            X = moveEndX - startX,
+            Y = moveEndY - startY; 
+            endPos = {x:X,y:Y,time:+new Date};
+            isScrolling = Math.abs(endPos.x) < Math.abs(endPos.y) ? 1:0
+            
+            if(isScrolling == 1){
+            }else{
+                e.preventDefault();
+            }
+        }) 
+        $(".imgList").on("touchend",function(e){
+            e.preventDefault();
+            EndX = e.originalEvent.changedTouches[0].pageX
+            EndY = e.originalEvent.changedTouches[0].pageY
+            if(isScrolling == 0){
+                if(EndX > startX) {
+                if(curIndex == 0) {
+                    clearInterval(autoChange);
+                    changeTo(4);
+                    curIndex = 4;
+                    go()
+                }else{
+                    clearInterval(autoChange);
+                    curIndex--;
+                    changeTo(curIndex)
+                    go()
+                }
+            }else{
+                if(curIndex == 4) {
+                    clearInterval(autoChange);
+                    changeTo(0);
+                    curIndex = 0;
+                    go()
+                }else{
+                    clearInterval(autoChange);
+                    curIndex++;
+                    changeTo(curIndex)
+                    go()
+                }
+            }
+            }else{
+                $(".imgList")[0].removeEventListener('touchend',this,false);
+            }
+        })
         
     </script>
 </body>

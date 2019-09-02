@@ -152,8 +152,6 @@
     margin: 0.2rem auto;
     display: flex;
     background-color: #fff;
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-50%);
 }
 .center .sel .sel_box{
     flex: 1;
@@ -636,6 +634,7 @@
     left: 0.42rem;
     bottom: 0.32rem;
     top: auto;
+    padding: 0rem;
 }
 #three .title_box .text_title .text .fsz32{
     font-size: 0.32rem;

@@ -65,7 +65,7 @@
     position: fixed;
     /* left: 50%; */
     /* top: -50%; */
-    top: -100%;
+    top: 0%;
     z-index: 60;
     display: block;
     background-color: #fff;
@@ -73,7 +73,7 @@
     /* transform: scale(0.1); */
     overflow-y: scroll;
     overflow-x: hidden;
-    transition: top 0.5s linear;
+    display: none;
 }
 .search_img {
     width: 100%;
@@ -183,15 +183,18 @@
     font-size: 0.34rem;
     line-height: 1rem;
     text-indent: 0.32rem;
+    transform: translate(-20px,-20px);
+    opacity: 0;
+    transition: transform 1s linear,opacity 1s linear;
 }
 .search .list .two {
     font-size: 0.34rem;
-    line-height: 1rem;
-    display: none;
+    line-height: 1rem;  
     text-indent: 0.62rem;   
+    display: none;
 }
 .search .list .three{
-    font-size: 0.24rem;
+    font-size: 0.34rem;
     line-height: 1rem;
     display: none;
     text-indent: 0.92rem;   

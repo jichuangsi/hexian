@@ -170,7 +170,7 @@
     background-color: #009d81;
     border: 1px solid #fff;
     position: absolute;
-    left: 50%;
+    right: 50%;
     transform: rotate(45deg);
     bottom: -0.08rem;
     border-color:  #009d81 #fff  #fff #009d81;
@@ -207,6 +207,13 @@
 #one .check span em{
     background-color: #009d81;
 }
+#one .one_title p {
+    left: 0%;
+    transform: translateX(-80%);
+}
+#one .one_title p em{
+    right: 10%;
+}
 #one .two_title {
     position: absolute;
     left: 49%;
@@ -227,6 +234,14 @@
     top: 74.5%;
     font-size: 0.32rem;
     cursor: pointer;
+    z-index: 1;
+}
+#one .four_title p {
+    left: 0%;
+    transform: translateX(0%);
+}
+#one .four_title p em{
+    right: 90%;
 }
 #one .five_title {
     position: absolute;
@@ -288,7 +303,7 @@
     width: 80%;
     background-color: #ffffff;
     padding-top: 4.19rem;
-    padding-bottom: 6%;
+    padding-bottom: 1.45rem;
     margin: 0 auto;
 }
 #four .center_title{
@@ -493,6 +508,7 @@
     transform: translateX(-50%);
 }
 #six .center_title{
+    top: 1.19rem;
     color: #fff;
 }
 #six .center_title p:first-child{
@@ -540,9 +556,9 @@
     margin-bottom: 0.3rem;
 }
 #six .text_title p:nth-child(1){
-    width: 0.5rem;
-    height: 0.5rem;
-    line-height: 0.5rem;
+    width: 0.62rem;
+    height: 0.62rem;
+    line-height: 0.62rem;
     text-align: center;
     border-radius: 50%;
     background-color: #de7a36;
@@ -561,10 +577,10 @@
     overflow: hidden;
     transition: height 0.1s linear;
 }
-#six .text_title:hover .btn {
+/* #six .text_title:hover .btn {
     height: 0.5rem;
     line-height: 0.5rem;
-}
+} */
 .center_nav {
     display: none;
     position: fixed;
@@ -733,22 +749,22 @@
     cursor: pointer;
 }
 .big_box .text_box .box p {
-    font-size: 0.18rem;
+    font-size: 0.24rem;
     margin-bottom:0.2rem;
-    line-height: 0.24rem;
+    line-height: 0.32rem;
 }
 .big_box .text_box .box .h1 {
-    font-size: 0.34rem;
+    font-size: 0.40rem;
     color: #009d81;
     margin-bottom:0.rem;
 }
 .big_box .text_box .box .h2 {
-    font-size: 0.2rem;
+    font-size: 0.26rem;
     color: #de7a36;
     margin-bottom:0.3rem;
 }
 .big_box .text_box .box .h2 span{
-    font-size: 0.2rem;
+    font-size: 0.22rem;
     color: #de7a36;
     padding: 0.03rem 0.1rem;
     border-radius: 50%;

@@ -18,6 +18,8 @@
     height: 14rem;
     z-index: 10;
     position: absolute;
+    opacity: 1;
+    transition: opacity 1s linear;
     /* display: none; */
 }
 
@@ -122,7 +124,8 @@
     border-color: #fff transparent transparent #fff;
 }
 .indexList_box {
-    height: 14rem;
+    height: 0rem;
+    transition: all 1s linear;
 }
 .bottom_nav {
     position: absolute;
