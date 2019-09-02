@@ -189,22 +189,22 @@
                 <img src="./assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
                 <p>海军部队指传统的品牌营销，即户外广告、权威媒体<br>高速、高铁，框架，传统媒体等。陆军部队，即专业<br>销售团队和重装旅团队，主要负责收集管理渠道和开<br>发维护经销商，做好经销商和终端营销以及市场推广<br>等。空军是互联网营销、社交营销及资源整合，扮演<br>超级生态链的角色。和鲜既要巡航导弹支持，也要坦<br>克部队武装前进，海陆空三军并进，全方位进行营销<br>策划、渠道推广，服务整合内外资源。</p>
             </div>
-            <div class="one_title text_title" onclick="$('.big_box').css('display','block')">
+            <div class="one_title text_title" onclick="businessbox(0)">
                     <p>1</p>
                     <p>户外广告支持</p>
                     <p class="btn">查看更多</p>
                 </div>
-                <div class="two_title text_title" onclick="$('.big_box').css('display','block')">
+                <div class="two_title text_title" onclick="businessbox(1)">
                     <p>2</p>
                     <p>权威营销 信任背书</p>
                     <p class="btn">查看更多</p>
                 </div>
-                <div class="three_title text_title" onclick="$('.big_box').css('display','block')">
+                <div class="three_title text_title" onclick="businessbox(2)">
                     <p>3</p>
                     <p>线上组合媒体推广</p>
                     <p class="btn">查看更多</p>
                 </div>
-                <div class="four_title text_title" onclick="$('.big_box').css('display','block')">
+                <div class="four_title text_title" onclick="businessbox(3)">
                     <p>4</p>
                     <p>线下推广支持</p>
                     <p class="btn">查看更多</p>
@@ -212,9 +212,9 @@
         </div>
         <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     </div>
-    <div class="big_box">
+    <div class="business_box">
         <div class="text_box">
-            <div class="none iconfont icon-quxiao" onclick="$('.big_box').css('display','none')"></div>
+            <div class="none iconfont icon-quxiao" onclick="outbox(0)"></div>
             <div class="box">
                     <p class="h1">
                             户外广告支持
@@ -229,6 +229,14 @@
                             <p>
                                     覆盖广东省珠三角、粤东、粤西等区域各主要地级市，动态画面立体传播，精准聚焦消费人群，空间内高频次传播，区域市场媒体等资源向支持当地经销商的覆盖门店精准导流，提升渠道客流及产品销量。
                             </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="business_box">
+        <div class="text_box">
+            <div class="none iconfont icon-quxiao" onclick="outbox(1)"></div>
+            <div class="box">
                         <p class="h1">
                             权威营销 信任背书
                         </p>
@@ -277,6 +285,14 @@
                         <p class="hui">
                            下载栏目视频，通过微博、微信、视频网站二次传播。引导中老年人通过微信转发实现大面积深度精准推送，促进产品的销售。
                         </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="business_box">
+        <div class="text_box">
+            <div class="none iconfont icon-quxiao" onclick="outbox(2)"></div>
+            <div class="box">
                         <p class="h1">
                             线上组合媒体推广
                         </p>
@@ -310,6 +326,14 @@
                         <p>
                             百度搜索引擎进行品牌关键词及产品文案建设，塑造良好用户口碑。
                         </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="business_box">
+        <div class="text_box">
+            <div class="none iconfont icon-quxiao" onclick="outbox(3)"></div>
+            <div class="box">
                         <p class="h1">
                             线下推广支持
                         </p>
@@ -479,7 +503,7 @@
             setTimeout(function(){
                 $('#head').css('position','relative')
                 $('.center').css('zIndex','99')
-                $('#head').css('height','1rem')
+                $('#head').css('height','1.14rem')
                 $('.btn').css('zIndex','30')
             },500)
         }
@@ -517,6 +541,15 @@
                 $('.one_all_title').eq(item).addClass('check').siblings().removeClass('check')
             });
         });
+        
+        function businessbox(index){
+            console.log(index)
+            $('.business_box').css('display','none')
+            $('.business_box').eq(index).css('display','block')
+        }
+        function outbox(index){
+            $('.business_box').css('display','none')
+        }
         // })
     </script>
 </body>

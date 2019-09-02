@@ -136,6 +136,9 @@
     line-height: 1rem;
     font-size: 0.28rem;
     padding-left: 0.35rem;
+    transform: translate(-20px,-20px);
+    opacity: 0;
+    transition: transform 0.3s linear,opacity 0.3s linear;
 }
 .search .ipt_text ul li:first-child {
     margin-left: 0px;
@@ -185,7 +188,7 @@
     text-indent: 0.32rem;
     transform: translate(-20px,-20px);
     opacity: 0;
-    transition: transform 1s linear,opacity 1s linear;
+    transition: transform 0.3s linear,opacity 0.3s linear;
 }
 .search .list .two {
     font-size: 0.34rem;
