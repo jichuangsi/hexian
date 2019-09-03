@@ -261,6 +261,9 @@
     top: 10%;
     margin: 0.46rem auto;
 }
+#four .center_title p:last-child{
+    font-size: 0.2rem;
+}
 #four .center_title img{
     width: auto;
 }

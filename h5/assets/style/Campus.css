@@ -184,6 +184,9 @@
 .center_title p:last-child {
     font-size: 0.19rem;
 }
+.center .center_title p:last-child {
+    font-size: 0.20rem;
+}
 .center_title .btn{
     margin-top: 0.9rem;
     margin-left: 0.3rem;
