@@ -47,6 +47,33 @@
 }
 
 
+.shutext {
+    position: absolute;
+    display: flex;
+    /* align-items: center; */
+    top:1.10rem;
+    right: 0.87rem;
+}
+.shutext div {
+    font-size: 0.2rem;
+    line-height: 0.24rem;
+    color: #fff;
+    width: 0.2rem;
+    margin-left: 0.15rem;
+}
+.shutext div span{
+    display: inline-block;
+    margin-top: 0.1rem;
+}
+.shutext div:first-child {
+    margin-top: 0.6rem;
+}
+.shutext div:nth-child(2) {
+    line-height: 0.22rem;
+}
+.shutext div:last-child {
+    line-height: 0.235rem;
+}
 
 .infoList {
     position: absolute;

@@ -372,7 +372,7 @@
                             }
                         }) 
                         $(".indexList_box").on("touchend",function(e){
-                            e.preventDefault();
+                            // e.preventDefault();
                             EndX = e.originalEvent.changedTouches[0].pageX
                             EndY = e.originalEvent.changedTouches[0].pageY
                             let tab_num = $(this).parent().find('.tab_check').find('.all_check').attr('data-id');
