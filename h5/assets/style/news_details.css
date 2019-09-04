@@ -200,9 +200,13 @@ body {
     margin-bottom: 0.6rem;
 }
 .center .right li{
+    width: 4rem;
     font-size: 0.16rem;
     line-height: 0.36rem;
     color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .center .right li span{
     margin-right: 0.15rem;
