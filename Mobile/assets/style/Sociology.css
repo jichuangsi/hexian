@@ -149,9 +149,11 @@
 .center .sel{
     width: 100%;
     height: 1rem;
-    margin: 0.2rem auto;
+    /* margin: 0.2rem auto; */
     display: flex;
     background-color: #fff;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 .center .sel .sel_box{
     flex: 1;
@@ -161,7 +163,7 @@
 .center .sel .sel_box div {
     width: 100%;
     height: 100%;
-    font-size: 0.18rem;
+    font-size: 0.28rem;
     text-indent: 0.32rem;
     color: #333;
     position: absolute;
@@ -219,14 +221,18 @@
     outline: none;
     border: none;
 }
+.center .sel input {
+    border-right: 0.01rem solid #f2f2f2;
+}
 .center .sel .btn {
-    font-size: 0.2rem;
-    width: 1.8rem;
+    font-size: 0.3rem;
+    /* width: 1.8rem; */
     text-align: center;
     line-height: 0.8rem;
     cursor: pointer;
     background-color: #009d81;
     color: #fff;
+    text-indent: initial;
 }
 .center .zw {
     font-size: 0.1rem;
