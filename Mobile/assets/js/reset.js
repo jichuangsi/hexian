@@ -7,9 +7,8 @@ setHTML();
         // alert('是否是Android：'+isAndroid);
         // alert('是否是iOS：'+isiOS);
         if(isAndroid){
-            document.write("<link rel='stylesheet' href='./assets/style/reset.css'>")
         }else if(isiOS){
-            document.write("<link rel='stylesheet' href='./assets/style/reset_ios.css'>")
+            document.write("<link rel='stylesheet' href='../style/reset_ios.css'>")
         }
 
         

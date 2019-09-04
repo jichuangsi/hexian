@@ -58,7 +58,7 @@ function OSnow(){
     if (agent.indexOf("win64") >= 0 || agent.indexOf("wow64") >= 0) {
     }
     if(isMac){
-        document.write("<link rel='stylesheet' href='./assets/style/reset_mac.css'>")
+        document.write("<link rel='stylesheet' href='../style/reset_mac.css'>")
     }
   }
 // }
