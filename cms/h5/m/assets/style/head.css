@@ -1,0 +1,215 @@
+.head {
+    width: 100%;
+    height: 1rem;
+    /* position: relative; */
+	position: absolute;
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+	z-index: 2;
+}
+.logo {
+    width: 1.16rem;
+    /* height: 0.73rem; */
+    margin-left: 0.5rem;
+    /* position: absolute;
+    left: 0.6rem;
+    top: 0.4rem;
+    z-index: 30; */
+    cursor: pointer;
+}
+.logo img{
+    width: 100%;
+    height: auto;
+}
+.nav {
+    margin-right: 0.4rem;
+    /* width: 100%; */
+    /* position: absolute;
+    right: 0.6rem;
+    top: 0.7rem;
+    z-index: 30; */
+}
+.nav div {
+    float: left;
+    margin-right: 0.5rem;
+    font-size: 0.2rem;
+    cursor: pointer;
+    color:#333;
+}
+.nav div .iconfont {
+    font-size: 0.46rem !important;
+}
+.nav div:nth-child(7) {
+    margin-right: 0.63rem;
+}
+.nav div:nth-child(8) {
+    margin-right: 0.63rem;
+}
+.nav div:last-child {
+    margin-right: 0px;
+}
+.big_box {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 60;
+    left: 0%;
+    top: 0%;
+    /* transform: scale(0.1); */
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.search {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* left: 50%; */
+    /* top: -50%; */
+    top: 0%;
+    z-index: 60;
+    display: block;
+    background-color: #fff;
+    /* opacity: 0; */
+    /* transform: scale(0.1); */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+.search_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 32;
+}
+.search .search_box {
+    display: none;
+    background-color: #fff;
+}
+.search .ipt{
+    width: 6.9rem;
+    height: 0.8rem;
+    position: relative;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: 0.93rem;
+}
+.search .ipt input{
+    flex: 1;
+    height: 0.8rem;
+    border: none;
+    outline: none;
+    text-indent: 0.3rem;
+    font-size: 0.28rem;
+    background-color: #f2f2f2;
+}
+.search .icon-sousuo {
+    width: 0.5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color: #999999 !important;
+    margin-right: 0.3rem;
+    cursor: pointer;
+}
+.search .title {
+    font-size: 0.28rem;
+    color: #999;
+    position: relative;
+    padding-left: 0.35rem;
+    line-height: 1rem;
+}
+.search .ipt_text {
+    position: relative;
+}
+.search .ipt_text ul {
+    width: 100%;
+    height: 9rem;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+.search .ipt_text li {
+    width: 100%;
+    line-height: 1rem;
+    font-size: 0.28rem;
+    padding-left: 0.35rem;
+    transform: translate(-20px,-20px);
+    opacity: 0;
+    transition: transform 0.3s linear,opacity 0.3s linear;
+}
+.search .ipt_text ul li:first-child {
+    margin-left: 0px;
+}
+.search .search_list {
+    display: none;
+    width: 100%;
+    position: relative;
+    margin-top: 0.93rem;
+    z-index: 32;
+    display: none;
+    justify-content: center;
+    background-color: #fff;
+    padding-top: .3rem;   
+}
+.search .list {
+    display: block;
+    width: 100%;
+    color: #333;
+    vertical-align: top;
+    font-size: 0.18rem;
+    line-height: 0.32rem;
+    padding: 0rem 0.32rem;
+    background-color: #fff;
+}
+.search .list:first-child {
+    margin-left: 0px;
+}
+.search .list div {
+    width: 100%;
+    padding-right: 0.2rem;
+    cursor: pointer;
+    border-bottom: 0.01rem solid #eaecef;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+}
+.search .list div span {
+    font-size: 0.56rem;
+    color: #6e6e6e;
+}
+.search .list .one{
+    font-size: 0.34rem;
+    line-height: 1rem;
+    text-indent: 0.32rem;
+    transform: translate(-20px,-20px);
+    opacity: 0;
+    transition: transform 0.3s linear,opacity 0.3s linear;
+}
+.search .list .two {
+    font-size: 0.34rem;
+    line-height: 1rem;  
+    text-indent: 0.62rem;   
+    display: none;
+}
+.search .list .three{
+    font-size: 0.34rem;
+    line-height: 1rem;
+    display: none;
+    text-indent: 0.92rem;   
+}
+.head .none {
+    color: #333;
+    position: absolute;
+    right: 0.43rem;
+    top: 3%;
+    z-index: 32;
+    font-size: 0.32rem !important;
+    cursor: pointer;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/search_Result.css">
+    <!-- 
+	<script src="{ms:global.host/}/{ms:global.style/}/libs/jquery.fullpage.js"></script>
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/reset.css"> 
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/font_1340231_3b1rumcv30t/iconfont.css">
+    <script src="{ms:global.host/}/{ms:global.style/}/libs/jquery.min.js"></script>
+    <script src="{ms:global.host/}/{ms:global.style/}/assets/js/reset.js"></script>
+	-->
+   <title>{ms:global.name/}</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <!-- <div id="fullpage"> -->
+        
+	<#include "/m/head.html">
+    <div class="wrapper">
+        <!-- 最外层部分 -->
+        <div class="banner">
+            <div class="center_title">
+                <img class="title_img" src="{ms:global.host/}/{ms:global.style/}/assets/images/校园招聘/和鲜-加入和鲜-招聘职位_03.png" alt="">
+                <p class="fsz56">搜索结果</p>
+                <img src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
+                <!-- <p>加入我们，共同庆祝世界各地的精湛技艺和生活乐趣。</p> -->
+            </div>
+            <!-- 轮播部分 -->
+            <div class="imgList">
+                <img src="{ms:global.host/}/{ms:global.style/}/assets/images/校园招聘/和鲜-手机版-加入和鲜和鲜-手机版-加入和鲜-社会招聘_02.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="list">
+			{ms:arclist ispaging=true noflag=h} 			
+				<div class="list_box">
+					<a href="{ms:global.url/}[field.link/]">
+						<div class="img">
+							<img src="{ms:global.host/}[field.litpic/]" alt="">
+						</div>
+						<div class="time">
+							[field.date?string("yyyy年MM月dd日")/]
+						</div>
+						<div class="title">
+						  [field.title/]
+						</div>
+					</a>
+				</div>	
+			{/ms:arclist}   
+		</div>			
+        <div class="more" onclick="more()">
+            加载更多
+        </div>
+       <#include "/m/foot.html">
+    </div>
+    <!-- </div> -->
+    <script type="text/javascript">
+        // $(function(){
+        //     $('#fullpage').fullpage();
+        // });
+        // var h = window.innerHeight
+        //     console.log(h)
+        // $('.imgList').css('height',h+'px')
+
+        // onresize = function(){
+        //     h = window.innerHeight
+        //     $('.imgList').css('height',h+'px')
+        //     console.log(h)
+        // }
+        for(let i = 0; i < $(".center_title").children().length; i++){
+               setTimeout(function() {
+                $(".center_title").children().eq(i).addClass("qie");
+                }, i*4+'00');
+            }
+        function scroll(){
+            var l = $(document).scrollLeft()
+            var a = $(document).scrollTop()
+            var b = $(".list")[0].offsetTop
+            $('.wrapper').css('left',-l+'px')
+            scroll_top(l);
+            $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
+            if(b<a+400){
+                for(let i = 0; i < $(".list_box").length; i++){
+                   setTimeout(function() {
+                        $(".list_box").eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+        }
+        
+        //$('.list > .list_box').click(function(){
+            //window.location.href = '{ms:global.host/}/{ms:global.style/}/news_details.html'
+        //})
+        function iframefixed(){
+            $('#head').css('position','fixed')
+            $('#head').css('height','100%')
+            $('.center').css('zIndex','6')
+        }
+        function iframeabsolute(){
+            setTimeout(function(){
+                $('#head').css('position','relative')
+                $('#head').css('height','1.14rem')
+                $('.center').css('zIndex','99')
+            },500)
+        }
+		function more(){
+			var pageNo = 1;
+			var total = {ms:page.total/};
+			var size = {ms:page.rcount/}+6;
+			var categoryIds = {ms:search.categoryIds/};
+			
+			window.location.href="{ms:global.host/}/cms/10/search.do?categoryIds="+categoryIds+"&article_keyword={ms:search.article_keyword/}&size="+size+"&pageNo="+1;
+			window.event.returnValue=false; 
+			//http://127.0.0.1:8080/ms-mcms/cms/10/search.do?categoryIds=152&basic_title=&size=6&pageNo=3
+		}
+        // })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/reset.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/big_Notes.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/font_1340231_3b1rumcv30t/iconfont.css">
+    <script src="{ms:global.host/}/{ms:global.style/}/libs/jquery.min.js"></script>
+    <script src="{ms:global.host/}/{ms:global.style/}/assets/js/reset.js"></script>
+    <!-- <script src="./libs/jquery.fullpage.js"></script> -->
+    <title>{ms:global.name/}</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <!-- <div id="fullpage"> -->
+    <!-- <iframe id="head" src="./head.html" frameborder="0"></iframe> -->
+    <#include "head.html">
+    <div class="center_nav">
+        <a href="#synopsis"><span><em></em>公司简介</span></a>
+        <a href="#strategy"><span><em></em>我们的核心发展战略</span></a>
+        <a href="#Idea"><span><em></em>我们的品牌核心理念</span></a>
+        <a href="#Culture"><span><em></em>我们的企业核心文化</span></a>
+    </div>
+    <div class="wrapper">
+        <!-- 最外层部分 -->
+        <div class="banner">
+            <div class="center_title">
+                <img class="title_img" src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜--公司简介/和鲜-关于和鲜-公司简介_033.png" alt="">
+                <p class="fsz56">关于和鲜</p>
+                <img src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
+                <p>“只做无添加剂健康食品”是我们一直坚守的信念，</p>
+                <p>不断创新探索，给予消费者新时代下充满质感和智慧的美食体验。</p>
+                <p class="btn" onclick="location.href='{ms:global.host/}/html/1/151/161/index.html'">企业简介</p>
+                <p class="btn" onclick="location.href='{ms:global.host/}/html/1/151/160/index.html'">经营理念</p>
+                <p class="btn check">和鲜大事记</p>
+            </div>
+            <!-- 轮播部分 -->
+            <div class="imgList">
+                <img src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜--公司简介/和鲜-关于和鲜-公司简介_01.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="center_title">
+            <p>和鲜大事记</p>
+            <img src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
+            <p>和鲜发展至今，产品销量已遍及全球超过30个市场。<br>更重要的是，每一件产品都承载着我们的理念，把健康带给全世界。</p>
+        </div>
+        <div class="center_box">
+            {ms:arclist typeid=159 size=1 flag=h} 
+            <div class="first">
+                <img src="{ms:global.host/}[field.litpic/]" alt="">
+                <div class="text">    
+					<p> [field.title/]</p>                
+                   <p> [field.content/]</p>
+                    <em>NEW</em>
+                </div>
+            </div>
+			{/ms:arclist}
+            <div class="Second">
+                <div class="hua">
+                    <img src="{ms:global.host/}/{ms:global.style/}/assets/images/关于和鲜--和鲜大事迹/花_03.png" alt="">
+                </div>
+                <div class="xian"></div>
+                <a href="{ms:global.url/}{ms:page.next/}"><div class="more">加载更多</div></a>
+                <div class="center_second_box">                   
+                    {ms:arclist  typeid=159 size=7 noflag=h ispaging=true orderby=date order=desc}	
+					<!-- {ms:if item.index%2!=0}
+                    <div class="second_box first_box">
+                        <div class="yuan">
+                            <div>
+                                <span>[field.date?string("yyyy")/]</span>
+                                <span>[field.date?string("MM")/].[field.date?string("dd")/]</span>
+                            </div>
+                            <em class="right_em"></em>
+                        </div>
+                        <div class="right_box">
+                            <div class="img">
+								<img src="{ms:global.host/}[field.litpic/]" alt="">
+                            </div>
+                            <div class="title">[field.descrip/]</div>
+                            <div class="text">[field.content/]</div>
+                            <div class="text_more">展开更多<span>+</span></div>
+                        </div>
+                    </div>
+					{/ms:if} 
+					{ms:if item.index%2==0}
+                    <div class="second_box">
+                        <div class="yuan">
+                            <div>
+								<span>[field.date?string("yyyy")/]</span>
+                                <span>[field.date?string("MM")/].[field.date?string("dd")/]</span>
+                            </div>
+                            <em class="left_em"></em>
+                        </div>
+                        <div class="left_box">
+                            <div class="img">
+                                   <img src="{ms:global.host/}[field.litpic/]" alt="">
+                            </div>
+                          <div class="title">[field.descrip/]</div>
+                            <div class="text">[field.content/]</div>
+							<div class="text_more">展开更多<span>+</span></div>
+                        </div>
+                    </div>
+					{/ms:if} -->
+					<div class="second_box">
+                        <div class="yuan">
+                            <div>
+								<span>[field.date?string("yyyy")/]</span>
+                                <span>[field.date?string("MM")/].[field.date?string("dd")/]</span>
+                            </div>
+                            <em></em>
+                        </div>
+                        <div>
+                            <div class="img">
+                                   <img src="{ms:global.host/}[field.litpic/]" alt="">
+                            </div>
+                          <div class="title">[field.descrip/]</div>
+                            <div class="text">[field.content/]</div>
+							<div class="text_more">展开更多<span>+</span></div>
+                        </div>
+                    </div>
+				{/ms:arclist}                
+                    
+                </div>
+            </div>
+        </div>
+        <!-- <iframe id="foot" src="./foot.html" frameborder="0"></iframe> -->
+        <#include "foot.html">
+    </div>
+    <!-- </div> -->
+    <script type="text/javascript">
+        // $(function(){
+        //     $('#fullpage').fullpage();
+        // });
+        // var h = window.innerHeight
+        //     console.log(h)
+        // $('.imgList').css('height',h+'px')   
+
+        // onresize = function(){
+        //     h = window.innerHeight
+        //     $('.imgList').css('height',h+'px')
+        //     console.log(h)
+        // }
+        
+        for(let i = 0; i < $(".center_title").eq(0).children().length; i++){
+                setTimeout(function() {
+                $(".center_title").eq(0).children().eq(i).addClass("qie");
+                }, i*4+'00');
+            }
+			
+		var num = parseInt("{ms:page.rcount/}");
+		for(let j = 0; j < num; j++){
+			if(j%2==0){
+				$(".second_box").eq(j).find("div[class='yuan']").find("em").addClass("right_em");
+				$(".second_box").eq(j).find("div").eq(2).addClass("right_box");
+			}else{
+				$(".second_box").eq(j).find("div[class='yuan']").find("em").addClass("left_em");
+				$(".second_box").eq(j).find("div").eq(2).addClass("left_box");
+			}
+		}
+        function scroll(){
+            var l = $(document).scrollLeft()
+            var a = $(document).scrollTop()
+            var b = $(".center")[0].offsetTop
+            var c = $(".center")[0].offsetTop+$(".Second")[0].offsetTop
+            $('.wrapper').css('left',-l+'px')
+            //var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+           // childWindow.scroll_top(l);
+           scroll_top(l);
+            $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
+            if(b<a+400){
+                for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
+                   setTimeout(function() {
+                    $(".center_title").eq(1).children().eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+                for(let i = 0; i < $(".first>.text").find('p').length; i++){
+                   setTimeout(function() {
+                        $('.first').find('img').addClass('qie')
+                        $(".first>.text").find('p').eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+            if(c<a+400){
+                for(let i = 0; i < $(".second_box").length; i++){
+                   setTimeout(function() {
+                        $(".second_box").eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+        }
+        function iframefixed(){
+            $('#head').css('position','fixed')
+            $('#head').css('height','100%')
+            $('.center').css('zIndex','6')
+            $('.btn').css('zIndex','70')
+        }
+        function iframeabsolute(){
+            setTimeout(function(){
+                $('#head').css('position','absolute')
+                $('#head').css('height','2rem')
+                $('.center').css('zIndex','99')
+                $('.btn').css('zIndex','30')
+            },500)
+        }
+        $('.second_box > .yuan').click(function(){
+            $(this).parent().find('.text').css('height','auto')
+            $(this).parent().find('.text_more').css('display','none')
+        })
+        $('.second_box > .left_box').click(function(){
+            $(this).parent().find('.text').css('height','auto')
+            $(this).parent().find('.text_more').css('display','none')
+        })
+        $('.second_box > .right_box').click(function(){
+            $(this).parent().find('.text').css('height','auto')
+            $(this).parent().find('.text_more').css('display','none')
+        })
+        for(let i = 0; i< $('.second_box').length; i++){
+            if(i%2 != 0){
+                $('.second_box').eq(i).find('.yuan').css('left','117%')
+                // $('.second_box').eq(i).css('marginTop','20%')
+                $('.second_box').eq(i).addClass('second_top')
+            }else{
+                // $('.second_box').eq(i).css('marginTop','-20%')
+                // $('.second_box').eq(i).css('transform','-20%')
+                // $('.second_box').eq(i).css('transform','translateY(-50%) !important;')
+                // $('.second_box').eq($('.second_box').length-1).css('marginTop','0%')
+            }
+        }
+        if($('.second_box').length%2 == 0){
+            $('.center_second_box').css('paddingBottom',$('.second_box').eq($('.second_box').length-1).outerWidth(true)/2+'px')
+        }
+        // })
+    </script>
+</body>
+
+</html>
