@@ -194,7 +194,7 @@
         // var listfirst;
         // var listtwo;
         
-        var startX, startY, moveEndX, moveEndY, X, Y, endPos,isScrolling;
+        var startX, startY, moveEndX, moveEndY, X, Y, endPos,isScrolling,time;
         // //   alert(imgLen);
         // // 定时器自动变换2.5秒每次
         // var autoChange;
@@ -357,6 +357,7 @@
                             // e.preventDefault();
                             startX = e.originalEvent.changedTouches[0].pageX,
                             startY = e.originalEvent.changedTouches[0].pageY;
+                            time = +new Date
                         });
                         $(".indexList_box").on("touchmove", function(e) {
                             // e.preventDefault();
@@ -365,7 +366,7 @@
                             X = moveEndX - startX,
                             Y = moveEndY - startY; 
                             endPos = {x:X,y:Y,time:+new Date};
-                            isScrolling = Math.abs(endPos.x) < Math.abs(endPos.y) ? 1:0
+                            isScrolling = Math.abs(endPos.x) - Math.abs(endPos.y)<10 ? 1:0
                             if(isScrolling == 1){
                             }else{
                                 e.preventDefault();
@@ -377,7 +378,7 @@
                             EndY = e.originalEvent.changedTouches[0].pageY
                             let tab_num = $(this).parent().find('.tab_check').find('.all_check').attr('data-id');
                             let tab_length = $(this).parent().find('.tab_check').find('.all_title').length;
-                            if(isScrolling == 0){
+                            if(isScrolling == 0&&  +new Date - time > 100){
                                 if(EndX > startX) {
                                 if(tab_num == 1) {
                                     $(this).parent().find('.tab_check').find('.all_title').eq(tab_length-1).click()

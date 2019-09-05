@@ -135,7 +135,7 @@
         //   alert(imgLen);
         // 定时器自动变换2.5秒每次
         var autoChange;
-        go()
+        // go()
         function go(){
             autoChange = setInterval(function () {
             if (curIndex < $(".imgList li").length - 1) {
@@ -153,7 +153,7 @@
                 clearInterval(autoChange);
                 changeTo(item);
                 curIndex = item;
-                go()
+                // go()
             });
         });
 
@@ -200,12 +200,13 @@
     //         childWindow.scroll_top(l);
     //     }
     // })
-    var startX, startY, moveEndX, moveEndY, X, Y, endPos,isScrolling;
+    var startX, startY, moveEndX, moveEndY, X, Y, endPos,isScrolling,time;
  
         $(".imgList").on("touchstart", function(e) {
             // e.preventDefault();
             startX = e.originalEvent.changedTouches[0].pageX,
             startY = e.originalEvent.changedTouches[0].pageY;
+            time = +new Date
         });
         $(".imgList").on("touchmove", function(e) {
             // e.preventDefault();
@@ -213,8 +214,8 @@
             moveEndY = e.originalEvent.changedTouches[0].pageY,
             X = moveEndX - startX,
             Y = moveEndY - startY; 
-            endPos = {x:X,y:Y,time:+new Date};
-            isScrolling = Math.abs(endPos.x) < Math.abs(endPos.y) ? 1:0
+            endPos = {x:X,y:Y,time:time};
+            isScrolling = Math.abs(endPos.x) - Math.abs(endPos.y)<10 ? 1:0
             
             if(isScrolling == 1){
             }else{
@@ -222,38 +223,42 @@
             }
         }) 
         $(".imgList").on("touchend",function(e){
-            e.preventDefault();
+            // e.preventDefault();
+            // $(".imgList")[0].removeEventListener('touchend',this,false);
+            // $(".imgList")[0].removeEventListener('touchmove',this,false);
             EndX = e.originalEvent.changedTouches[0].pageX
             EndY = e.originalEvent.changedTouches[0].pageY
-            if(isScrolling == 0){
+            console.log(Math.abs(endPos.x),Math.abs(endPos.y))
+            if(isScrolling == 0 &&  +new Date - time > 100){
                 if(EndX > startX) {
                 if(curIndex == 0) {
                     clearInterval(autoChange);
                     changeTo(4);
                     curIndex = 4;
-                    go()
+                    // go()
                 }else{
                     clearInterval(autoChange);
                     curIndex--;
                     changeTo(curIndex)
-                    go()
+                    // go()
                 }
             }else{
                 if(curIndex == 4) {
                     clearInterval(autoChange);
                     changeTo(0);
                     curIndex = 0;
-                    go()
+                    // go()
                 }else{
                     clearInterval(autoChange);
                     curIndex++;
                     changeTo(curIndex)
-                    go()
+                    // go()
                 }
             }
-            }else{
-                $(".imgList")[0].removeEventListener('touchend',this,false);
             }
+            // else{
+            //     $(".imgList")[0].removeEventListener('touchend',this,false);
+            // }
         })
         
     </script>
