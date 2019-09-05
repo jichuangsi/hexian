@@ -243,13 +243,15 @@
         function iframefixed(){
             $('#head').css('position','fixed')
             $('#head').css('height','100%')
+            $('#head').css('zIndex','99')
             $('.center').css('zIndex','6')
             $('.btn').css('zIndex','70')
         }
         function iframeabsolute(){
             setTimeout(function(){
-                $('#head').css('position','relative')
+                $('#head').css('position','absolute')
                 $('#head').css('height','1.14rem')
+                $('#head').css('zIndex','2')
                 $('.center').css('zIndex','99')
                 $('.btn').css('zIndex','30')
             },500)

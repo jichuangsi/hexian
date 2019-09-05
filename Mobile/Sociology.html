@@ -310,14 +310,78 @@
             </div>
             <div class="ym">
                 <span class="left_span"><em></em></span>
-                <span class="number_span check">1</span>
+                <div class="number_box">
+                    <div class="number_box_x"></div>
+                </div>
                 <span class="right_span"><em></em></span>
+                <div class="page">共1/3页</div>
             </div>
         </div>
         <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     </div>
     <!-- </div> -->
     <script type="text/javascript">
+        
+        var pagenum = 0
+        var pageindex = 1
+        var ymhtml = ''
+        pagenum = 6
+        $('.number_box_x').css('width',6*0.95+'rem')
+        // if(pagenum<=3){
+            for(let i = 0; i < pagenum; i++){
+                ymhtml +='<span class="number_span">'+(i+1)+'</span>'
+            }
+        // }else{
+        //     for(let i = 0; i < 3; i++){
+        //         ymhtml +='<span class="number_span">'+(i+1)+'</span>'
+        //     }
+        // }
+        $('.number_box_x').children().remove()
+        $('.number_box_x').append(ymhtml)
+        $('.page').text('共1/'+pagenum+'页')
+        $('.number_span').eq(pageindex-1).addClass('number_check')
+        $('.number_span').click(function(){
+            $('.number_span').removeClass('number_check')
+            $('.number_span').eq($(this).text()-1).addClass('number_check')
+            // if($(this).text() < pagenum-1){
+            //     $('.number_box_x').css('transform','translateX('+($(this).text()-1)*0.95*-1+'rem)')
+            // }
+            $('.page').text('共'+$(this).text()+'/'+pagenum+'页')
+            if($(this).text() == pagenum ||$(this).text() == pagenum-1||$(this).text() == pagenum-2){
+                $('.number_box_x').css('transform','translateX('+(pagenum-3)*0.95*-1+'rem)')
+            }else{
+                $('.number_box_x').css('transform','translateX('+($(this).text()-1)*0.95*-1+'rem)')
+            }
+        })
+        $('.left_span').click(function(){
+            let index = $('.number_check').text()
+            $('.number_span').removeClass('number_check')
+            if(index == 1){
+                $('.page').text('共'+1+'/'+pagenum+'页')
+                $('.number_span').eq(0).addClass('number_check')
+                $('.number_box_x').css('transform','translateX(0rem)')
+            }else{
+                $('.page').text('共'+(Number(index)-1)+'/'+pagenum+'页')
+                $('.number_span').eq(index - 2).addClass('number_check')
+                if(index<pagenum-1){
+                    $('.number_box_x').css('transform','translateX('+(index-2)*0.95*-1+'rem)')
+                }
+            }
+        })
+        $('.right_span').click(function(){
+            let index = $('.number_check').text()
+            $('.number_span').removeClass('number_check')
+            if(index == pagenum){
+                $('.page').text('共'+pagenum+'/'+pagenum+'页')
+                $('.number_span').eq(pagenum-1).addClass('number_check')
+            }else{
+                $('.page').text('共'+(Number(index)+1)+'/'+pagenum+'页')
+                $('.number_span').eq(index).addClass('number_check')
+                if(index<pagenum-2){
+                    $('.number_box_x').css('transform','translateX('+(index)*0.95*-1+'rem)')
+                }
+            }
+        })
         // $(function(){
         //     $('#fullpage').fullpage();
         // });

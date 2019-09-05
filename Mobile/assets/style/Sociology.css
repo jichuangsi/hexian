@@ -269,6 +269,7 @@
     padding: 0.35rem 0.2rem;
     /* border-bottom: 1px solid #f3f3f3; */
     font-size: 0.28rem;
+    line-height: 0.32rem;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -375,7 +376,44 @@
     transform: rotate(225deg) translate(20%,-20%);
     border-color: transparent transparent #999 #999;
 }
+
+.center .list .ym .number_box {
+    width: 2.8rem;
+    height: 0.75rem;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: relative;
+}
+.number_box_x {
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    height: 0.75rem;
+}
+.number_box::-webkit-scrollbar
+{
+    width: 0rem;
+    height: 0rem;
+    background-color: transparent;
+}
+ 
+/*定义滚动条轨道 内阴影+圆角*/
+.number_box::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: normal;
+    border-radius: 0rem;
+    background-color: transparent;
+}
+ 
+/*定义滑块 内阴影+圆角*/
+.number_box::-webkit-scrollbar-thumb
+{
+    border-radius: 0rem;
+    -webkit-box-shadow: inset 0 0 6px transparent;
+    background-color: transparent;
+}
 .center .list .ym .number_span {
+    float: left;
     font-size: 0.1rem;
     display: inline-block;
     width: 0.75rem;
@@ -389,7 +427,12 @@
 .center .list .ym span {
     margin-left: 0.2rem;
 }
-.center .list .ym .check {
+.center .list .ym .page {
+    font-size: 0.1rem;
+    line-height: 0.75rem;
+    margin-left: 0.2rem;
+}
+.center .list .ym .number_check {
     background-color: #009d81;
     color: #fff;
 }
