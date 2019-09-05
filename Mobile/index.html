@@ -135,7 +135,7 @@
         //   alert(imgLen);
         // 定时器自动变换2.5秒每次
         var autoChange;
-        // go()
+        go()
         function go(){
             autoChange = setInterval(function () {
             if (curIndex < $(".imgList li").length - 1) {
@@ -153,7 +153,7 @@
                 clearInterval(autoChange);
                 changeTo(item);
                 curIndex = item;
-                // go()
+                go()
             });
         });
 
@@ -235,24 +235,24 @@
                     clearInterval(autoChange);
                     changeTo(4);
                     curIndex = 4;
-                    // go()
+                    go()
                 }else{
                     clearInterval(autoChange);
                     curIndex--;
                     changeTo(curIndex)
-                    // go()
+                    go()
                 }
             }else{
                 if(curIndex == 4) {
                     clearInterval(autoChange);
                     changeTo(0);
                     curIndex = 0;
-                    // go()
+                    go()
                 }else{
                     clearInterval(autoChange);
                     curIndex++;
                     changeTo(curIndex)
-                    // go()
+                    go()
                 }
             }
             }
