@@ -260,6 +260,9 @@
     width: 18%;
     position: relative;
     padding-bottom: 0.2rem;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
 }
 .center .list .list_box .one {
     width: 10%;

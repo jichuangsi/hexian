@@ -322,8 +322,10 @@
                     $('.number_box_x').css('transform','translateX('+(index-2)*0.95*-1+'rem)')
                 }
 				if(nosearch){
-					let indexPage = "{ms:page.index/}";
-					let gotoPage = indexPage.replace("index.html", "list-"+(parseInt(index)-1)+".html");
+					let indexPage = gotoPage = "{ms:page.index/}";
+					if(index != 2){						
+						gotoPage = indexPage.replace("index.html", "list-"+(parseInt(index)-1)+".html");
+					}
 					window.location.href="{ms:global.url/}"+gotoPage;
 					window.event.returnValue=false;
 				}else{				
