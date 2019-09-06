@@ -656,7 +656,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    overflow: scroll;
+    overflow: auto;
     padding: 0.6rem;
 }
 .business_box .text_box .box::-webkit-scrollbar{/*滚动条整体样式*/

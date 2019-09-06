@@ -221,6 +221,7 @@
     color: #333;
     outline: none;
     border: none;
+	-webkit-appearance:none;
 }
 .center .sel input {
     border-right: 0.01rem solid #f2f2f2;
