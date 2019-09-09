@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/reset.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/product.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/font_1340231_3b1rumcv30t/iconfont.css">
+    <script src="{ms:global.host/}/{ms:global.style/}/libs/jquery.min.js"></script>
+    <script src="{ms:global.host/}/{ms:global.style/}/assets/js/reset.js"></script>
+    <!-- <script src="./libs/jquery.fullpage.js"></script> -->
+    <title>{ms:global.name/}</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <#include "head.html">
+    <!-- <div id="fullpage"> -->
+    <div class="wrapper">
+        <!-- 最外层部分 -->
+        <div class="banner">
+            <div class="ite">
+                Copyright 2019 Hexian All Rights Reserved 粤ICP备18009779号-1
+            </div>
+            <!-- 轮播部分 -->
+            <ul class="imgList">
+                <!-- 图片部分 -->
+                {ms:channel type=son typeid=152 ref=th}
+                <li data-id="[field.typeindex/]">
+					{ms:arclist  refs=th tableName=mdiy_product_50}
+                                                 <!-- [field.index/]-[field.title/]-[field.productImg/] -->
+						<div class="libox" data-id="[field.index/]">
+							<div class="img_box">
+								<img class="img_1" src="[field.productImg/]" alt="">
+								<img class="img_2" src="[field.Background/]" alt="">
+							</div>
+							<div class="title">
+								<p class="fsz34">[field.descrip/]</p>
+								<div class="te_box">
+									<p class="te">产品特点</p>
+									<div class="right_box">
+										[field.content/]
+									 </div>
+								</div>
+								<div class="btn_box">
+									<p class="btn first"
+										onclick="location.href='[field.Tmall/]'">
+										<span class="iconfont icon-tianmao"></span><span>天猫</span>
+									</p>
+									<p class="btn" onclick="location.href='[field.JD/]'">
+										<span class="iconfont icon-jingdong"></span><span class="jd">京东</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					{/ms:arclist}
+				</li>
+				{/ms:channel}   
+                
+                           {ms:channel type=son typeid=152 ref=th1}
+					<div class="tab" data-id="[field.typeindex/]">
+						{ms:arclist refs=th1 tableName=mdiy_product_50}
+							<div class="all_title" data-id="[field.index/]" onclick="tabclick(this)">
+								<img src="{ms:global.host/}[field.litpic/]" alt="">
+								<p>[field.title/]</p>
+							</div>
+						{/ms:arclist}                            
+					</div>
+					{/ms:channel}
+                
+
+            </ul>
+            <ul class="indexList">
+                <!-- 图片右下角序号部分 -->
+
+                {ms:channel type=son typeid=152}
+				<li data-id="[field.typeindex/]" onclick="listclick(this)">[field.typetitle/]</li>
+				{/ms:channel}
+
+            </ul>
+            <ul class="bottom_nav">
+                <!-- 图片右下角序号部分 -->
+                <li onclick="top.location.href='{ms:global.url/}/179/index.html'">和鲜商城</li>
+                <li>/</li>
+                <li onclick="top.location.href='{ms:global.url/}/151/index.html'">关于和鲜</li>
+                <li>/</li>
+                <li onclick="top.location.href='{ms:global.url/}/153/index.html'">加入和鲜</li>
+                <li><span class="iconfont icon-icoweibo"></span><span class="iconfont icon-weixin"></span></li>
+            </ul>
+        </div>
+    </div>
+    <!-- </div> -->
+    <script type="text/javascript">
+		$('.head').find('.nav').find('div').css('color', '#333')
+        $(function () {
+            var url = window.location.href.split('?')[1] ? window.location.href.split('?')[1] : ''
+            var num;
+            if (url != '') {
+                num = url ? url.split('=')[1] : ''
+            }
+            if (num == 1) {
+                $('.indexList').find('li').eq(0).click()
+            } else if (num == 2) {
+                $('.indexList>li').eq(1)[0].click()
+            } else if (num == 3) {
+                $('.indexList>li').eq(2)[0].click()
+            } else if (num == 4) {
+                $('.indexList>li').eq(3)[0].click()
+            } else if (num == 5) {
+                $('.indexList>li').eq(4)[0].click()
+            } else {
+                $('.indexList>li').eq(0)[0].click()
+            }
+            console.log(num)
+            for(let i = 0; i< $('.indexList>li').length; i++){
+                if ($('.indexList>li').eq(i).attr('data-id') == num) {
+                    console.log($('.indexList>li').eq(i)[0])
+                }
+            }
+
+            function scroll() {
+                var l = $(document).scrollLeft()
+               // var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+                //childWindow.scroll_top(l);
+scroll_top(l);
+            }
+        });
+
+        function getIframeDom() {
+            $('#head').contents().find('.nav').find('div').css('color', 'black')
+        }
+        var w = window.innerWidth
+        var h = window.innerHeight
+        if (w >= 1200) {
+            $('.imgList').css('height', h + 'px')
+            $('.imgList>li').css('height', h + 'px')
+            // $('.imgList>li').find('img').css('height',h+'px')
+        } else {
+            $('.imgList').css('height', '635px')
+            $('.imgList>li').css('height', '635px')
+            // $('.imgList>li').find('img').css('height','635px')
+        }
+        // $('.imgList>li').find('img').css('height',h+'px')
+        // console.log($('.imgList>li>img'))
+        var curIndex = 0; //当前index
+        var listfirst;
+        var listtwo;
+        //   alert(imgLen);
+        // 定时器自动变换2.5秒每次
+        var autoChange;
+        go()
+
+        function go() {
+            //     autoChange = setInterval(function () {
+            //     if (curIndex < $(".imgList li").length - 1) {
+            //         curIndex++;
+            //     } else {
+            //         curIndex = 0;
+            //     }
+            //     //调用变换处理函数
+            //     changeTo(curIndex);
+            // }, 5500);
+        }
+
+        // $(".indexList").click(function () {
+        //     console
+        //     let num = $(this).attr('data-id')
+        //         clearInterval(autoChange);
+        //         changeTo(num);
+        //         curIndex = num;
+        // });
+        function listclick(val) {
+            let num = $(val).attr('data-id')
+            clearInterval(autoChange);
+            changeTo(num);
+            curIndex = num;
+        }
+
+        function tabclick(val) {
+            let item = $(val).attr('data-id')
+            $(val).addClass('all_check').siblings().removeClass('all_check')
+            $(".imgList").find("li").find('p').removeClass("qie")
+            $(".imgList").find(".img_box").removeClass('img_check')
+            $(".imgList").find('.libox').removeClass('libox_check')
+            let arr = $(".imgList").find("li").find('.title_check').parent().parent().parent().find('.libox')
+            $(".imgList").find(".title").removeClass('title_check')
+            for (let i = 0; i < arr.length; i++) {
+                if(arr.eq(i).attr('data-id') == item) {
+                    arr.eq(i).find('.img_box').addClass('img_check')
+                    arr.eq(i).find('.title').addClass('title_check')
+                    arr.eq(i).addClass('libox_check')
+                    for (let j = 0; j < arr.eq(i).find('.title_check').find('p').length; j++) {
+                       setTimeout(function() {
+                            arr.eq(i).find('.title_check').find('p').eq(j).addClass("qie");
+                        }, i * 4 + '00');
+                    }
+                }
+            }
+            // $(val).parent().parent().find('.title').find('p').removeClass("qie");
+            // $(val).parent().parent().find('.title').eq(item).addClass('title_check').siblings().removeClass(
+            //     'title_check')
+            // $(val).parent().parent().find('.img_box').eq(item).addClass('img_check').siblings().removeClass('img_check')
+            // for (let i = 0; i < $(val).parent().parent().find('.title_check').find('p').length; i++) {
+            //    setTimeout(function() {
+            //         $(val).parent().parent().find('.title_check').find('p').eq(i).addClass("qie");
+            //     }, i * 4 + '00');
+            // }
+        }
+        // $(".tab>.all_title").each(function (item) {
+        //     $(this).click(function () {
+        //         $(this).addClass('all_check').siblings().removeClass('all_check')
+        //         $('.title').eq(item).addClass('title_check').siblings().removeClass('title_check')
+        //     });
+        // });
+
+        function changeTo(num) {
+            $(".imgList").find("li").removeClass("imgOn")
+            $(".imgList").find("li").find('p').removeClass("qie")
+            $('.tab').removeClass('tab_check')
+            $('.all_title').removeClass('all_check')
+            $('.title').removeClass('title_check')
+            for (let i = 0; i < $(".imgList").find("li").length; i++) {
+                if($(".imgList").find("li").eq(i).attr('data-id') == num) {
+                    $(".indexList").find("li").removeClass("indexOn").eq(i).addClass("indexOn");
+                    $(".imgList").find("li").eq(i).find('.img_box').eq(0).addClass('img_check').siblings().removeClass('img_check')
+                    $(".imgList").find("li").eq(i).find('.title').eq(0).addClass('title_check').siblings().removeClass('title_check')
+                    $(".imgList").find("li").eq(i).find('.libox').eq(0).addClass('libox_check')
+                    setTimeout(function () {
+                        $(".imgList").find("li").eq(i).addClass("imgOn");
+                    }, 100)
+                    for (let j = 0; j < $(".imgList").find("li").eq(i).find('.title_check').find('p').length; j++) {
+                       setTimeout(function() {
+                            $(".imgList").find("li").eq(i).find('.title_check').find('p').eq(j).addClass("qie");
+                        }, i * 4 + '00');
+                    }
+                    for (let j = 0; j < $('.tab').length; j++) {
+                        if($('.tab').eq(j).attr('data-id') == num) {
+                            $('.tab').eq(j).addClass('tab_check')
+                            $('.tab').eq(j).find('.all_title').eq(0).addClass('all_check')
+                        }
+                    }
+                }
+            }
+        }
+
+        function tabTo(num) {
+            for (let i = 0; i < $(".imgList").find("li").eq(num).find('.title_check').find('p').length; i++) {
+               setTimeout(function() {
+                    $(".imgList").find("li").eq(num).find('.title_check').find('p').eq(i).addClass("qie");
+                }, i * 4 + '00');
+            }
+        }
+
+        function iframefixed() {
+            $('#head').css('position', 'fixed')
+            $('#head').css('height', '100%')
+        }
+
+        function iframeabsolute() {
+            setTimeout(function () {
+                $('#head').css('position', 'absolute')
+                $('#head').css('height', '150px')
+            }, 500)
+        }
+    </script>
+</body>
+
+</html>

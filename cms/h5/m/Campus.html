@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/Campus.css">
+    <!-- 
+	<script src="{ms:global.host/}/{ms:global.style/}/libs/jquery.fullpage.js"></script> 
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/reset.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/font_1340231_3b1rumcv30t/iconfont.css">
+    <script src="{ms:global.host/}/{ms:global.style/}/libs/jquery.min.js"></script>
+    <script src="{ms:global.host/}/{ms:global.style/}/assets/js/reset.js"></script>	
+	-->
+    <title>{ms:global.name/}</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <!-- <div id="fullpage"> -->
+        
+    <#include "/m/head.html">
+    <div class="wrapper">
+        <!-- 最外层部分 -->
+        <div class="banner">
+            <div class="center_title">
+                <img class="title_img" src="{ms:global.host/}/{ms:global.style/}/assets/images/校园招聘/和鲜-加入和鲜-招聘职位_03.png" alt="">
+                <p class="fsz56">加入和鲜</p>
+                <img src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
+                <p>“让人类在享受美食中健康起来”<br>是我们的企业愿景，我们期待每一位志同道合的和鲜<br>人的加入，与我们一起推动健康生活新浪潮，树立食<br>品行业新标杆，让和鲜产品走进全球每一个家庭。</p>
+            </div>
+            <div class="center_title_btn">
+                <p class="btn check">校园招聘</p>
+                <p class="btn" onclick="location.href='{ms:global.url/}/153/158/index.html'">社会招聘</p>
+            </div>
+            <!-- 轮播部分 -->
+            <div class="imgList">
+                <img src="{ms:global.host/}/{ms:global.style/}/assets/images/校园招聘/和鲜-手机版-加入和鲜和鲜-手机版-加入和鲜-社会招聘_02.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="center_title">
+            <p>应届毕业生招聘</p>
+            <img src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
+            <p>我们还有各类激动人心并适合应届毕业生担任的若干<br>职能领域岗位。如果您有工作热情，学习能力强，希<br>望成就一番事业，有志于从事大健康行业，那么欢迎<br>您加入我们。</p>
+        </div>
+        <div class="list">
+			{ms:arclist typeid=157  orderby=sort order=asc tableName=mdiy_address_50} 
+				<div class="list_box">
+					<p>[field.title/]</p>
+					<p>[field.descrip/]</p>
+					<p><span>工作地点：</span><span>[field.address/]</span></p>
+					<p><span>招聘专业：</span><span>[field.major/]</span></p>
+				</div>
+			{/ms:arclist}
+        </div>
+       <#include "/m/foot.html">
+    </div>
+    <!-- </div> -->
+    <script type="text/javascript">
+        // var h = window.innerHeight
+        //     console.log(h)
+        // $('.imgList').css('height',h+'px')
+
+        // onresize = function(){
+        //     h = window.innerHeight
+        //     $('.imgList').css('height',h+'px')
+        //     console.log(h)
+        // }
+        for(let i = 0; i < $(".center_title").eq(0).children().length; i++){
+               setTimeout(function() {
+                $(".center_title").eq(0).children().eq(i).addClass("qie");
+                }, i*4+'00');
+            }
+        function scroll(){
+            var l = $(document).scrollLeft()
+            var a = $(document).scrollTop()
+            var b = $(".list")[0].offsetTop
+            $('.wrapper').css('left',-l+'px')
+            scroll_top(l);
+            $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
+            if(b<a+400){
+            for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
+                   setTimeout(function() {
+                    $(".center_title").eq(1).children().eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+            for(let i = 0; i < $(".list_box").length; i++){
+                   setTimeout(function() {
+                    $(".list_box").eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+        }
+        function iframefixed(){
+            $('#head').css('position','fixed')
+            $('#head').css('height','100%')
+            $('.center').css('zIndex','6')
+        }
+        function iframeabsolute(){
+            setTimeout(function(){
+                $('#head').css('position','relative')
+                $('#head').css('height','1.14rem')
+                $('.center').css('zIndex','99')
+            },500)
+        }
+        window.addEventListener("scroll", function () {
+            var l = $(document).scrollLeft()
+            var a = $(document).scrollTop()
+            var b = $(".list")[0].offsetTop
+            $('.wrapper').css('left',-l+'px')
+            let q;
+            // var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+            // childWindow.
+            // scroll_top(l);
+            $('.banner>.center_title').css('transform','translate(-50%,'+(-a/2)+'px)')
+            $('.banner>.center_title_btn').css('bottom',((a))+'px')
+            if(b<a+400){
+            for(let i = 0; i < $(".center_title").eq(1).children().length; i++){
+                q = i
+                   setTimeout(function() {
+                    //    $(".center_title").eq(1).children()
+                    $(".center_title").eq(1).children().eq(q).addClass("qie");
+                    }, i*4+'00');
+                }
+            }
+            for(let i = 0; i < $(".list_box").length; i++){
+                   setTimeout(function() {
+                    $(".list_box").eq(i).addClass("qie");
+                    }, i*4+'00');
+                }
+        })
+        // })
+    </script>
+</body>
+
+</html>

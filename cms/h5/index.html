@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{ms:global.host/}/{ms:global.style/}/assets/js/reset.js"></script>
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/reset.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/index.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/font_1340231_3b1rumcv30t/iconfont.css">
+    <script src="{ms:global.host/}/{ms:global.style/}/libs/jquery.min.js"></script>
+    <!-- <script src="./assets/js/antimoderate.js"></script> -->
+    <!-- <script src="./libs/jquery.fullpage.js"></script> -->
+    <title>{ms:global.name/}</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onscroll="scroll()">
+    <!-- <iframe id="head" src="./head.html" frameborder="0"></iframe> -->
+     <#include "head.html">
+    <!-- <div id="fullpage"> -->
+    <div class="wrapper">
+        <!-- 最外层部分 -->
+        <div class="banner">
+            <div class="ite">
+                Copyright 2019 Hexian All Rights Reserved 粤ICP备18009779号-1
+            </div>
+            <!-- 轮播部分 -->
+            <ul class="imgList">
+                <!-- 图片部分 -->
+                {ms:arclist typeid=147 size=5 orderby=sort order=asc }
+					{ms:if item.flag=="h,"}
+						<li class="imgOn">
+					{/ms:if} 
+					{ms:if item.flag!="h,"}
+						<li>
+					{/ms:if}
+                                                <div class="title">
+                                                     [field.descrip/]
+                                                 </div>						
+						<img src="{ms:global.host/}[field.litpic/]">
+					</li>
+				{/ms:arclist}
+            </ul>
+            <ul class="indexList">
+                <!-- 图片右下角序号部分 -->
+                {ms:arclist typeid=147 size=5 orderby=sort order=asc} 
+					{ms:if item.flag=="h,"}
+						<li class="indexOn">
+					{/ms:if} {ms:if item.flag!="h,"}
+						<li>
+					{/ms:if} [field.title/]
+						</li>
+				{/ms:arclist}
+            </ul>
+            <ul class="bottom_nav">
+                    <!-- 图片右下角序号部分 -->
+                    <li onclick="top.location.href='{ms:global.host/}/html/1/179/index.html'">和鲜商城</li>
+                    <li>/</li>
+                    <li onclick="top.location.href='{ms:global.host/}/html/1/151/index.html'">关于和鲜</li>
+                    <li>/</li>
+                    <li onclick="top.location.href='{ms:global.host/}/html/1/153/index.html'">加入和鲜</li>
+                    <li><span class="iconfont icon-icoweibo"></span><span class="iconfont icon-weixin"></span></li>
+                </ul>
+        </div>
+    </div>
+    <!-- </div> -->
+    <script type="text/javascript">
+        //     $('#fullpage').fullpage();
+        // });
+            var w = window.innerWidth
+            var h = window.innerHeight
+        if(w>=1200){
+            $('.imgList').css('height',h+'px')
+            $('.imgList>li').css('height',h+'px')
+            // $('.imgList>li').find('img').css('height',h+'px')
+        }else{
+            $('.imgList').css('height','635px')
+            $('.imgList>li').css('height','635px')
+            // $('.imgList>li').find('img').css('height','635px')
+        }
+        // console.log($('.imgList>li>img'))
+        var curIndex = 0; //当前index
+        //   alert(imgLen);
+        // 定时器自动变换2.5秒每次
+        var autoChange;
+        go()
+        function go(){
+            autoChange = setInterval(function () {
+            if (curIndex < $(".imgList li").length - 1) {
+                curIndex++;
+            } else {
+                curIndex = 0;
+            }
+            //调用变换处理函数
+            changeTo(curIndex);
+        }, 5500);
+        }
+
+        $(".indexList").find("li").each(function (item) {
+            $(this).click(function (){
+            })
+            $(this).click(function () {
+                clearInterval(autoChange);
+                changeTo(item);
+                curIndex = item;
+                go()
+            });
+        });
+
+        function changeTo(num) {
+            $(".imgList").find("li").removeClass("imgOn")
+            $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
+            $(".imgList").find("li").find('p').removeClass("qie")
+            setTimeout(function(){
+                $(".imgList").find("li").eq(num).addClass("imgOn");
+            },100)
+            for(let i = 0; i < $(".imgList").find("li").eq(num).find('p').length; i++){
+                setTimeout(function() {
+                $(".imgList").find("li").eq(num).find('p').eq(i).addClass("qie");
+                }, i*4+'00');
+            }
+            // $(".imgList").find("li").removeClass("imgOn").hide().eq(num).fadeIn().addClass("imgOn");
+            // $(".infoList").find("li").removeClass("infoOn").eq(num).addClass("infoOn");
+            // $(".indexList").find("li").removeClass("indexOn").eq(num).addClass("indexOn");
+        }
+        // onresize = function(){
+        //     h = window.innerHeight
+        //     $('.imgList').css('height',h+'px')
+        //     $('.imgList>li').css('height',h+'px')
+        //     console.log(7777)
+        //     console.log(h)
+        // }iframefixed
+        // var img = $('.ssas')[0]
+        function iframefixed(){
+            $('#head').css('position','fixed')
+            $('#head').css('height','100%')
+        }
+        function iframeabsolute(){
+            setTimeout(function(){
+                $('#head').css('position','absolute')
+                $('#head').css('height','150px')
+            },500)
+        }
+        
+function indexJump(url){
+top.location.href = "{ms:global.url/}" + url;
+}
+
+    $(function(){
+        function scroll(){
+            var l = $(document).scrollLeft()
+            //var childWindow = $("#head")[0].contentWindow;
+            //childWindow.scroll_top(l);
+            scroll_top(l);
+        }
+    }) 
+        // let img = $('img')[0]
+        // AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"))
+        // for(let j = 0; j<$('img').length; j++){
+        //     let img = $('img').eq(j)[0]
+        //     AntiModerate.process(img, img.getAttribute("data-antimoderate-idata"))
+        // }
+    </script>
+</body>
+
+</html>

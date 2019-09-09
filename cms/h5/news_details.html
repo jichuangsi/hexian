@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/reset.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/news_details.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/font_1340231_3b1rumcv30t/iconfont.css">
+    <script src="{ms:global.host/}/{ms:global.style/}/libs/jquery.min.js"></script>
+    <script src="{ms:global.host/}/{ms:global.style/}/assets/js/reset.js"></script>
+    <!-- <script src="./libs/jquery.fullpage.js"></script> -->
+    <title>{ms:global.name/}</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onscroll="scroll()"> 
+    
+    <#include "head.html">
+    <!-- <div id="fullpage"> -->
+    <div class="wrapper">
+        <!-- 最外层部分 -->
+        <div class="banner">
+            <div class="center_title">
+                    <p>{ms:field.date?string("yyyy-MM-dd")/}<span class="iconfont icon-chakan"></span><em style="font-style:normal"></em></p>
+                    <p>{ms:field.title/}</p>
+                </div>
+            <!-- 轮播部分 -->
+            <div class="imgList">
+                <img src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜-公司动态详情页/和鲜-公司动态-详情页_01.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="center_box">
+            <div class="left">
+                <img src="{ms:field.litpic/}" alt="">
+                <p class="text">
+                    {ms:field.content/}
+                </p>
+                <div class="xian"></div>
+                <ul>
+                    <li><span>-</span><a href="{ms:global.url/}{ms:pre.link/}">{ms:pre.title/}</a></li>
+                    <li><span>一</span><a href="{ms:global.url/}{ms:next.link/}">{ms:next.title/}</a></li>
+                </ul>
+                <a href="{ms:global.url/}/154/index.html"><div class="out">
+				返回列表
+            </div></a>
+            </div>
+            <div class="right">
+                
+{ms:arclist typeid=156 flag=h  size=1}
+					<div class="title">
+						推荐新闻
+					</div>
+					<a href="{ms:global.url/}[field.link/]"><img src="{ms:global.host/}[field.litpic/]" alt=""></a>
+					<a href="{ms:global.url/}[field.link/]"><p>[field.title/]</p></a>
+					<div class="xian"></div>
+				{/ms:arclist}
+
+                <ul>
+                    
+{ms:arclist typeid=156 noflag=h size=5}
+						<li><a href="{ms:global.url/}[field.link/]"><span>·</span>和鲜情怀：[field.title/]</a></li>
+					{/ms:arclist}
+
+                </ul>
+                <div class="video">
+                    <img src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜-公司动态详情页/和鲜-公司动态-详情页_09.png" alt="">
+                    <div class="video_text">
+                        <p>PLANVIM</p>
+                        <p>CORPORATE</p>
+                        <p>VIDEO</p>
+                        <p>企业宣传片</p>
+                    </div>
+                    <div class="video_btn">
+                        <em></em>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <#include "foot.html">
+    </div>
+    <!-- </div> -->
+    <script type="text/javascript">
+ $(function(){
+var url = "{ms:global.host/}"+"/basic/"+"{ms:field.id/}"+"/hit.do";
+//console.log(url);
+$.get(url,null,function (data) {
+//console.log(data);
+$(".center_title>p>em").text(data.substring(data.indexOf("(")+1,data.indexOf(")")));
+});
+})    
+        // $(function(){
+        // for(let i = 0; i < $(".center_title").children().length; i++){
+        //        setTimeout(function() {
+        //         $(".center_title").children().eq(i).addClass("qie");
+        //         }, i*4+'00');
+        //     }
+        function scroll(){
+            var l = $(document).scrollLeft()
+            // $('.wrapper').css('left',-l+'px')
+            //var childWindow = $("#head")[0].contentWindow; //表示获取了嵌入在iframe中的子页面的window对象。  []将JQuery对象转成DOM对象，用DOM对象的contentWindow获取子页面window对象。
+            ///childWindow.scroll_top(l);
+scroll_top(l);
+        }
+        function iframefixed(){
+            $('#head').css('position','fixed')
+            $('#head').css('height','100%')
+        }
+        function iframeabsolute(){
+            setTimeout(function(){
+                $('#head').css('position','absolute')
+                $('#head').css('height','2rem')
+            },500)
+        }
+        // })
+    </script>
+</body>
+
+</html>
