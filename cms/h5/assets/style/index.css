@@ -60,7 +60,7 @@
     right: 0.6rem;
     bottom: 20%;
     z-index: 30;
-    font-size: 0.18rem;
+    font-size: 0.20rem;
 }
 
 .indexList li {
@@ -107,7 +107,7 @@
 .shutext {
     position: absolute;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     top:4.26rem;
     right: 1.64rem;
 }
@@ -121,6 +121,15 @@
 .shutext div span{
     display: inline-block;
     margin-top: 0.1rem;
+}
+.shutext div:first-child {
+    margin-top: 0.6rem;
+}
+.shutext div:nth-child(2) {
+    line-height: 0.23rem;
+}
+.shutext div:last-child {
+    line-height: 0.24rem;
 }
 /* .logo {
     width: 124px;

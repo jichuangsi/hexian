@@ -1,15 +1,15 @@
 // window.onload = function () {
 setHTML();
 
-        var u = navigator.userAgent;
-        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-        // alert('是否是Android：'+isAndroid);
-        // alert('是否是iOS：'+isiOS);
-        if(isAndroid){
-        }else if(isiOS){
-            document.write("<link rel='stylesheet' href='../style/reset_ios.css'>")
-        }
+        // var u = navigator.userAgent;
+        // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        // // alert('是否是Android：'+isAndroid);
+        // // alert('是否是iOS：'+isiOS);
+        // if(isAndroid){
+        // }else if(isiOS){
+        //     document.write("<link rel='stylesheet' href='../style/reset_ios.css'>")
+        // }
 
         
 // 为了在pc端更好的去调试
