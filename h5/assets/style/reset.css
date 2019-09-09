@@ -15,7 +15,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: Microsoft Yahei;
+  font-family: 'hkyt';
   vertical-align: baseline;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -87,4 +87,10 @@ input::-webkit-input-placeholder {
 input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
   color: #b1babf;
   opacity: 0.6; 
-} 
+}  
+@font-face {
+  font-family: 'hkyt';   /*字体名称*/
+  src: url('../font/华康圆体W5\(1\).TTF');       /*字体源文件*/
+  font-weight: normal;
+  font-style: normal;
+}
