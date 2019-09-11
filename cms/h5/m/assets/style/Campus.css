@@ -92,6 +92,24 @@
 .center .center_title p {
     color: #333;
 }
+.center .center_title .emil {
+    color: #009d81;
+    font-size: 0.34rem !important;
+    margin-top: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.center .center_title .emil span {
+    width: 50%;
+}
+.center .center_title .emil span:nth-child(1n){
+    width: 42%;
+    text-align: right;
+}
+.center .center_title .emil span:nth-child(2n){
+    width: 58%;
+    text-align: left;
+}
 .center .center_title p:first-child {
     width: 100%;
     font-size: 0.66rem;
@@ -113,7 +131,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 6.20rem;
+    margin-top: 8.40rem;
 	padding: 0 0.46rem;
 }
 .center .list .list_box{
