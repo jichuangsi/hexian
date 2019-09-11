@@ -92,6 +92,27 @@
 .center .center_title img {
     width: auto;
 }
+.center .center_title p {
+    font-size: 0.2rem;
+}
+.center .center_title .emil {
+    color: #009d81;
+    font-size: 0.26rem !important;
+    margin-top: 0.38rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.center .center_title .emil span {
+    width: 50%;
+}
+.center .center_title .emil span:nth-child(1n){
+    width: 47%;
+    text-align: right;
+}
+.center .center_title .emil span:nth-child(2n){
+    width: 53%;
+    text-align: left;
+}
 .center .list {
     width: 80%;
     /* position: absolute;
