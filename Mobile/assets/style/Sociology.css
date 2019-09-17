@@ -214,12 +214,13 @@
     background-color: #0094ff;
 }
 .center .sel input {
-    flex: 1;
-    font-size: 0.18rem;
+    width: 45%;
+    font-size: 0.24rem;
     text-indent: 0.32rem;
     color: #333;
     outline: none;
     border: none;
+    -webkit-appearance: none;
 }
 .center .sel input {
     border-right: 0.01rem solid #f2f2f2;
@@ -417,7 +418,7 @@
 }
 .center .list .ym .number_span {
     float: left;
-    font-size: 0.1rem;
+    font-size: 0.22rem;
     display: inline-block;
     width: 0.75rem;
     height: 0.75rem;
@@ -431,7 +432,7 @@
     margin-left: 0.2rem;
 }
 .center .list .ym .page {
-    font-size: 0.1rem;
+    font-size: 0.22rem;
     line-height: 0.75rem;
     margin-left: 0.2rem;
 }
