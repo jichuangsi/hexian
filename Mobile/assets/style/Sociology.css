@@ -293,7 +293,10 @@
 .center .list .list_box div {
     width: 25%;
     position: relative;
-    padding-bottom: 0.35rem;
+    padding-bottom: 0.35rem;  
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .center .list .list_box .box {
     width: 100%;
