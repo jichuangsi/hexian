@@ -86,7 +86,7 @@
                             {/ms:channel}
                         </div>
                         <div class="list">
-                            <div class="one" onclick="top.location.href='{ms:global.url/}/153/index.html'">加入和鲜</div>
+                            <div class="one" onclick="top.location.href='{ms:global.url/}/153/157/index.html'">加入和鲜</div>
                             <div class="two" onclick="top.location.href='{ms:global.url/}/153/157/index.html'">校园招聘</div>
                             <div class="two" onclick="top.location.href='{ms:global.url/}/153/158/index.html'">社会招聘</div>
                         </div>
@@ -116,7 +116,12 @@
                             <div onclick="top.location.href='./business.html'">商业合作</div>
                             <div onclick="top.location.href='./Mall.html'">和鲜商城</div> -->
                              {ms:channel type=nav flag=pc order=desc orderby=sort}
-					<div><a href="{ms:global.url/}[field.typelink/]"class="[field.class/]">[field.typetitle/]</a></div>
+							 {ms:if item.typeurl!=""}
+							 <div><a href="{ms:global.url/}[field.typeurl/]"class="[field.class/]">[field.typetitle/]</a></div>
+							 {/ms:if}
+							{ms:if item.typeurl==""}
+							 <div><a href="{ms:global.url/}[field.typelink/]"class="[field.class/]">[field.typetitle/]</a></div>
+							 {/ms:if}					
 					{/ms:channel}
                             <div onclick="search()"><span class="iconfont icon-sousuo"></span></div>
                             <div onclick="list()"><span class="iconfont icon-caidan"></span></div>

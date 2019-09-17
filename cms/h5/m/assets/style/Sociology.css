@@ -310,13 +310,15 @@
     padding: 0px;
     overflow: hidden;
     transition: all 1s linear;
+	flex-wrap: wrap;
 }
 .center .list .list_box .box .left{
     width: 100%;
     text-align: left;
 }
 .center .list .list_box .box .right{
-    width: 48%;
+    width: 100%;
+    text-align: left;
 }
 .center .list .list_box .box div{
     /* width: auto; */
@@ -324,7 +326,7 @@
 .center .list .list_box .box p {
     line-height: 0.26rem;
     margin-bottom: 0.16rem;
-    white-space: nowrap;
+    white-space: normal;
     font-size: 0.24rem;
 }
 .center .list .list_box .box .h1{

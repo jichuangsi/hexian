@@ -45,13 +45,98 @@
         <div class="center_title">
             <p>应届毕业生招聘</p>
             <img src="{ms:global.host/}/{ms:global.style/}/assets/images/和鲜-公司动态/微信图片_20190820154249.png" alt="">
-            <p>我们拥有完善的人才培养计划，<br>清晰的职业晋升通道，愉悦包容的工作氛围，<br>丰富多彩的福利活动。<br>如果您有志于从事大健康行业，<br>有奋斗者精神，渴望成就一番事业，<br>工作积极主动，学习能力强，那么欢迎您加入我们。</p>
+            <!-- <p>我们拥有完善的人才培养计划，<br>清晰的职业晋升通道，愉悦包容的工作氛围，<br>丰富多彩的福利活动。<br>如果您有志于从事大健康行业，<br>有奋斗者精神，渴望成就一番事业，<br>工作积极主动，学习能力强，那么欢迎您加入我们。</p>
 			<p class="emil"><span>座机：</span><span>0755-83630607</span>
                 <span>联系人：</span><span>李先生15321295835</span>
-                <span>邮箱：</span><span>lirm@hexian88.com</span></p>            
+                <span>邮箱：</span><span>lirm@hexian88.com</span></p> -->        
 			<!-- <p>我们还有各类激动人心并适合应届毕业生担任的若干<br>职能领域岗位。如果您有工作热情，学习能力强，希<br>望成就一番事业，有志于从事大健康行业，那么欢迎<br>您加入我们。</p> -->
         </div>
+        <div class="center_tp_box">
+            <div class="tp_left_box">
+                <div class="title">
+                    重装旅：一次从士兵成为将军的机会!
+                </div>
+                <div class="text">
+                    志立满怀天下,却因资源有限无处发挥？<br>
+                    才能艳压群雄,受困舞台太小被迫淹没？<br>
+                    加入和鲜重装旅营销团队,给你一次从士兵成为将军的机会！<br>
+                    我们不看出身,不论经验,只要能吃苦能打仗,不惧艰难险阻,均<br>
+                    可成为重装旅的一员。<br>
+                    重装旅将由深圳40年十大商业杰出人物之黄董亲自担任总教官<br>
+                    ,亲自组建和鲜陆战部队,致誓“不破楼兰终不还”。
+                </div>
+            </div>
+            <div class="tp_right_box">
+                <div class="title">
+                    高管代培生：“鲜”发“智仁”
+                </div>
+                <div class="text">
+                    我们拥有完善的人才培养计划,清晰的职业晋升通道愉悦包容的<br>
+                    工作氛围,丰富多彩的福利活动如果您有志于从事大健康行业,<br>
+                    有奋斗者精神,渴望成就一番事业,工作积极主动,学习能力强,那<br>
+                    么欢迎您加入我们<br>
+                </div>
+            </div>
+        </div>
+        <div class="sel">
+			<input type="text" name="J_position" placeholder="请输入工作岗位">
+			<input type="text" name="J_category" placeholder="请输入岗位类别">
+            <input class="btn" type="button" value="搜索" onclick="serachJobClick()"></input>
+        </div>
         <div class="list">
+            <div class="list_box first">
+                <div class="two">工作岗位</div>
+                <div class="three">岗位类别</div>
+                <div class="four">工作地点</div>
+                <div class="six">学历要求</div>
+            </div>
+			{ms:arclist typeid=157 size=10 ispaging=true orderby=sort order=asc tableName=mdiy_address_50} 
+				<div class="list_box">
+					<div class="two">[field.position/]</div>
+					<div class="three">[field.category/]</div>
+					<div class="four">[field.address/]</div>
+					<div class="six">[field.major/]<em></em></div>
+					<div class="box">
+						<div class="left">
+							<p class="h1">任职要求：</p>
+							[field.requiremen/]							
+						</div>
+						<div class="right">
+							<p class="h1">岗位职责：</p>
+							[field.duty/]
+							<p class="emil">座机：0755-83630607 <br/>
+								李先生：15321295835 <br/>
+								邮箱：lirm@hexian88.com</p>
+						</div>
+					</div>
+				</div>
+			{/ms:arclist}
+            <!-- <div class="list_box">
+                <div class="two">重装旅（营销人员）</div>
+                <div class="three">营销类</div>
+                <div class="four">全国各地</div>
+                <div class="six">不限学历<em></em></div>
+                <div class="box">
+                    <div class="left">
+                        <p class="h1">岗位职责：</p>
+                        <p>1、负责和鲜集团所有产业产品的销售执行</p>
+                        <p>2、开发销售渠道、拓展销售区域，达成销售业绩</p>
+                        <p class="emil">座机：0755-83630607<br>
+                            李先生：15321295835<br>   
+                            邮箱：lirm@hexian88.com</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="ym">
+                <span class="left_span"><em></em></span>
+                <div class="number_box">
+                    <div class="number_box_x"></div>
+                </div>
+                <span class="right_span"><em></em></span>
+                <div class="page">共1/3页</div>
+            </div>
+        </div>
+        <!-- <div class="list">
 			{ms:arclist typeid=157  orderby=sort order=asc tableName=mdiy_address_50} 
 				<div class="list_box">
 					<p>[field.title/]</p>
@@ -60,11 +145,165 @@
 					<p><span>招聘专业：</span><span>[field.major/]</span></p>
 				</div>
 			{/ms:arclist}
-        </div>
+        </div> -->
        <#include "/m/foot.html">
     </div>
     <!-- </div> -->
     <script type="text/javascript">
+		//var per = {ms:page.rcount/};
+        //var page = {ms:page.total/};
+        //var total = parseInt(per*page);
+        //$(".zw>p>span").text(total);         
+		var nosearch = false;
+        var pre = "{ms:page.pre/}";
+        var host = "{ms:global.host/}";
+        if(pre.indexOf(host )==-1){
+			nosearch = true;
+			//pre="{ms:global.url/}{ms:page.pre/}";
+        }
+        //$(".ym>a").eq(0).prop('href',pre);
+
+        var next = "{ms:page.next/}";
+        var host = "{ms:global.host/}";
+        if(next.indexOf(host )==-1){
+			nosearch = true;
+			//next="{ms:global.url/}{ms:page.next/}";
+        }
+        //$(".ym>a").eq(1).prop('href',next);
+    
+		var pagenum = 0
+        var pageindex = parseInt("{ms:page.cur/}");
+        var ymhtml = ''
+        pagenum = parseInt("{ms:page.total/}");
+        $('.number_box_x').css('width',pagenum*0.95+'rem')
+        // if(pagenum<=3){
+            for(let i = 0; i < pagenum; i++){
+                ymhtml +='<span class="number_span">'+(i+1)+'</span>'
+            }
+        // }else{
+        //     for(let i = 0; i < 3; i++){
+        //         ymhtml +='<span class="number_span">'+(i+1)+'</span>'
+        //     }
+        // }
+        $('.number_box_x').children().remove()
+        $('.number_box_x').append(ymhtml)
+        $('.page').text('共'+pageindex+'/'+pagenum+'页')
+        $('.number_span').eq(pageindex-1).addClass('number_check')
+		if(pagenum<3){
+			$('.number_box').css('width',pagenum*0.95+'rem')
+		}else{
+			$('.number_box').css('width','2.9rem')
+		}
+		if((pageindex == pagenum ||pageindex == pagenum-1||pageindex == pagenum-2)&&pageindex!=1&&pageindex!=2){
+			$('.number_box_x').css('transform','translateX('+(pagenum-3)*0.95*-1+'rem)')
+		}else if(pageindex == 1 || pageindex == 2){
+			$('.number_box_x').css('transform','translateX('+'0rem)')
+		}
+		else{
+			$('.number_box_x').css('transform','translateX('+(pageindex-1)*0.95*-1+'rem)')
+		}		
+		
+        $('.number_span').click(function(){
+            $('.number_span').removeClass('number_check')
+            $('.number_span').eq($(this).text()-1).addClass('number_check')
+            // if($(this).text() < pagenum-1){
+            //     $('.number_box_x').css('transform','translateX('+($(this).text()-1)*0.7*-1+'rem)')
+            // }
+            $('.page').text('共'+$(this).text()+'/'+pagenum+'页')
+            /*if($(this).text() == pagenum ||$(this).text() == pagenum-1||$(this).text() == pagenum-2){
+                $('.number_box_x').css('transform','translateX('+(pagenum-3)*0.7*-1+'rem)')
+            }else{
+                $('.number_box_x').css('transform','translateX('+($(this).text()-1)*0.7*-1+'rem)')
+            }*/
+			if(nosearch){
+				if($(this).text()==="1") {
+					window.location.href="{ms:global.url/}{ms:page.index/}";
+					window.event.returnValue=false; 
+				}else if($(this).text() === pagenum) {
+					window.location.href="{ms:global.url/}{ms:page.last/}";
+					window.event.returnValue=false; 
+				}else {
+					let indexPage = "{ms:page.index/}";
+					let gotoPage = indexPage.replace("index.html", "list-"+$(this).text()+".html");
+					window.location.href="{ms:global.url/}"+gotoPage;
+					window.event.returnValue=false; 
+				}
+			}else{
+				let indexPage = "{ms:page.index/}";
+				let gotoPage = indexPage.replace("pageNo=1", "pageNo="+$(this).text());
+				window.location.href=gotoPage;
+				window.event.returnValue=false; 
+			}
+        })
+        $('.left_span').click(function(){
+            let index = $('.number_check').text()
+            $('.number_span').removeClass('number_check')
+            if(index == 1){
+                $('.page').text('共'+1+'/'+pagenum+'页')
+                $('.number_span').eq(0).addClass('number_check')
+                $('.number_box_x').css('transform','translateX(0rem)')
+				if(nosearch){
+					window.location.href="{ms:global.url/}{ms:page.index/}";
+					window.event.returnValue=false;
+				}else{				
+					window.location.href="{ms:page.index/}";
+					window.event.returnValue=false;				
+				}
+            }else{
+                $('.page').text('共'+(Number(index)-1)+'/'+pagenum+'页')
+                $('.number_span').eq(index - 2).addClass('number_check')
+                if(index<pagenum-1){
+                    $('.number_box_x').css('transform','translateX('+(index-2)*0.95*-1+'rem)')
+                }
+				if(nosearch){
+					let indexPage = gotoPage = "{ms:page.index/}";
+					if(index != 2){						
+						gotoPage = indexPage.replace("index.html", "list-"+(parseInt(index)-1)+".html");
+					}
+					window.location.href="{ms:global.url/}"+gotoPage;
+					window.event.returnValue=false;
+				}else{				
+					let indexPage = "{ms:page.index/}";
+					let gotoPage = indexPage.replace("pageNo=1", "pageNo="+(parseInt(index)-1));
+					window.location.href=gotoPage;
+					window.event.returnValue=false; 				
+				}
+            }
+        })
+        $('.right_span').click(function(){
+            let index = $('.number_check').text()
+            $('.number_span').removeClass('number_check')
+            if(index == pagenum){
+                $('.page').text('共'+pagenum+'/'+pagenum+'页')
+                $('.number_span').eq(pagenum-1).addClass('number_check')
+				if(nosearch){
+					window.location.href="{ms:global.url/}{ms:page.last/}";
+					window.event.returnValue=false;
+				}else{				
+					let indexPage = "{ms:page.index/}";
+					let gotoPage = indexPage.replace("pageNo=1", "pageNo="+(parseInt(index)));
+					window.location.href=gotoPage;
+					window.event.returnValue=false;				
+				}
+            }else{
+                $('.page').text('共'+(Number(index)+1)+'/'+pagenum+'页')
+                $('.number_span').eq(index).addClass('number_check')
+                if(index<pagenum-2){
+                    $('.number_box_x').css('transform','translateX('+(index)*0.95*-1+'rem)')
+                }
+				if(nosearch){
+					let indexPage = "{ms:page.index/}";
+					let gotoPage = indexPage.replace("index.html", "list-"+(parseInt(index)+1)+".html");
+					window.location.href="{ms:global.url/}"+gotoPage;
+					window.event.returnValue=false;
+				}else{				
+					let indexPage = "{ms:page.index/}";
+					let gotoPage = indexPage.replace("pageNo=1", "pageNo="+(parseInt(index)+1));
+					window.location.href=gotoPage;
+					window.event.returnValue=false;				
+				}
+            }
+        })
         // var h = window.innerHeight
         //     console.log(h)
         // $('.imgList').css('height',h+'px')
@@ -111,6 +350,39 @@
                 $('.center').css('zIndex','99')
             },500)
         }
+		
+		function serachJobClick(){
+            var form = document.createElement('form');
+            form.action = '{ms:global.host/}/cms/12/search.do';
+			//categoryIds 
+            var categoryIds = document.createElement('input');
+            categoryIds.type = 'hidden'; 
+            categoryIds.name = 'categoryIds';    
+			categoryIds.value = 157;    
+			form.appendChild(categoryIds);     
+			//position
+            var position = document.createElement('input');
+            position.type = 'hidden'; 
+            position.name = 'position';    
+			position.value = $("input[name='J_position']").val();    
+			form.appendChild(position );   
+			//category
+            var category = document.createElement('input');
+            category.type = 'hidden'; 
+            category.name = 'category';    
+			category.value = $("input[name='J_category']").val();    
+			form.appendChild(category);   
+			//article_keyword
+            //var article_keyword = document.createElement('input');
+            //article_keyword.type = 'hidden'; 
+            //article_keyword.name = 'article_keyword';    
+			//article_keyword.value = $("input[name='J_article_keyword']").val();   
+			//form.appendChild(article_keyword);   
+
+			$(document.body).append(form);    
+			form.submit();
+		}
+		
         window.addEventListener("scroll", function () {
             var l = $(document).scrollLeft()
             var a = $(document).scrollTop()
@@ -136,6 +408,36 @@
                     $(".list_box").eq(i).addClass("qie");
                     }, i*4+'00');
                 }
+        })
+        $('.list_box').click(function(){
+            console.log($(this).find('.box').css('height'))
+            if(Number($(this).find('.box').css('height').split('px')[0]) < 10){
+                $(this).find('.box').css('height','auto')
+                $(this).find('.six>em').css('transform','rotate(225deg)')
+            }else{
+                $(this).find('.box').css('height','0px')
+                $(this).find('.six>em').css('transform','rotate(45deg)')
+            }
+        })
+        $('#Block').click(function(){
+            $(this).find('ul').css('display','block')
+            $('#Company').find('ul').css('display','none')
+        })
+        $('#Block').find('li').click(function(){
+            $(this).parent().parent().find('span').text($(this).text())
+            $(this).parent().css('display','none')
+            $('#Block').find('ul').css('display','none')
+            event.stopPropagation();
+        })
+        $('#Company').click(function(){
+            $(this).find('ul').css('display','block')
+            $('#Block').find('ul').css('display','none')
+        })
+        $('#Company').find('li').click(function(){
+            $(this).parent().parent().find('span').text($(this).text())
+            $(this).parent().css('display','none')
+            $('#Company').find('ul').css('display','none')
+            event.stopPropagation();
         })
         // })
     </script>

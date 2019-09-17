@@ -134,8 +134,8 @@
 					<option value="招聘公司">饮品产业公司</option>
 					<option value="招聘公司">互联网营销公司</option>
 				</select> -->
-				<input type="text" name="Block" placeholder="请输入您的版块">
-				<input type="text" name="Company" placeholder="请输入您的公司">
+				<input type="text" name="Company" placeholder="请输入事业部/中心">
+				<input type="text" name="position" placeholder="请输入岗位名称">
 				<input type="text" name="article_keyword" placeholder="请输入您的关键词">
 				<input class="btn"type="submit" value="搜索"></input>
 			</div>
@@ -152,22 +152,21 @@
         <div class="list">
             <div class="list_box first">
                 <div class="one">序号</div>
-                <div class="two">招聘版块</div>
-                <div class="three">招聘公司</div>
-                <div class="four">招聘职位</div>
-                <div class="five">工作地址</div>
-                <div class="six">截至时间</div>
+                <div class="two">事业部/中心</div>
+                <div class="three">岗位名称</div>
+                <div class="four">岗位类别</div>
+                <div class="six">工作地点</div>
             </div>
             
             
             {ms:arclist typeid=158 size=10 ispaging=true orderby=sort order=asc tableName=mdiy_JobInfo_50 } 
             <div class="list_box">
                 <div class="one">[field.index/]</div>
-                <div class="two">[field.Block/]</div>
-                <div class="three">[field.Company/]</div>
-                <div class="four">[field.position/]</div>
-                <div class="five">[field.WorkAddres/]</div>
-                <div class="six">[field.time/]<em></em></div>
+                <div class="two">[field.Company/]</div>
+                <div class="three">[field.position/]</div>
+                <div class="four">[field.Block/]</div>
+                <!-- <div class="five">[field.WorkAddres/]</div> -->
+                <div class="six">[field.WorkAddres/]<em></em></div>
                 <div class="box">
                     <div class="left">
                         <p class="h1">任职要求：</p>
@@ -260,9 +259,9 @@
 		}else{
 			$('.number_box_x').css('transform','translateX('+(pageindex-1)*0.7*-1+'rem)')
 		}*/
-		if((pageindex == pagenum ||pageindex == pagenum-1||pageindex == pagenum-2)&&pageindex!=1){
+		if((pageindex == pagenum ||pageindex == pagenum-1||pageindex == pagenum-2)&&pageindex!=1&&pageindex!=2){
 			$('.number_box_x').css('transform','translateX('+(pagenum-3)*0.7*-1+'rem)')
-		}else if(pageindex == 1){
+		}else if(pageindex == 1 || pageindex == 2){
 			$('.number_box_x').css('transform','translateX('+'0rem)')
 		}
 		else{
