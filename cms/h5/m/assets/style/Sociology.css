@@ -283,7 +283,7 @@
     font-size: 0.2rem;
     border-bottom: 1px solid #f3f3f3;
     background-color: #009e82;
-    padding: 0rem;
+    padding-top: 0rem;
     color: #fff;
     line-height: 1rem;
     text-align: center;
@@ -295,10 +295,12 @@
 .center .list .list_box div {
     width: 25%;
     position: relative;
+    text-align: left;
+    padding: 0 0.1rem;
     padding-bottom: 0.35rem;
-	white-space: nowrap;
+	/*white-space: nowrap;
 	text-overflow:ellipsis;
-	overflow: hidden;
+	overflow: hidden;*/
 }
 .center .list .list_box .box {
     width: 100%;
