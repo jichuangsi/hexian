@@ -94,3 +94,6 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
   font-weight: normal;
   font-style: normal;
 }
+input {
+	-webkit-appearance: none;
+}
