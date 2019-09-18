@@ -67,8 +67,7 @@
                     高管代培生：“鲜”发“智仁”
                 </div>
                 <div class="text">
-                    我们拥有完善的人才培养计划,清晰的职业晋升通道愉悦包容的<br>
-                    工作氛围,丰富多彩的福利活动。<br>
+                    我们拥有完善的人才培养计划,清晰的职业晋升通道,愉悦包容的工作氛围,丰富多彩的福利活动。<br>
                     如果您有志于从事大健康行业,有奋斗者精神,渴望成就一番事业,工作积极主动,学习能力强,那么欢迎您加入我们。<br>
                 </div>
             </div>
@@ -208,6 +207,10 @@
             </div>
         </div> -->
         <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
+    </div>
+    <div class="weixinbox">
+        <img class="wx" src="./assets/images/微信图片_20190918174742.jpg" alt="">
+        <img class="wb" src="./assets/images/微信图片_20190918182948.png" alt="">
     </div>
     <!-- </div> -->
     <script type="text/javascript">
@@ -349,6 +352,19 @@
             $(this).parent().css('display','none')
             $('#Company').find('ul').css('display','none')
             event.stopPropagation();
+        })
+        function weixinbox(){
+            $('.weixinbox').css('display','block');
+            $('.wx').css('display','block')
+            $('.wb').css('display','none')
+        }
+        function weibobox(){
+            $('.weixinbox').css('display','block');
+            $('.wx').css('display','none')
+            $('.wb').css('display','block')
+        }
+        $('.weixinbox').click(function(){
+            $(this).css('display','none');
         })
         // })
     </script>

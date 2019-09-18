@@ -207,6 +207,10 @@
         </div>
         <iframe id="foot" src="./foot.html" frameborder="0"></iframe>
     </div>
+    <div class="weixinbox">
+        <img class="wx" src="./assets/images/微信图片_20190918174742.jpg" alt="">
+        <img class="wb" src="./assets/images/微信图片_20190918182948.png" alt="">
+    </div>
     <!-- </div> -->
     <script type="text/javascript">
         
@@ -377,6 +381,19 @@
             $(this).parent().css('display','none')
             $('#Company').find('ul').css('display','none')
             event.stopPropagation();
+        })
+        function weixinbox(){
+            $('.weixinbox').css('display','block');
+            $('.wx').css('display','block')
+            $('.wb').css('display','none')
+        }
+        function weibobox(){
+            $('.weixinbox').css('display','block');
+            $('.wx').css('display','none')
+            $('.wb').css('display','block')
+        }
+        $('.weixinbox').click(function(){
+            $(this).css('display','none');
         })
         // })
     </script>

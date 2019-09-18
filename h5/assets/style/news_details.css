@@ -2,6 +2,23 @@
 body {
     background-color: #f5f8f9;
 }
+.weixinbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.weixinbox img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
 #head {
     width: 100%;
     height: 2rem;
