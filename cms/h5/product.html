@@ -88,9 +88,13 @@
                 <li onclick="top.location.href='{ms:global.url/}/151/index.html'">关于和鲜</li>
                 <li>/</li>
                 <li onclick="top.location.href='{ms:global.url/}/153/157/index.html'">加入和鲜</li>
-                <li><span class="iconfont icon-icoweibo"></span><span class="iconfont icon-weixin"></span></li>
+                <li><span class="iconfont icon-icoweibo" onclick="weibobox()"></span><span class="iconfont icon-weixin" onclick="weixinbox()"></span></li>
             </ul>
         </div>
+    </div>
+    <div class="weixinbox">
+        <img class="wx" src="{ms:global.host/}/{ms:global.style/}/assets/images/微信图片_20190918174742.jpg" alt="">
+        <img class="wb" src="{ms:global.host/}/{ms:global.style/}/assets/images/微信图片_20190918182948.png" alt="">
     </div>
     <!-- </div> -->
     <script type="text/javascript">
@@ -265,6 +269,19 @@ scroll_top(l);
                 $('#head').css('height', '150px')
             }, 500)
         }
+        function weixinbox(){
+            $('.weixinbox').css('display','block');
+            $('.wx').css('display','block')
+            $('.wb').css('display','none')
+        }
+        function weibobox(){
+            $('.weixinbox').css('display','block');
+            $('.wx').css('display','none')
+            $('.wb').css('display','block')
+        }
+        $('.weixinbox').click(function(){
+            $(this).css('display','none');
+        })
     </script>
 </body>
 

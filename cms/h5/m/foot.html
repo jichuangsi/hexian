@@ -13,11 +13,33 @@
     <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/assets/style/foot.css">    
     <title>{ms:global.name/}</title>
     <style type="text/css">
+	.weixinbox {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0rem;
+		left: 0rem;
+		z-index: 999;
+		background-color: rgba(0, 0, 0, 0.6);
+		display: none;
+	}
+	.weixinbox img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		width: 200px;
+		height: 200px;
+	}
     </style>
 </head>
 
 <body>
     <div class="foot">
+			<div class="weixinbox">
+				<img class="wx" src="{ms:global.host/}/{ms:global.style/}/assets/images/微信图片_20190918174742.jpg" alt="">
+				<img class="wb" src="{ms:global.host/}/{ms:global.style/}/assets/images/微信图片_20190918182948.png" alt="">
+			</div>
             <ul class="bottom_nav">
                     <!-- 图片右下角序号部分 -->
                     <li onclick="top.location.href='{ms:global.url/}/153/157/index.html'">加入和鲜</li>
@@ -39,6 +61,25 @@
     <!-- <div id="fullpage"> -->
     <!-- </div> -->
     <script type="text/javascript">
+        $('.icon-weixin').click(function(){
+            weixinbox()
+        })
+        $('.icon-icoweibo').click(function(){
+            weibobox()
+        })
+        function weixinbox(){
+            $('.weixinbox').css('display','block');
+            $('.wx').css('display','block')
+            $('.wb').css('display','none')
+        }
+        function weibobox(){
+            $('.weixinbox').css('display','block');
+            $('.wx').css('display','none')
+            $('.wb').css('display','block')
+        }
+        $('.weixinbox').click(function(){
+            $(this).css('display','none');
+        })
     </script>
 </body>
 
