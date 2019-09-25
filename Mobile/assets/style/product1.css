@@ -61,22 +61,26 @@
 .img_box {
     /* width: 100%;
     height: 100%; */
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 .indexList li .img_1 {
     width: 4.24rem;
     height: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0.8rem;
+    margin: 0 auto;
+    padding-top: 0.8rem;
+    margin-bottom: 0.8rem;
     z-index: 10;
-    position: absolute;
+    position: relative;
+    display: block;
 }
 .indexList li .img_2 {
     width: 100%;
-    height: 100%;
     left: 0%;
     top: 0%;
     display: block;
+    position: absolute;
 }
 .imgList li a{
     width: 100%;
@@ -218,9 +222,9 @@
 }
 .title {
     width: 80%;
-    position: absolute;
-    left: 0.49rem;
-    top: 6.56rem;
+    position: relative;
+    margin-left: 0.49rem;
+    padding-bottom: 2rem;
     z-index: 30;
     font-size: 0.28rem;
     line-height: 0.44rem;

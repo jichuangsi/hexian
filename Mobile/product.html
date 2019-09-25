@@ -425,11 +425,12 @@
             for (let i = 0; i < $(".indexList>li").length; i++) {
                 if($(".indexList>li").eq(i).attr('data-id') == num){
                     $(".indexList>li").eq(i).addClass('indexOn').siblings().removeClass('indexOn')
-                    $(".indexList>li").eq(i).find('.indexList_box').css('height',$(".indexList>li").eq(i).find('.libox').eq(0).outerHeight(true)+'px')
                     $(".indexList>li").eq(i).find('.libox').eq(0).addClass('libox_check').siblings().removeClass('libox_check')
                     $(".indexList>li").eq(i).find('.libox').eq(0).find('.title').addClass('title_check')
                     $(".indexList>li").eq(i).find('.tab').addClass('tab_check')
                     $(".indexList>li").eq(i).find('.tab_check').find('.all_title').eq(0).addClass('all_check')
+                    $(".indexList>li").eq(i).find('.indexList_box').css('height',$(".indexList>li").eq(i).find('.libox').eq(0).outerHeight(true)+'px')
+                    $(".indexList>li").eq(i).find('.img_2').css('height',$(".indexList>li").eq(i).find('.libox').eq(0).outerHeight(true)+'px')
                     for (let j = 0; j < $(".indexList>li").eq(i).find('.title_check').find('p').length; j++) {
                        setTimeout(function() {
                             $(".indexList>li").eq(i).find('.title_check').find('p').eq(j).addClass("qie");
@@ -453,6 +454,8 @@
                 if(arr.eq(i).attr('data-id') == item){
                     arr.eq(i).addClass('libox_check').siblings().removeClass('libox_check')
                     arr.eq(i).find('.title').addClass('title_check')
+                    arr.eq(i).parent().parent().css('height',arr.eq(i).outerHeight(true)+'px')
+                    arr.eq(i).find('.img_2').css('height',arr.eq(i).outerHeight(true)+'px')
                     for (let j = 0; j < arr.eq(i).find('.title_check').find('p').length; j++) {
                        setTimeout(function() {
                             arr.eq(i).find('.title_check').find('p').eq(j).addClass("qie");
