@@ -36,7 +36,7 @@
     <div class="center">
         <div class="center_box">
             <div class="left">
-                <img src="{ms:field.litpic/}" alt="">
+                <!-- <img src="{ms:field.litpic/}" alt=""> -->
                 <p class="text">
                     {ms:field.content/}
                 </p>
@@ -62,8 +62,8 @@
 
                 <ul>
                     
-{ms:arclist typeid=156 noflag=h size=5}
-						<li><a href="{ms:global.url/}[field.link/]"><span>·</span>和鲜情怀：[field.title/]</a></li>
+{ms:arclist typeid=156 noflag=h size=5 orderby=date order=desc}
+						<li><a href="{ms:global.url/}[field.link/]"><span>·</span>[field.title/]</a></li>
 					{/ms:arclist}
 
                 </ul>
