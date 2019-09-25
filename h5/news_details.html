@@ -84,6 +84,9 @@
                     <div class="video_btn">
                         <em></em>
                     </div>
+                    <video id="myVideo" controls onchange="video()">
+                        <source src="http://192.168.31.108:92/Uploads/test.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
@@ -95,7 +98,7 @@
     </div>
     <!-- </div> -->
     <script type="text/javascript">
-    
+        
         // $(function(){
         // for(let i = 0; i < $(".center_title").children().length; i++){
         //        setTimeout(function() {
@@ -130,6 +133,14 @@
         }
         $('.weixinbox').click(function(){
             $(this).css('display','none');
+        })
+        $('.video').click(function(){
+            var myVideo = document.getElementById('myVideo')
+            $(myVideo).css('display','block').siblings().css('display','none')
+            myVideo.play()
+        })
+        $('#myVideo').bind('error ended', function(){
+            $('#myVideo').css('display','none').siblings().css('display','block')
         })
         // })
     </script>
