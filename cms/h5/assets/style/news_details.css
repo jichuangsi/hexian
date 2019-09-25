@@ -119,7 +119,7 @@ body {
 }
 .center .left img{
     width: 100%;
-	margin-bottom: 0.6rem;
+	/* margin-bottom: 0.6rem; */
 }
 .center .left p{
     font-size: 0.16rem;
