@@ -287,7 +287,7 @@
                     $(".indexList").find("li").removeClass("indexOn").eq(i).addClass("indexOn");
                     $(".imgList").find("li").eq(i).find('.img_box').eq(0).addClass('img_check').siblings().removeClass('img_check')
                     $(".imgList").find("li").eq(i).find('.title').eq(0).addClass('title_check').siblings().removeClass('title_check')
-                    $(".imgList").find("li").eq(i).find('.libox').eq(0).addClass('libox_check')
+                    $(".imgList").find("li").eq(i).find('.libox').eq(0).addClass('libox_check').siblings().removeClass('libox_check')
                     setTimeout(function () {
                         $(".imgList").find("li").eq(i).addClass("imgOn");
                     }, 100)
