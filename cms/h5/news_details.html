@@ -37,9 +37,7 @@
         <div class="center_box">
             <div class="left">
                 <!-- <img src="{ms:field.litpic/}" alt=""> -->
-                <p class="text">
-                    {ms:field.content/}
-                </p>
+                {ms:field.content/}
                 <div class="xian"></div>
                 <ul>
                     <li><span>-</span><a href="{ms:global.url/}{ms:pre.link/}">{ms:pre.title/}</a></li>
@@ -78,6 +76,9 @@
                     <div class="video_btn">
                         <em></em>
                     </div>
+                    <video id="myVideo" controls onchange="video()">
+                        <source src="{ms:global.host/}/{ms:global.style/}/assets/test.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </div>
@@ -116,6 +117,14 @@ scroll_top(l);
                 $('#head').css('height','2rem')
             },500)
         }
+        $('.video').click(function(){
+            var myVideo = document.getElementById('myVideo')
+            $(myVideo).css('display','block').siblings().css('display','none')
+            myVideo.play()
+        })
+        $('#myVideo').bind('error ended', function(){
+            $('#myVideo').css('display','none').siblings().css('display','block')
+        })
         // })
     </script>
 </body>

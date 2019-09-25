@@ -45,6 +45,15 @@
     transition: opacity 0.8s linear;
     overflow: hidden;
 }
+.img_box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.img_check {
+    z-index: 6;
+}
 .imgList li img{
     /* width: 20%; */
     /* width: 100%; */
@@ -62,6 +71,7 @@
     height: auto;
     left: 0%;
     top: 0%;
+    z-index: 9;
 }
 .imgList li a{
     width: 100%;
