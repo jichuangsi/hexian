@@ -42,6 +42,7 @@ body {
 }
 .center img {
     width: 100%;
+    margin-bottom: 0.6rem;
 }
 .center .time {
     color:#e18d5b;
