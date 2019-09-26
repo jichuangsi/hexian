@@ -29,6 +29,12 @@
 .wrapper {
     position: relative;
 }
+.libox {
+    opacity: 0;
+}
+.libox_check {
+    opacity: 1;
+}
 .imgList {
     width: 100%;
     z-index: 10;
@@ -50,9 +56,11 @@
     height: 100%;
     position: absolute;
     z-index: 1;
+    opacity: 0;
 }
 .img_check {
     z-index: 6;
+    opacity: 1;
 }
 .imgList li img{
     /* width: 20%; */
