@@ -193,26 +193,37 @@
     line-height: 0.24rem;
     color:#333;
     cursor: pointer;
-    display: none;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 1s linear, opacity 0.1s linear;
 }
 .title_check{
-    display: block;
+    opacity: 1;
+    transform: translateY(0px);
 }
 .title p {
-    opacity: 0;
     letter-spacing: 4px;
-    transition: transform 1s linear, opacity 1s linear;
-    transform: translateY(50px);
 }
 .title p span {
     color: #de7a36;
 }
-.title .btn_box {
+.btn_box {
     display: flex;
+    position: absolute;
+    bottom: 3.3rem;
+    left: 11rem;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 1s linear, opacity 0.1s linear;
     /* justify-content: space-around; */
 }
-.title .btn {
-    margin-top: 1.31rem;
+.btn_box_check {
+    z-index: 66;
+    opacity: 1;
+    transform: translateY(0px);
+}
+.btn {
     /* display: inline-block; */
     font-size: 0.18rem;
     /* padding: 20px 52px; */
@@ -226,29 +237,29 @@
     align-items: center;
     margin-left: 0.2rem;
 }
-.title .btn_box .first {
+.btn_box .first {
     margin-left: 0px;
 }
-.title .btn .iconfont {
+.btn .iconfont {
     /* flex:1; */
     margin-left: 0rem;
     margin-top: 0rem;
     font-size: 0.24rem !important;
 }
-.title .btn .icon-tianmao {
+.btn .icon-tianmao {
     font-size: 0.30rem !important;
 }
-.title .btn span {
+.btn span {
     margin-left: 0.1rem;
     color: #fff;
     font-size: 0.18rem;
     line-height: 0.2rem;
     margin-top: 0.1rem;
 }
-.title .btn .jd {
+.btn .jd {
     margin-top: 0.08rem;
 }
-.title .btn:last-child {
+.btn:last-child {
     background-color: #009e8b;
     color: #fff;
 }
