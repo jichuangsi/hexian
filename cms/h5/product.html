@@ -45,6 +45,7 @@
 										[field.content/]
 									 </div>
 								</div>
+							</div>
 								<div class="btn_box">
 									<p class="btn first"
 										onclick="location.href='[field.Tmall/]'">
@@ -54,7 +55,6 @@
 										<span class="iconfont icon-jingdong"></span><span class="jd">京东</span>
 									</p>
 								</div>
-							</div>
 						</div>
 					{/ms:arclist}
 				</li>
@@ -189,18 +189,19 @@ scroll_top(l);
             $(".imgList").find("li").find('p').removeClass("qie")
             $(".imgList").find(".img_box").removeClass('img_check')
             $(".imgList").find('.libox').removeClass('libox_check')
-            let arr = $(".imgList").find("li").find('.title_check').parent().parent().parent().find('.libox')
+            let arr = $(".imgList").find(".imgOn").find('.libox')
+            // .find('.title_check').parent().parent().parent()[0]
+            // .find('.libox')
             $(".imgList").find(".title").removeClass('title_check')
+            $(".imgList").find(".btn_box").removeClass('btn_box_check')
             for (let i = 0; i < arr.length; i++) {
                 if(arr.eq(i).attr('data-id') == item) {
                     arr.eq(i).find('.img_box').addClass('img_check')
-                    arr.eq(i).find('.title').addClass('title_check')
                     arr.eq(i).addClass('libox_check')
-                    for (let j = 0; j < arr.eq(i).find('.title_check').find('p').length; j++) {
-                       setTimeout(function() {
-                            arr.eq(i).find('.title_check').find('p').eq(j).addClass("qie");
-                        }, i * 4 + '00');
-                    }
+                    setTimeout(function(){
+                        arr.eq(i).find('.title').addClass('title_check')
+                        arr.eq(i).find('.btn_box').addClass('btn_box_check')
+                    },100)
                 }
             }
             // $(val).parent().parent().find('.title').find('p').removeClass("qie");
@@ -226,28 +227,27 @@ scroll_top(l);
             $('.tab').removeClass('tab_check')
             $('.all_title').removeClass('all_check')
             $('.title').removeClass('title_check')
-			$(".imgList").find(".img_box").removeClass('img_check')
+            $(".btn_box").removeClass('btn_box_check')
+            $(".imgList").find(".img_box").removeClass('img_check')
             for (let i = 0; i < $(".imgList").find("li").length; i++) {
                 if($(".imgList").find("li").eq(i).attr('data-id') == num) {
                     $(".indexList").find("li").removeClass("indexOn").eq(i).addClass("indexOn");
                     $(".imgList").find("li").eq(i).find('.img_box').eq(0).addClass('img_check').siblings().removeClass('img_check')
-                    $(".imgList").find("li").eq(i).find('.title').eq(0).addClass('title_check').siblings().removeClass('title_check')
                     $(".imgList").find("li").eq(i).find('.libox').eq(0).addClass('libox_check').siblings().removeClass('libox_check')
-                    setTimeout(function () {
-                        $(".imgList").find("li").eq(i).addClass("imgOn");
-                    }, 100)
-                    for (let j = 0; j < $(".imgList").find("li").eq(i).find('.title_check').find('p').length; j++) {
-                       setTimeout(function() {
-                            $(".imgList").find("li").eq(i).find('.title_check').find('p').eq(j).addClass("qie");
-                        }, i * 4 + '00');
-                    }
+                    $(".imgList").find("li").eq(i).addClass("imgOn");
+                    $(".imgList").find(".imgOn").find('.title').eq(0).siblings().removeClass('title_check')
+                    setTimeout(function(){
+                        $(".imgList").find(".imgOn").find('.title').eq(0).addClass('title_check')
+                        $(".imgList").find(".imgOn").find('.btn_box').eq(0).addClass('btn_box_check')
+                    },100)
+                }
+                
                     for (let j = 0; j < $('.tab').length; j++) {
                         if($('.tab').eq(j).attr('data-id') == num) {
                             $('.tab').eq(j).addClass('tab_check')
                             $('.tab').eq(j).find('.all_title').eq(0).addClass('all_check')
                         }
                     }
-                }
             }
         }
 
