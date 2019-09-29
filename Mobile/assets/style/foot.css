@@ -1,7 +1,7 @@
 
 .foot {
     width: 100%;
-    height: 3.52rem;
+    height: 4.8rem;
     /* line-height: 1rem; */
     /* display: flex; */
     /* align-items: center; */
@@ -9,13 +9,47 @@
 }
 .foot .ite{
     width: 100%;
-    font-size: 0.20rem;
+    font-size: 0.28rem;
     line-height: 0.34rem;
     text-align: center;
     /* transform: scale(.8) translateX(-5%); */
     /* margin-left: 0.6rem; */
     color: #333;
     margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+.dz {
+    width: 6.58rem;
+    font-size: 0.20rem;
+    line-height: 0.34rem;
+    text-align: center;
+    margin: 0 auto;
+    /* white-space: nowrap; */
+}
+.ph {
+    width: 6.58rem;
+    font-size: 0.20rem;
+    line-height: 0.34rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.rx {
+    width: 6.58rem;
+    font-size: 0.20rem;
+    line-height: 0.34rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.wa {
+    width: 6.58rem;
+    font-size: 0.20rem;
+    line-height: 0.34rem;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+.wa img {
+    vertical-align: middle;
 }
 .bottom_nav  {
     width: 6.58rem;
