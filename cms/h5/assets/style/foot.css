@@ -21,14 +21,14 @@
 }
 .dz {
     width: 50%;
-    font-size: 0.18rem;
+    font-size: 0.16rem;
     line-height: 0.24rem;
     padding-left: 0.6rem;
     margin-top: 0.27rem;
 }
 .ph {
     width: 50%;
-    font-size: 0.18rem;
+    font-size: 0.16rem;
     line-height: 0.24rem;
     padding-right: 0.6rem;
     text-align: right;
@@ -36,22 +36,22 @@
 }
 .rx {
     width: 50%;
-    font-size: 0.18rem;
+    font-size: 0.16rem;
     line-height: 0.24rem;
     padding-left: 0.6rem;
     margin-bottom: 0.1rem;
 }
 .wa {
-    font-size: 0.18rem;
-height: 0.32rem;
-line-height: 0.32rem;
-padding-right: 0.6rem;
-text-align: right;
-margin-bottom: 0.1rem;
-vertical-align: middle;
-background: url('../images/hxcr.png') no-repeat;
-padding-left: 0.32rem;
-background-position-y: 50%;
+    font-size: 0.16rem;
+	height: 0.32rem;
+	line-height: 0.32rem;
+	padding-right: 0.6rem;
+	text-align: right;
+	margin-bottom: 0.1rem;
+	vertical-align: middle;
+	background: url('../images/hxcr.png') no-repeat;
+	padding-left: 0.32rem;
+	background-position-y: 50%;
 }
 .wa img {
     vertical-align: middle;
