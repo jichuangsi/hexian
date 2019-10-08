@@ -130,9 +130,7 @@
 						<div class="left">
 							<p class="h1">任职要求：</p>
 							[field.requiremen/]
-							<p class="emil">座机：0755-83630607 <span></span>
-								李先生：15321295835 <span></span>
-								邮箱：lirm@hexian88.com</p>
+							<p class="emil">[field.contact/]</p>
 						</div>
 						<div class="right">
 							<p class="h1">岗位职责：</p>
@@ -195,7 +193,7 @@
         var page = {ms:page.total/};
         var total = parseInt(per*page);
 		var nosearch = false;
-        $(".zw>p>span").text(total);         
+        $(".zw>p>span").text(per);         
 
         var pre = "{ms:page.pre/}";
         var host = "{ms:global.host/}";
